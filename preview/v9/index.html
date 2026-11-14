@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maisy Leigh</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<style>
+/* v9. Built from Maisy's own shoot albums (October Photoshoot, her Photos-app edits), shown exactly as she
+   edited them: no filters, no overlays, no recolouring, only resized. Fun comes from things that are hers:
+   a stack of prints, a day at her desk told by the clock (her standby photo really reads 3:56), a list that
+   shows the photo under your cursor, and a contact strip with the real frame numbers. Larken Bold headings,
+   Futura text, the email sunset grain behind type only, never over a photo. No words on photos. */
+:root{
+  --ink:#2b2622; --text:#57504a; --muted:#8a7f74; --paper:#F7F2EA; --line:rgba(43,38,34,.14);
+  --terra:#B4633F;
+  --serif:"larken",Georgia,serif; --sans:"futura-pt","Futura","Helvetica Neue",Arial,sans-serif;
+  --slow:cubic-bezier(.16,.84,.24,1);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --sunset:linear-gradient(180deg,#C9B473 0%,#E2A06A 15%,#F6A27E 33%,#F5A17F 48%,#F4AC88 64%,#FACB9C 82%,#FED8AC 100%);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--text);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+p,h1,h2,h3,figure{margin:0}
+.wrap{width:min(1240px,calc(100% - 40px));margin:0 auto}
+.caps{font:500 11.5px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase}
+.h{font:700 var(--size,34px)/1.08 var(--serif);color:var(--ink);letter-spacing:-.015em;text-wrap:balance}
+.h em{font-style:italic;color:var(--terra)}
+.frame{font:500 10.5px/1 var(--sans);letter-spacing:.18em;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 30px;border-radius:999px;background:var(--ink);color:#fffaf2;font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;transition:transform .8s var(--slow)}
+.btn:hover{transform:translateY(-2px)}
+.more{display:inline-flex;align-items:center;gap:8px;min-height:44px;font:500 11.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink);background:linear-gradient(currentColor,currentColor) 0 calc(100% - 10px)/100% 1px no-repeat;transition:background-size .9s var(--slow)}
+.more:hover{background-size:30% 1px}
+
+/* sunset grain sits behind type only */
+.sun{position:relative;isolation:isolate;background:var(--sunset)}
+.sun::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--noise);mix-blend-mode:overlay;opacity:.6;pointer-events:none}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;height:70px}
+.top .mk{font:700 19px/1 var(--serif);color:var(--ink)}
+.top nav{display:flex;gap:18px}
+
+/* ---------- hero: the line builds, the prints fan out ---------- */
+.hero{overflow:hidden}
+.hero .in{display:grid;gap:44px;padding:30px 0 80px}
+.hero .h{--size:42px;line-height:1.02;letter-spacing:-.025em}
+.hero .h .w{display:inline-block;opacity:0;transform:translateY(.4em);animation:wordin .9s var(--slow) forwards}
+@keyframes wordin{to{opacity:1;transform:none}}
+.hero .sub{margin-top:20px;max-width:30em;color:var(--ink)}
+.hero .acts{display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin-top:26px}
+.prints{position:relative;height:440px;margin:0 auto;width:min(100%,520px)}
+.print{position:absolute;background:#fffdf8;padding:10px 10px 30px;box-shadow:0 30px 60px -32px rgba(80,40,15,.55),0 2px 6px rgba(80,40,15,.08);transition:transform 1.4s var(--slow),box-shadow .8s var(--slow);will-change:transform}
+.print img{width:100%;height:100%;object-fit:cover}
+.print .frame{position:absolute;left:12px;bottom:11px}
+.print.a{width:58%;aspect-ratio:3/4;left:21%;top:4%;transform:rotate(0)}
+.print.b{width:52%;aspect-ratio:3/2;left:22%;top:26%;transform:rotate(0)}
+.print.c{width:44%;aspect-ratio:3/4;left:28%;top:12%;transform:rotate(0)}
+.prints.open .print.a{transform:translate(-30%,-2%) rotate(-7deg)}
+.prints.open .print.b{transform:translate(18%,46%) rotate(4deg)}
+.prints.open .print.c{transform:translate(48%,-8%) rotate(8deg)}
+.prints .print:hover{transform:translateY(-6px) rotate(0) scale(1.03)!important;z-index:5;box-shadow:0 40px 70px -30px rgba(80,40,15,.6)}
+
+/* ---------- a day at my desk: pinned, told by the clock ---------- */
+.day{position:relative;height:420vh}
+.day .stage{position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-rows:auto 1fr;padding:84px 0 28px}
+.day .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.day .body{display:grid;gap:18px;align-content:center;min-height:0}
+.clock{font:700 72px/1 var(--serif);color:var(--ink);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.clock small{font:500 12px/1 var(--sans);letter-spacing:.2em;margin-left:8px;color:var(--muted)}
+.moment{min-height:3.4em}
+.moment .h{--size:26px}
+.moment p{margin-top:6px;max-width:28em}
+.shots{position:relative;height:min(52vh,520px)}
+.shot{position:absolute;inset:0;opacity:0;transform:scale(1.04);transition:opacity 1s var(--slow),transform 1.6s var(--slow)}
+.shot.on{opacity:1;transform:none}
+.shot img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.shot .frame{position:absolute;right:0;bottom:-22px}
+.ticks{display:flex;gap:6px}
+.ticks i{width:28px;height:2px;background:var(--line);transition:background .6s}
+.ticks i.on{background:var(--ink)}
+
+/* ---------- favorites list: the photo follows your cursor ---------- */
+.fav{padding:110px 0}
+.list{margin-top:34px;border-top:1px solid var(--line)}
+.row{position:relative;display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:22px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.row .n{font:500 11px/1 var(--sans);letter-spacing:.2em;color:var(--muted)}
+.row .t{font:700 26px/1.1 var(--serif);letter-spacing:-.015em;transition:transform .8s var(--slow),color .6s}
+.row .t em{font-style:italic;color:var(--terra)}
+.row .d{font-size:14px;color:var(--muted);text-align:right}
+.row .thumb{display:none}
+.row:hover .t{transform:translateX(10px)}
+.peek{position:fixed;left:0;top:0;width:260px;aspect-ratio:4/5;pointer-events:none;z-index:40;border-radius:12px;overflow:hidden;opacity:0;transform:translate(-50%,-50%) scale(.9) rotate(-3deg);transition:opacity .4s var(--slow),transform .5s var(--slow);box-shadow:0 30px 60px -30px rgba(60,30,10,.6)}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}
+.peek img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- contact strip from the shoot ---------- */
+.strip{padding:40px 0 110px;overflow:hidden}
+.strip .head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:22px}
+.track{display:flex;gap:14px;width:max-content;animation:drift 70s linear infinite}
+.strip:hover .track{animation-play-state:paused}
+.cell{width:220px;flex:none}
+.cell img{width:220px;height:275px;object-fit:cover;border-radius:6px;transition:transform 1s var(--slow)}
+.cell:hover img{transform:translateY(-6px)}
+.cell .frame{display:block;margin-top:10px}
+@keyframes drift{to{transform:translateX(-50%)}}
+
+/* ---------- close ---------- */
+.close{padding:110px 0 34px;text-align:center}
+.close .h{--size:40px;margin:14px auto 0;max-width:12em}
+.close .links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:26px}
+.close .sign{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:90px;padding-top:16px;border-top:1px solid rgba(43,38,34,.22);color:var(--ink)}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 1.3s var(--slow),transform 1.3s var(--slow)}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:900px){
+  .wrap{width:min(1240px,calc(100% - 112px))}
+  .top{height:84px}.top nav{gap:34px}
+  .hero .in{grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:40px 0 120px;min-height:min(calc(100vh - 84px),860px)}
+  .hero .h{--size:76px}
+  .prints{height:600px;width:100%}
+  .day .stage{padding:110px 0 40px}
+  .day .body{grid-template-columns:1fr 1.25fr;gap:64px;align-items:center}
+  .clock{font-size:150px}
+  .moment .h{--size:36px}
+  .shots{height:min(66vh,640px)}
+  .fav{padding:160px 0}
+  .row{grid-template-columns:70px 1fr auto;padding:28px 0}
+  .row .t{font-size:46px}
+  .cell,.cell img{width:280px}.cell img{height:350px}
+  .close{padding:170px 0 40px}.close .h{--size:72px}
+}
+@media (max-width:899px){
+  .row{grid-template-columns:72px 1fr}
+  .row .d{grid-column:2;text-align:left;margin-top:-6px}
+  .row .thumb{display:block;grid-row:span 2;width:72px;height:90px;object-fit:cover;border-radius:8px}
+  .row .n{display:none}
+  .peek{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .hero .h .w{opacity:1;transform:none}.reveal{opacity:1;transform:none}
+  .day{height:auto}.day .stage{position:relative;height:auto}.shot{position:relative;opacity:1;transform:none;margin-bottom:24px}.shots{height:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="sun hero">
+  <div class="wrap">
+    <header class="top caps">
+      <a class="mk" href="./">Maisy Leigh</a>
+      <nav><a href="favorites">Favorites</a><a href="#day">Watch</a><a href="brands">Brands</a></nav>
+    </header>
+    <section class="in">
+      <div>
+        <p class="caps" style="color:var(--ink)">Designer · Maker · Storyteller</p>
+        <h1 class="h" id="line" style="margin-top:16px">Making life warm again, one design at a <em>time.</em></h1>
+        <p class="sub">I design calm, warm spaces and the pieces that live in them, and share it all on YouTube so you can make a space that feels like you.</p>
+        <div class="acts"><a class="btn" href="favorites">My favorite things</a><a class="more" href="https://www.youtube.com/@maisyleigh">YouTube ↗</a></div>
+      </div>
+      <div class="prints" id="prints">
+        <figure class="print a"><img src="img/oct/DSCF0102.jpg" alt="A hand lifting a cup of tea from a maple tray beside the sofa"><span class="frame">DSCF0102</span></figure>
+        <figure class="print b"><img src="img/oct/DSCF1268.jpg" alt="A warm front-on desk with a maple desk shelf and a beige desk mat"><span class="frame">DSCF1268</span></figure>
+        <figure class="print c"><img src="img/oct/DSCF0144.jpg" alt="A charger stand in standby mode on a walnut tray, the clock reading 3:55"><span class="frame">DSCF0144</span></figure>
+      </div>
+    </section>
+  </div>
+</div>
+
+<section class="day" id="day">
+  <div class="stage wrap">
+    <div class="head"><p class="caps">A day at my desk</p><div class="ticks"><i class="on"></i><i></i><i></i><i></i></div></div>
+    <div class="body">
+      <div>
+        <div class="clock" id="clock">8:30<small>am</small></div>
+        <div class="moment" id="moment"><h2 class="h">Tea before <em>anything.</em></h2><p>A few quiet minutes with a warm cup, before the inbox gets a say.</p></div>
+      </div>
+      <div class="shots">
+        <figure class="shot on"><img src="img/oct/DSCF0082.jpg" alt="Tea on a maple side table beside the sofa"><span class="frame">DSCF0082</span></figure>
+        <figure class="shot"><img src="img/oct/DSCF1268.jpg" alt="The desk set up for the day"><span class="frame">DSCF1268</span></figure>
+        <figure class="shot"><img src="img/oct/DSCF1069.jpg" alt="A hand lifting the lid of a Fa trinket tray with rings inside"><span class="frame">DSCF1069</span></figure>
+        <figure class="shot"><img src="img/oct/DSCF0145.jpg" alt="A charger stand in standby mode in the late sun, the clock reading 3:56"><span class="frame">DSCF0145</span></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fav">
+  <div class="wrap">
+    <p class="caps reveal">Start here</p>
+    <h2 class="h reveal" style="--size:40px;margin-top:12px">What are you making <em>cozy?</em></h2>
+    <div class="list" id="list">
+      <a class="row reveal" href="favorites#desk" data-img="img/oct/DSCF0030.jpg"><img class="thumb" src="img/oct/DSCF0030.jpg" alt=""><span class="n">01</span><span class="t">My desk, <em>linked</em></span><span class="d">Every piece, and where it’s from</span></a>
+      <a class="row reveal" href="favorites#tips" data-img="img/oct/DSCF9856.jpg"><img class="thumb" src="img/oct/DSCF9856.jpg" alt=""><span class="n">02</span><span class="t">Desk <em>tips</em></span><span class="d">Calm, comfy, kind to your back</span></a>
+      <a class="row reveal" href="favorites#rituals" data-img="img/oct/DSCF1086.jpg"><img class="thumb" src="img/oct/DSCF1086.jpg" alt=""><span class="n">03</span><span class="t">Slow <em>rituals</em></span><span class="d">Matcha, tea, quiet mornings</span></a>
+      <a class="row reveal" href="favorites#books" data-img="img/oct/DSCF0213.jpg"><img class="thumb" src="img/oct/DSCF0213.jpg" alt=""><span class="n">04</span><span class="t">Books I <em>love</em></span><span class="d">The ones that shaped me</span></a>
+    </div>
+  </div>
+  <div class="peek" id="peek"><img alt=""></div>
+</section>
+
+<section class="strip">
+  <div class="wrap head"><p class="caps">From the October shoot</p><a class="more" href="https://cozyleigh.studio/">See the pieces ↗</a></div>
+  <div class="track" id="track"></div>
+</section>
+
+<section class="sun close">
+  <div class="wrap">
+    <p class="caps reveal" style="color:var(--ink)">Stay close</p>
+    <h2 class="h reveal">From our cozy home, <em style="color:#7a3a22">to yours.</em></h2>
+    <div class="links reveal"><a class="more" href="https://www.youtube.com/@maisyleigh">YouTube</a><a class="more" href="https://www.instagram.com/maisyleigh/">Instagram</a><a class="more" href="https://discord.gg/cozyleigh-community">Discord</a><a class="more" href="https://cozyleigh.studio/">The studio</a></div>
+    <div class="sign caps"><span>© Maisy Leigh</span><a href="brands">For brands</a></div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1. the line builds word by word on load (the italic word last)
+  const line = document.getElementById('line');
+  if (!reduce) {
+    const parts = []; line.childNodes.forEach(n => {
+      if (n.nodeType === 3) n.textContent.split(/(\s+)/).forEach(t => parts.push(t.trim() ? `<span class="w">${t}</span>` : t));
+      else parts.push(`<span class="w">${n.outerHTML}</span>`);
+    });
+    line.innerHTML = parts.join('');
+    line.querySelectorAll('.w').forEach((w, i) => w.style.animationDelay = (0.25 + i * 0.09) + 's');
+  }
+
+  // 2. the prints fan out once the line has landed
+  setTimeout(() => document.getElementById('prints').classList.add('open'), reduce ? 0 : 1100);
+
+  // 3. a day at my desk, told by the clock
+  const day = document.getElementById('day');
+  const times = [['8:30','am','Tea before <em>anything.</em>','A few quiet minutes with a warm cup, before the inbox gets a say.'],
+                 ['10:00','am','The desk, <em>ready.</em>','Everything in its place, so the work can be the only thing on my mind.'],
+                 ['1:15','pm','Small things, <em>kept close.</em>','Rings, notes and little treasures, in a tray that looks like a flower.'],
+                 ['3:56','pm','Golden hour, <em>slowing down.</em>','The light comes through the blinds and my phone turns into a clock.']];
+  const shots = [...day.querySelectorAll('.shot')], ticks = [...day.querySelectorAll('.ticks i')];
+  const clock = document.getElementById('clock'), moment = document.getElementById('moment');
+  let cur = 0;
+  const show = i => {
+    if (i === cur) return; cur = i;
+    shots.forEach((s, k) => s.classList.toggle('on', k === i));
+    ticks.forEach((t, k) => t.classList.toggle('on', k <= i));
+    clock.innerHTML = `${times[i][0]}<small>${times[i][1]}</small>`;
+    moment.innerHTML = `<h2 class="h">${times[i][2]}</h2><p>${times[i][3]}</p>`;
+    if (!reduce) { [clock, moment].forEach(el => el.animate([{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}],{duration:700,easing:'cubic-bezier(.16,.84,.24,1)'})); }
+  };
+  if (!reduce) addEventListener('scroll', () => requestAnimationFrame(() => {
+    const r = day.getBoundingClientRect(), span = day.offsetHeight - innerHeight;
+    const p = Math.min(.999, Math.max(0, -r.top / span));
+    show(Math.floor(p * times.length));
+  }), { passive: true });
+
+  // 4. the photo follows the cursor over the list
+  const peek = document.getElementById('peek'), pimg = peek.querySelector('img');
+  document.querySelectorAll('#list .row').forEach(r => {
+    r.addEventListener('mouseenter', () => { pimg.src = r.dataset.img; peek.classList.add('on'); });
+    r.addEventListener('mouseleave', () => peek.classList.remove('on'));
+  });
+  let px = 0, py = 0, tx = 0, ty = 0;
+  addEventListener('mousemove', e => { tx = e.clientX + 160; ty = e.clientY; });
+  (function follow(){ px += (tx - px) * .14; py += (ty - py) * .14; peek.style.left = px + 'px'; peek.style.top = py + 'px'; requestAnimationFrame(follow); })();
+
+  // 5. the contact strip: real frames, real numbers, drifting slowly (doubled so it loops)
+  const frames = ['DSCF1062','DSCF1057','DSCF0213','DSCF1083','DSCF9862','DSCF0009','DSCF1048','DSCF9851','DSCF0037','DSCF1086','DSCF0187','DSCF1253'];
+  const html = frames.map(f => `<figure class="cell"><img src="img/oct/${f}.jpg" alt="" loading="lazy"><span class="frame">${f}</span></figure>`).join('');
+  document.getElementById('track').innerHTML = html + html;
+
+  // reveals
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(e => reduce ? e.classList.add('in') : io.observe(e));
+})();
+</script>
+</body>
+</html>
