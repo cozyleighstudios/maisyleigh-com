@@ -76,8 +76,9 @@ em{font-style:italic}
 .head h2{margin:0;font:300 36px/1.1 var(--serif);color:var(--ink);letter-spacing:-.015em;max-width:640px}
 .reveal{opacity:0;filter:blur(8px);transform:translateY(22px);transition:opacity 1.6s var(--slow),filter 1.6s var(--slow),transform 1.6s var(--slow)}
 .reveal.in{opacity:1;filter:none;transform:none}
-.veil{clip-path:inset(0 0 100% 0);transition:clip-path 1.8s var(--slow)}
-.veil.in{clip-path:inset(0 0 0 0)}
+/* clip the image, not the figure: a clipped element never reports as visible */
+.veil img{clip-path:inset(0 0 100% 0);transform:scale(1.08);transition:clip-path 1.8s var(--slow),transform 2.6s var(--slow)}
+.veil.in img{clip-path:inset(0 0 0 0);transform:none}
 
 /* start here: an index, not cards */
 .index{display:grid;gap:44px}
@@ -135,7 +136,7 @@ em{font-style:italic}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .unblur,.reveal{opacity:1;filter:none;transform:none}.portrait,.veil{clip-path:none}.portrait img{transform:none}.rule{transform:none}
+  .unblur,.reveal{opacity:1;filter:none;transform:none}.portrait,.veil img{clip-path:none;transform:none}.portrait img{transform:none}.rule{transform:none}
 }
 </style>
 </head>
