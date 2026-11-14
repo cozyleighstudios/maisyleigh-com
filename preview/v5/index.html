@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maisy Leigh</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<style>
+/* maisyleigh.com v5: quiet, elegant, zen. The pale Cozyleigh email wash (cream, blush, sage) with a fine grain;
+   Larken Light with italic accents; Futura small caps; hairlines; big calm photos; generous space.
+   Motion only fades, unblurs and unveils, slowly. Nothing spins or bounces. */
+:root{
+  --ink:#2e2a25; --text:#5b534a; --muted:#8f8478; --line:rgba(46,42,37,.14);
+  --cream:#FFF6EA; --paper:#FFFCF6; --blush:#F7DDD2; --sage:#E7EAD3; --sand:#F4EBDD;
+  --serif:"larken",Georgia,serif; --sans:"futura-pt","Futura","Helvetica Neue",Arial,sans-serif;
+  --slow:cubic-bezier(.16,.84,.24,1);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--text);font:400 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,calc(100% - 40px));margin:0 auto}
+.caps{font:400 11.5px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.serif{font-family:var(--serif);font-weight:300}
+em{font-style:italic}
+.link{position:relative;display:inline-flex;align-items:center;gap:12px;min-height:44px;font:400 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.link::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:1px;background:currentColor;transform-origin:left;transition:transform 1s var(--slow)}
+.link:hover::after{transform:scaleX(.35)}
+
+/* the wash: the pale email gradient, drifting very slowly, with a fine paper grain */
+.wash{position:relative;isolation:isolate;overflow:hidden;background:var(--cream)}
+.wash::before{content:"";position:absolute;inset:-25%;z-index:-2;
+  background:radial-gradient(42% 46% at 62% 46%,var(--blush),transparent 72%),
+             radial-gradient(38% 40% at 92% 92%,var(--sage),transparent 70%),
+             radial-gradient(40% 40% at 8% 8%,#FFF4E2,transparent 70%),var(--cream);
+  animation:drift 40s ease-in-out infinite alternate}
+.wash::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--noise);opacity:.22;mix-blend-mode:multiply;pointer-events:none}
+@keyframes drift{from{transform:translate3d(-2%,-1%,0)}to{transform:translate3d(2%,2%,0) scale(1.04)}}
+
+/* a hairline that fills as you read */
+.progress{position:fixed;left:0;top:0;height:1px;width:100%;background:var(--ink);transform-origin:left;transform:scaleX(0);z-index:50;opacity:.5}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;height:76px}
+.mark{white-space:nowrap;font:400 12px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--ink)}
+.top nav{display:flex;gap:16px}
+.top nav a{font:400 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink);position:relative;padding:16px 0}
+.top nav a::after{content:"";position:absolute;left:0;right:0;bottom:10px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .9s var(--slow)}
+.top nav a:hover::after{transform:scaleX(1);transform-origin:left}
+
+/* hero */
+.hero{display:grid;gap:40px;padding:40px 0 64px}
+.hero h1{margin:22px 0 0;font:300 44px/1.08 var(--serif);color:var(--ink);letter-spacing:-.02em}
+.hero h1 em{font-weight:300;color:#7a6a5c}
+.hero .lead{margin:26px 0 0;max-width:420px;font-size:17px;color:var(--text)}
+.hero .acts{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap}
+.unblur{opacity:0;filter:blur(10px);transform:translateY(14px);animation:unblur 1.8s var(--slow) forwards}
+@keyframes unblur{to{opacity:1;filter:blur(0);transform:none}}
+.d1{animation-delay:.15s}.d2{animation-delay:.35s}.d3{animation-delay:.55s}.d4{animation-delay:.8s}
+.portrait{position:relative;overflow:hidden;border-radius:2px;clip-path:inset(100% 0 0 0);animation:unveil 2s .2s var(--slow) forwards}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;transform:scale(1.12);animation:settle 2.8s .2s var(--slow) forwards}
+.portrait figcaption{position:absolute;left:0;right:0;bottom:-34px}
+@keyframes unveil{to{clip-path:inset(0 0 0 0)}}
+@keyframes settle{to{transform:scale(1)}}
+.below{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.scroll{display:flex;align-items:center;gap:12px}
+.scroll i{display:block;width:44px;height:1px;background:var(--ink);transform-origin:left;animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scaleX(.3);opacity:.4}50%{transform:scaleX(1);opacity:1}}
+
+/* sections */
+.sec{padding:110px 0}
+.head{display:grid;gap:14px;margin-bottom:46px}
+.head h2{margin:0;font:300 36px/1.1 var(--serif);color:var(--ink);letter-spacing:-.015em;max-width:640px}
+.reveal{opacity:0;filter:blur(8px);transform:translateY(22px);transition:opacity 1.6s var(--slow),filter 1.6s var(--slow),transform 1.6s var(--slow)}
+.reveal.in{opacity:1;filter:none;transform:none}
+.veil{clip-path:inset(0 0 100% 0);transition:clip-path 1.8s var(--slow)}
+.veil.in{clip-path:inset(0 0 0 0)}
+
+/* start here: an index, not cards */
+.index{display:grid;gap:44px}
+.item{display:block;color:var(--ink)}
+.item .ph{overflow:hidden;border-radius:2px}
+.item img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.6s var(--slow)}
+.item:hover img{transform:scale(1.035)}
+.item .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.item b{font:300 24px/1.2 var(--serif)}
+.item b em{color:#7a6a5c}
+.item span{display:block;margin-top:4px;font-size:14px;color:var(--muted)}
+.item:nth-child(2){transition-delay:.12s}.item:nth-child(3){transition-delay:.24s}.item:nth-child(4){transition-delay:.36s}
+
+/* the pause */
+.pause{padding:150px 0;text-align:center}
+.pause blockquote{margin:0 auto;max-width:900px;font:300 40px/1.18 var(--serif);color:var(--ink);letter-spacing:-.015em}
+.pause blockquote em{color:#7a6a5c}
+.pause .caps{margin-top:26px}
+.rule{width:1px;height:64px;margin:0 auto 34px;background:var(--ink);opacity:.35;transform-origin:top;transform:scaleY(0);transition:transform 1.6s var(--slow)}
+.rule.in{transform:scaleY(1)}
+
+/* made together */
+.together .wide{overflow:hidden;border-radius:2px}
+.together .wide img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.names{display:grid;grid-template-columns:repeat(3,1fr);margin-top:22px;border-top:1px solid var(--line)}
+.names div{padding:16px 0 0}
+.names b{display:block;font:300 24px/1.1 var(--serif);color:var(--ink)}
+.names .caps{margin-top:6px;letter-spacing:.2em}
+.together p.note{margin-top:34px;max-width:560px}
+
+/* stay close */
+.close{padding:120px 0 40px}
+.close h2{margin:14px 0 30px;font:300 40px/1.08 var(--serif);color:var(--ink)}
+.rows{border-top:1px solid var(--line);max-width:760px}
+.rows a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.rows b{font:300 24px/1.2 var(--serif)}
+.rows small{display:block;font-size:14px;color:var(--muted)}
+.rows i{font-style:normal;transition:transform 1s var(--slow)}
+.rows a:hover i{transform:translateX(8px)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:110px;padding:22px 0 30px;border-top:1px solid var(--line)}
+
+@media (min-width:900px){
+  .top nav{gap:30px}.top nav a{font-size:12px;letter-spacing:.22em}.mark{font-size:13px;letter-spacing:.32em}
+  .wrap{width:min(1240px,calc(100% - 120px))}
+  .hero{grid-template-columns:1.15fr .85fr;gap:90px;align-items:end;padding:60px 0 90px;min-height:min(calc(100vh - 76px),900px)}
+  .hero h1{font-size:76px}
+  .sec{padding:160px 0}
+  .head{grid-template-columns:1fr 2fr;align-items:end}
+  .head h2{font-size:52px}
+  .index{grid-template-columns:repeat(4,1fr);gap:28px}
+  .index .item:nth-child(even){margin-top:80px}
+  .pause{padding:220px 0}.pause blockquote{font-size:64px}
+  .together .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:80px;align-items:end}
+  .close{padding:170px 0 40px}.close h2{font-size:64px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .unblur,.reveal{opacity:1;filter:none;transform:none}.portrait,.veil{clip-path:none}.portrait img{transform:none}.rule{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<div class="wash">
+  <div class="wrap">
+    <header class="top">
+      <a class="mark" href="./">Maisy Leigh</a>
+      <nav><a href="favorites">Favorites</a><a href="#watch">Watch</a><a href="brands">Brands</a></nav>
+    </header>
+    <section class="hero">
+      <div>
+        <p class="caps unblur d1">Designer · Maker · Storyteller</p>
+        <h1 class="unblur d2">I design calm, warm spaces <em>and the pieces that live in them.</em></h1>
+        <p class="lead unblur d3">And I share how on YouTube, slowly, so you can make a space that feels like you.</p>
+        <div class="acts unblur d4"><a class="link" href="favorites">My favorite things <span>→</span></a><a class="link" href="https://www.youtube.com/@maisyleigh">Watch on YouTube <span>↗</span></a></div>
+      </div>
+      <div>
+        <figure class="portrait" style="margin:0"><img src="img/cozyleigh-maisy-desk.jpg" alt="Maisy tending a plant at her studio desk"></figure>
+        <div class="below unblur d4"><span class="caps">In the studio</span><span class="scroll caps"><i></i>Scroll</span></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head"><p class="caps reveal">01 / Start here</p><h2 class="reveal">What are you making <em>cozy?</em></h2></div>
+    <div class="index">
+      <a class="item reveal" href="favorites#desk"><div class="ph"><img src="img/sq-desk.jpg" alt="A warm desk with a matcha desk mat"></div><div class="meta"><b>My desk</b><span class="caps">i</span></div><span>Every piece on it, linked</span></a>
+      <a class="item reveal" href="favorites#tips"><div class="ph"><img src="img/cozyleigh-maisy-journaling.jpg" alt="Maisy journaling at a low table" style="object-position:50% 40%"></div><div class="meta"><b>Desk <em>tips</em></b><span class="caps">ii</span></div><span>Calm, comfy, kind to your back</span></a>
+      <a class="item reveal" href="favorites#rituals"><div class="ph"><img src="img/sq-tea.jpg" alt="Kyusu teapot on a maple tray"></div><div class="meta"><b>Slow rituals</b><span class="caps">iii</span></div><span>Matcha, tea, quiet mornings</span></a>
+      <a class="item reveal" href="favorites#books"><div class="ph"><img src="img/sq-reading.jpg" alt="Maisy reading in a cozy chair"></div><div class="meta"><b>Books I <em>love</em></b><span class="caps">iv</span></div><span>The ones that shaped me</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="pause wash">
+  <div class="wrap">
+    <div class="rule"></div>
+    <blockquote class="reveal">A clear space leads to <em>a clear mind.</em></blockquote>
+    <p class="caps reveal">From my most-saved post</p>
+  </div>
+</section>
+
+<section class="sec together">
+  <div class="wrap">
+    <div class="head"><p class="caps reveal">02 / Made together</p><h2 class="reveal">A designer, an artist <em>and an engineer.</em></h2></div>
+    <div class="grid">
+      <figure class="wide veil" style="margin:0"><img src="img/cozyleigh-family-studio.jpg" alt="Maisy, Tristan and Ashleigh in the Cozyleigh studio"></figure>
+      <div class="reveal">
+        <p class="note serif" style="font-size:24px;line-height:1.35;color:var(--ink);margin:0"><em>“After all, the triangle is the strongest shape.”</em></p>
+        <p class="note">My sister Ashleigh brings the color and art. Tristan builds every piece to last. I set how each one should feel. Together, that’s Cozyleigh Studios.</p>
+        <a class="link" href="https://cozyleigh.studio/">Visit the studio <span>↗</span></a>
+      </div>
+    </div>
+    <div class="names reveal"><div><b>Maisy</b><p class="caps">Design</p></div><div><b>Ashleigh</b><p class="caps">Art</p></div><div><b>Tristan</b><p class="caps">Engineering</p></div></div>
+  </div>
+</section>
+
+<section class="close wash">
+  <div class="wrap">
+    <p class="caps reveal">03 / Stay close</p>
+    <h2 class="reveal">Come <em>sit a while.</em></h2>
+    <div class="rows reveal">
+      <a href="https://discord.gg/cozyleigh-community"><span><b>Our Discord</b><small>Desk photos, cozy chats, studio news</small></span><i>→</i></a>
+      <a href="https://www.instagram.com/maisyleigh/"><span><b>Instagram</b><small>Daily desk moments</small></span><i>→</i></a>
+      <a href="https://www.youtube.com/@maisyleigh"><span><b>YouTube</b><small>Slow vlogs from home and the studio</small></span><i>→</i></a>
+    </div>
+    <div class="foot"><span class="caps">From our cozy home, to yours</span><span class="caps">For brands · © Maisy Leigh</span></div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const els = document.querySelectorAll('.reveal,.veil,.rule');
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); }
+  else {
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: .15, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(e => io.observe(e));
+  }
+  const bar = document.getElementById('progress'); let raf = 0;
+  addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => {
+    const max = document.documentElement.scrollHeight - innerHeight; bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+  }); }, { passive: true });
+})();
+</script>
+</body>
+</html>
