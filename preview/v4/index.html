@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maisy Leigh</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<style>
+/* maisyleigh.com v4. The vibe is Cozyleigh's own emails: the fall sunset grain (olive gold, amber, coral, apricot,
+   butter), cream cards floating on it, outlined pill tags, Ashleigh's hand-drawn sun, Fa petals, Larken + Futura.
+   Motion is slow and warm: things rise, breathe, drift and draw themselves. All of it stops for reduced motion. */
+:root{
+  --ink:#3b3731; --text:#5a5248; --muted:#857a6d; --cream:#FBF4E6; --paper:#FFFDF8; --line:#eadfcc;
+  --gold:#C9B473; --amber:#E2A06A; --coral:#F7A27E; --peach:#F4AC88; --apricot:#FACB9C; --butter:#FED8AC;
+  --blush:#F0BCB0; --terra:#F2C9A8; --sage:#C3D19C; --yellow:#FBE38F;
+  --serif:"larken",Georgia,serif; --sans:"futura-pt","Futura","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --petal:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='26' r='24'/%3E%3Ccircle cx='50' cy='74' r='24'/%3E%3Ccircle cx='26' cy='50' r='24'/%3E%3Ccircle cx='74' cy='50' r='24'/%3E%3Ccircle cx='50' cy='50' r='26'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--text);font:400 17px/1.6 var(--sans)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.pill{display:inline-flex;align-items:center;height:34px;padding:0 18px;border:1.5px solid rgba(59,55,49,.7);border-radius:999px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 30px;border-radius:999px;background:var(--ink);color:#fffdf8;font-size:17px;font-weight:500;text-decoration:none;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(59,55,49,.6)}
+.btn span{transition:transform .4s var(--ease)} .btn:hover span{transform:translateX(4px)}
+.petal{-webkit-mask:var(--petal) center/100% 100% no-repeat;mask:var(--petal) center/100% 100% no-repeat}
+
+/* ---------- the sunset grain (from the fall emails) ---------- */
+.sunset{position:relative;isolation:isolate;overflow:hidden;
+  background:linear-gradient(180deg,var(--gold) 0%,var(--amber) 16%,var(--coral) 34%,var(--peach) 58%,var(--apricot) 80%,var(--butter) 100%)}
+.sunset::before{content:"";position:absolute;inset:-20%;z-index:-1;pointer-events:none;
+  background:radial-gradient(35% 30% at 20% 30%,rgba(254,216,172,.55),transparent 70%),
+             radial-gradient(30% 28% at 80% 55%,rgba(247,130,110,.45),transparent 70%),
+             radial-gradient(28% 24% at 60% 15%,rgba(201,180,115,.5),transparent 70%);
+  animation:breathe 18s ease-in-out infinite alternate}
+.sunset::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--noise);opacity:.55;mix-blend-mode:overlay}
+.sunset > *{position:relative;z-index:1}
+@keyframes breathe{0%{transform:translate3d(-3%,-2%,0) scale(1)}50%{transform:translate3d(3%,2%,0) scale(1.06)}100%{transform:translate3d(-1%,3%,0) scale(1.02)}}
+
+/* ---------- header ---------- */
+.top{display:flex;justify-content:space-between;align-items:center;height:72px}
+.mark{font:500 23px/1 var(--serif);color:var(--ink);text-decoration:none}
+.top nav{display:flex;gap:4px;margin-right:-10px}
+.top nav a{display:flex;align-items:center;min-height:44px;padding:0 10px;font-size:15px;color:var(--ink);text-decoration:none;position:relative}
+.top nav a::after{content:"";position:absolute;left:10px;right:10px;bottom:10px;height:1.5px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.top nav a:hover::after{transform:scaleX(1)}
+
+/* ---------- hero ---------- */
+.hero{padding:22px 0 84px}
+.hero h1{margin:22px 0 22px;font:500 56px/.95 var(--serif);color:var(--ink);letter-spacing:-.035em}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .l > span{display:inline-block;transform:translateY(105%);animation:rise 1.1s var(--ease) forwards}
+.hero h1 .l:nth-child(2) > span{animation-delay:.12s}.hero h1 .l:nth-child(3) > span{animation-delay:.24s}.hero h1 .l:nth-child(4) > span{animation-delay:.36s}
+.hero h1 .warm{color:var(--paper)}
+@keyframes rise{to{transform:none}}
+.hero .lead{font-size:19px;line-height:1.55;color:var(--ink);max-width:470px;opacity:0;animation:fade 1s .7s var(--ease) forwards}
+.hero .act{margin-top:26px;opacity:0;animation:fade 1s .85s var(--ease) forwards}
+.hero .pill{opacity:0;animation:fade .9s .05s var(--ease) forwards}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.art{position:relative;width:min(400px,84%);margin:46px 0 0 auto;opacity:0;animation:fade 1.2s .5s var(--ease) forwards}
+.art .spin{position:absolute;width:82%;aspect-ratio:1;left:-30%;bottom:-14%;background:var(--paper);opacity:.9;animation:spin 40s linear infinite}
+.art .spin2{position:absolute;width:30%;aspect-ratio:1;right:-9%;top:18%;background:var(--blush);animation:spin 26s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.frame{position:relative;padding:10px;background:var(--paper);border-radius:999px 999px 26px 26px;box-shadow:0 40px 70px -40px rgba(120,60,30,.55)}
+.frame img{width:100%;aspect-ratio:3/4.3;object-fit:cover;border-radius:999px 999px 18px 18px}
+.sun{position:absolute;width:28%;right:-4%;top:-9%;animation:bob 7s ease-in-out infinite}
+.sun img{width:100%;animation:spin 60s linear infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)}}
+.note{position:absolute;left:-10%;bottom:9%;padding:10px 16px;background:var(--paper);border-radius:14px;font:500 15px/1.2 var(--serif);color:var(--ink);box-shadow:0 18px 30px -18px rgba(120,60,30,.6);transform:rotate(-5deg);animation:bob 9s 1s ease-in-out infinite}
+.note small{display:block;font:400 11px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
+.ticker .track{display:inline-flex;align-items:center;gap:22px;padding:18px 0;animation:marquee 34s linear infinite}
+.ticker span{font:500 22px/1 var(--serif);color:var(--ink)}
+.ticker i{display:inline-block;width:20px;height:20px;flex:none;background:var(--blush)}
+.ticker i:nth-of-type(3n+2){background:var(--sage)}.ticker i:nth-of-type(3n){background:var(--yellow)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+.sec{padding:84px 0}
+.kick{margin:0 0 14px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.sec h2{margin:0 0 30px;font:500 38px/1.03 var(--serif);color:var(--ink);letter-spacing:-.025em;max-width:640px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* start here: polaroids that settle */
+.pols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 16px}
+.pol{display:block;text-decoration:none;color:var(--ink);background:#fff;padding:9px 9px 14px;border-radius:6px;box-shadow:0 18px 34px -22px rgba(90,50,20,.45);transition:transform .6s var(--ease),box-shadow .6s var(--ease),opacity 1s var(--ease)}
+.pol img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.pol b{display:block;margin:11px 4px 0;font:500 18px/1.2 var(--serif)}
+.pol span{display:block;margin:2px 4px 0;font-size:13px;color:var(--muted)}
+.pol.reveal{transform:translateY(40px) rotate(0)}
+.pol.in:nth-child(1){transform:rotate(-2.5deg)}.pol.in:nth-child(2){transform:rotate(2deg) translateY(10px)}
+.pol.in:nth-child(3){transform:rotate(1.5deg)}.pol.in:nth-child(4){transform:rotate(-2deg) translateY(8px)}
+.pol.in:hover{transform:rotate(0) translateY(-6px) scale(1.02);box-shadow:0 30px 50px -26px rgba(90,50,20,.55)}
+.pol:nth-child(2){transition-delay:.08s}.pol:nth-child(3){transition-delay:.16s}.pol:nth-child(4){transition-delay:.24s}
+
+/* made together: the triangle draws itself */
+.made{background:var(--paper)}
+.tri{position:relative;width:min(560px,100%);margin:10px auto 0}
+.tri svg{width:100%;height:auto;display:block;overflow:visible}
+.tri line{stroke:#d6c8b2;stroke-width:1.5;stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.6s var(--ease)}
+.tri.in line{stroke-dashoffset:0}
+.tri.in line:nth-of-type(2){transition-delay:.25s}.tri.in line:nth-of-type(3){transition-delay:.5s}
+.who{position:absolute;width:26%;text-align:center;transform:translate(-50%,-50%) scale(.6);opacity:0;transition:transform .9s var(--ease),opacity .9s var(--ease)}
+.tri.in .who{transform:translate(-50%,-50%) scale(1);opacity:1}
+.tri.in .who:nth-of-type(2){transition-delay:.35s}.tri.in .who:nth-of-type(3){transition-delay:.6s}
+.who .ph{position:relative;width:100%;aspect-ratio:1}
+.who .ph::before{content:"";position:absolute;inset:-7%;background:var(--c);-webkit-mask:var(--petal) center/100% 100%;mask:var(--petal) center/100% 100%;animation:spin 30s linear infinite}
+.who img{position:relative;width:100%}
+.who b{display:block;margin-top:6px;font:500 18px/1.1 var(--serif);color:var(--ink)}
+.who small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.mid{position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);text-align:center;font:500 22px/1.15 var(--serif);color:var(--ink);width:40%}
+.mid em{display:block;font:400 12px/1.3 var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.quote{margin:36px auto 0;max-width:620px;text-align:center;font:500 26px/1.3 var(--serif);color:var(--ink)}
+.buko{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;font-size:14px;color:var(--muted)}
+.buko img{width:40px;transition:transform .5s var(--ease)} .buko:hover img{transform:rotate(-12deg) scale(1.1)}
+
+/* stay close: a cream card on the sunset, like the emails */
+.end{padding:84px 0 40px}
+.card{background:var(--paper);border-radius:22px;padding:30px 22px;box-shadow:0 30px 60px -40px rgba(120,60,30,.6);max-width:640px}
+.card h2{margin:0 0 8px;font:500 34px/1.05 var(--serif);color:var(--ink)}
+.rows{margin-top:18px;border-top:1px solid var(--line)}
+.rows a{display:flex;justify-content:space-between;align-items:center;min-height:64px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.rows b{display:block;font:500 19px/1.3 var(--serif)} .rows small{display:block;font-size:14px;color:var(--muted)}
+.rows i{font-style:normal;transition:transform .4s var(--ease)} .rows a:hover i{transform:translateX(6px)}
+.sign{margin-top:44px;text-align:center;color:var(--ink)}
+.sign p{margin:0;font-size:17px}
+.sign b{display:block;margin-top:6px;font:500 30px/1.1 var(--serif)}
+.foot{text-align:center;font-size:13px;color:var(--ink);padding:26px 0 40px;opacity:.85}
+
+@media (min-width:900px){
+  .sun{right:-12%}
+  .wrap{width:min(1180px,calc(100% - 112px))}
+  .hero{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center;padding:40px 0 120px;min-height:min(calc(100vh - 72px),860px)}
+  .hero h1{font-size:108px}
+  .art{margin:0 0 0 auto}
+  .sec{padding:128px 0}.sec h2{font-size:60px}
+  .pols{grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+  .end{padding:128px 0 48px}.card{padding:44px 44px;margin:0 auto}
+  .quote{font-size:32px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero h1 .l > span,.hero .lead,.hero .act,.hero .pill,.art{transform:none;opacity:1}
+  .reveal{opacity:1;transform:none}.tri line{stroke-dashoffset:0}.who{opacity:1;transform:translate(-50%,-50%)}
+}
+</style>
+</head>
+<body>
+
+<div class="sunset">
+  <div class="wrap">
+    <header class="top">
+      <a class="mark" href="./">Maisy Leigh</a>
+      <nav><a href="favorites">Favorites</a><a href="#watch">Watch</a><a href="brands">Brands</a></nav>
+    </header>
+    <section class="hero">
+      <div>
+        <span class="pill">Hi, I’m Maisy</span>
+        <h1><span class="l"><span>Designer,</span></span><span class="l"><span>maker &amp;</span></span><span class="l"><span>storyteller of</span></span><span class="l"><span class="warm">cozy things.</span></span></h1>
+        <p class="lead">I make calm, warm spaces and share how on YouTube, so you can make one that feels like you.</p>
+        <div class="act"><a class="btn" href="favorites">See my favorite things <span>→</span></a></div>
+      </div>
+      <div class="art">
+        <span class="spin petal"></span>
+        <span class="spin2 petal"></span>
+        <div class="frame"><img src="img/cozyleigh-maisy-desk.jpg" alt="Maisy tending a plant at her studio desk"></div>
+        <div class="sun"><img src="img/cl-email-weather-sun.png" alt=""></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>Desk mats</span><i class="petal"></i><span>MagSafe charger stands</span><i class="petal"></i><span>Trays</span><i class="petal"></i><span>Solid wood</span><i class="petal"></i><span>Slow mornings</span><i class="petal"></i><span>Cozy desks</span><i class="petal"></i>
+  <span>Desk mats</span><i class="petal"></i><span>MagSafe charger stands</span><i class="petal"></i><span>Trays</span><i class="petal"></i><span>Solid wood</span><i class="petal"></i><span>Slow mornings</span><i class="petal"></i><span>Cozy desks</span><i class="petal"></i>
+</div></div>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kick reveal">Start here</p>
+    <h2 class="reveal">What are you making cozy?</h2>
+    <div class="pols">
+      <a class="pol reveal" href="favorites#desk"><img src="img/sq-desk.jpg" alt="A warm desk with a matcha desk mat"><b>My desk setup</b><span>Every piece, linked</span></a>
+      <a class="pol reveal" href="favorites#tips"><img src="img/cozyleigh-making-maisy-woodworking.jpg" alt="Maisy at the workbench" style="object-position:50% 28%"><b>Desk tips</b><span>Cozy and kind to your back</span></a>
+      <a class="pol reveal" href="favorites#rituals"><img src="img/sq-tea.jpg" alt="Kyusu teapot on a maple tray"><b>Slow rituals</b><span>Matcha, tea, calm mornings</span></a>
+      <a class="pol reveal" href="favorites#books"><img src="img/sq-reading.jpg" alt="Maisy reading in a cozy chair"><b>Books I love</b><span>The ones that shaped me</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec made">
+  <div class="wrap">
+    <p class="kick reveal" style="text-align:center">Made together</p>
+    <h2 class="reveal" style="text-align:center;margin-left:auto;margin-right:auto">A designer, an artist and an engineer.</h2>
+    <div class="tri reveal" id="tri">
+      <svg viewBox="0 0 560 500" aria-hidden="true">
+        <line x1="280" y1="95" x2="90" y2="400"/><line x1="90" y1="400" x2="470" y2="400"/><line x1="470" y1="400" x2="280" y2="95"/>
+      </svg>
+      <div class="who" style="left:50%;top:19%;--c:var(--blush)"><div class="ph"><img src="img/cl-email-fa-maisy.png" alt="Maisy"></div><b>Maisy</b><small>Design</small></div>
+      <div class="who" style="left:16%;top:80%;--c:var(--yellow)"><div class="ph"><img src="img/cl-email-fa-ashleigh.png" alt="Ashleigh"></div><b>Ashleigh</b><small>Art</small></div>
+      <div class="who" style="left:84%;top:80%;--c:var(--sage)"><div class="ph"><img src="img/cl-email-fa-tristan.png" alt="Tristan"></div><b>Tristan</b><small>Engineering</small></div>
+      <div class="mid">made together<em>since 2021</em></div>
+    </div>
+    <p class="quote reveal">“After all, the triangle is the strongest shape.”</p>
+    <p class="buko reveal"><img src="img/cl-email-fa-buko.png" alt="Buko">and Buko, chief box destruction officer</p>
+  </div>
+</section>
+
+<div class="sunset end">
+  <div class="wrap">
+    <div class="card reveal">
+      <p class="kick">Stay close</p>
+      <h2>Come hang out</h2>
+      <p>The cozy corners where I share the in-between moments.</p>
+      <div class="rows">
+        <a href="https://discord.gg/cozyleigh-community"><span><b>Our Discord</b><small>Desk photos, cozy chats, studio news</small></span><i>→</i></a>
+        <a href="https://www.instagram.com/maisyleigh/"><span><b>Instagram</b><small>Daily desk moments and stories</small></span><i>→</i></a>
+        <a href="https://www.youtube.com/@maisyleigh"><span><b>YouTube</b><small>Slow vlogs from home and the studio</small></span><i>→</i></a>
+      </div>
+    </div>
+    <div class="sign reveal"><p>With love, Maisy 💛</p><b>From our cozy home, to yours</b></div>
+    <p class="foot">YouTube · Instagram · TikTok · X · For brands and press · © Maisy Leigh</p>
+  </div>
+</div>
+
+<script>
+// reveal on scroll: one observer, each element animates once
+(() => {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: .18, rootMargin: '0px 0px -6% 0px' });
+  els.forEach(e => io.observe(e));
+})();
+// a slow drift on the hero art as you scroll (skipped for reduced motion)
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const art = document.querySelector('.art .frame'); let raf = 0;
+  addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => {
+    const y = Math.min(scrollY, 900); art.style.transform = `translateY(${y * -0.06}px)`;
+  }); }, { passive: true });
+})();
+</script>
+</body>
+</html>
