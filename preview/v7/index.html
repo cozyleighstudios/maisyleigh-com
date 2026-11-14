@@ -165,6 +165,20 @@ h1,h2,h3,p,blockquote,figure{margin:0}
   .rise > span,.lines .line > span{transform:none}.fade,.reveal{opacity:1;transform:none}
   .hero figure{clip-path:none}.hero figure img{transform:none}
 }
+/* Maisy, Nov 14: Larken Bold. Every Larken face on the page is 700 (italic 700 for the warm words);
+   bold runs wider, so the display sizes step down and the tracking eases off a little. */
+.display,.display em,.state,.state em,.name,.name em,.num,.item h3,.item h3 em,.pause blockquote,.pause blockquote em,
+.trio b,.trio b em,.card h2,.card h2 em,.rows b,.sign,.sign em{font-weight:700}
+.name{font-size:26vw;letter-spacing:-.045em}
+.num{letter-spacing:-.03em}
+.sec h2.display,.pause blockquote,.card h2{letter-spacing:-.025em}
+@media (min-width:900px){
+  .name{font-size:min(15.5vw,226px)}
+  .sec h2.display{font-size:var(--s6)}
+  .pause blockquote{font-size:var(--s7)}
+  .trio b{font-size:var(--s5)}
+  .sign{font-size:min(9vw,128px)}
+}
 </style>
 </head>
 <body>
