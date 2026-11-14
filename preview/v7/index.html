@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maisy Leigh</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<style>
+/* v7: type-led. The name is the hero. One modular scale (1.333) from 12px to 240px, Larken across its range
+   (300 for display, 400 for statements, italic for the warm words), Futura 500 caps for labels at full ink,
+   balanced wrapping, tight display leading, negative tracking that grows with size. The email sunset grain behind. */
+:root{
+  --ink:#2a2420; --text:#4d443c; --muted:#7c6e62;
+  --deep:#7a3a22;     /* italics on the sunset: a burnt sienna that reads, never cream on coral */
+  --terra:#b0613f;    /* italics on cream */
+  --cream:#FBF4E6; --paper:#FFFBF3; --line:rgba(42,36,32,.16);
+  --serif:"larken",Georgia,serif; --sans:"futura-pt","Futura","Helvetica Neue",Arial,sans-serif;
+  --slow:cubic-bezier(.16,.84,.24,1);
+  /* scale 1.333 */
+  --s0:12px;--s1:16px;--s2:21px;--s3:28px;--s4:38px;--s5:50px;--s6:67px;--s7:89px;--s8:118px;--s9:158px;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--text);font:400 18px/1.6 var(--sans);-webkit-font-smoothing:antialiased;font-kerning:normal;font-feature-settings:"kern","liga"}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,blockquote,figure{margin:0}
+.wrap{width:min(1280px,calc(100% - 40px));margin:0 auto}
+.label{font:500 var(--s0)/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.display{font-family:var(--serif);font-weight:300;color:var(--ink);text-wrap:balance}
+.display em{font-style:italic;font-weight:300}
+.state{font-family:var(--serif);font-weight:400;color:var(--ink);text-wrap:balance;letter-spacing:-.01em}
+.state em{font-style:italic}
+.body{max-width:34em;text-wrap:pretty}
+.link{display:inline-flex;align-items:center;gap:10px;min-height:44px;font:500 13px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:linear-gradient(currentColor,currentColor) 0 calc(100% - 10px)/100% 1px no-repeat;transition:background-size .9s var(--slow)}
+.link:hover{background-size:30% 1px}
+
+/* the email sunset, with its speckle grain */
+.sun{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,#C9B473 0%,#E2A06A 15%,#F6A27E 33%,#F5A17F 48%,#F4AC88 64%,#FACB9C 82%,#FED8AC 100%)}
+.sun::before{content:"";position:absolute;inset:-25%;z-index:-2;pointer-events:none;
+  background:radial-gradient(34% 30% at 22% 34%,rgba(254,216,172,.45),transparent 70%),radial-gradient(30% 28% at 78% 58%,rgba(244,124,104,.35),transparent 70%),radial-gradient(28% 22% at 58% 12%,rgba(201,180,115,.45),transparent 70%);
+  animation:drift 30s ease-in-out infinite alternate}
+.sun::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--noise);opacity:.6;mix-blend-mode:overlay}
+.sun .display em,.sun .state em{color:var(--deep)}
+.sun.low{background:linear-gradient(180deg,#F4AC88 0%,#F8BE93 45%,#FACB9C 75%,#FED8AC 100%)}
+.sun.mid{background:linear-gradient(180deg,#E9A472 0%,#F6A27E 35%,#F4AC88 70%,#FACB9C 100%)}
+@keyframes drift{from{transform:translate3d(-3%,-2%,0)}to{transform:translate3d(3%,2%,0) scale(1.05)}}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;height:72px}
+.top nav{display:flex;gap:18px}
+.top nav a{position:relative;padding:14px 0}
+
+/* hero: the name is the picture */
+.hero{padding:16px 0 0}
+.hero .row{display:grid;gap:28px}
+.hero .state{font-size:var(--s3);line-height:1.18;max-width:15em}
+.hero .acts{display:flex;gap:26px;flex-wrap:wrap;margin-top:18px}
+.hero figure{overflow:hidden;border-radius:14px;box-shadow:0 40px 80px -50px rgba(110,50,20,.6)}
+.hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%}
+.name{margin:30px 0 0;font:300 31vw/.8 var(--serif);letter-spacing:-.055em;color:var(--ink);white-space:nowrap}
+.name span{display:block}
+.name em{font-style:italic;font-weight:300;color:var(--deep);padding-left:.12em}
+.hero .base{display:flex;justify-content:space-between;align-items:center;padding:18px 0 22px;border-top:1px solid rgba(42,36,32,.22);margin-top:18px}
+
+/* sections */
+.sec{padding:96px 0}
+.num{display:block;font:100 var(--s8)/.8 var(--serif);color:var(--terra);letter-spacing:-.04em;margin-bottom:10px}
+.sec h2.display{font-size:var(--s5);line-height:1.02;letter-spacing:-.03em;max-width:12em}
+.sec h2.display em{color:var(--terra)}
+.lead{margin-top:18px}
+
+/* index */
+.index{display:grid;gap:40px;margin-top:48px}
+.item .ph{overflow:hidden;border-radius:12px}
+.item img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.6s var(--slow)}
+.item:hover img{transform:scale(1.035)}
+.item h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font:400 var(--s3)/1.1 var(--serif);color:var(--ink);letter-spacing:-.015em}
+.item h3 em{font-style:italic;color:var(--terra)}
+.item h3 small{font:500 var(--s0)/1 var(--sans);letter-spacing:.2em;color:var(--muted)}
+.item p{margin-top:6px;font-size:16px;color:var(--muted)}
+
+/* the pause: one line, set big, with a hanging quote */
+.pause{padding:120px 0 110px}
+.pause blockquote{position:relative;font:300 var(--s5)/1.02 var(--serif);letter-spacing:-.035em;color:var(--ink);max-width:11em;text-wrap:balance}
+.pause blockquote em{font-style:italic;color:var(--deep)}
+.pause blockquote::before{content:"“";position:absolute;left:-.42em;top:-.08em;color:var(--deep);opacity:.55}
+.pause .label{margin-top:28px;display:block}
+
+/* made together: three names as type */
+.trio{display:grid;margin-top:48px;border-top:1px solid var(--line)}
+.trio div{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+.trio b{font:300 var(--s5)/1 var(--serif);color:var(--ink);letter-spacing:-.03em}
+.trio b em{font-style:italic;color:var(--terra)}
+.together figure{margin-top:40px;overflow:hidden;border-radius:12px}
+.together figure img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.together .state{margin-top:36px;font-size:var(--s3);line-height:1.2;max-width:18em}
+.together .state em{color:var(--terra)}
+
+/* close */
+.close{padding:110px 0 0}
+.card{background:var(--paper);border-radius:20px;padding:34px 24px 14px;box-shadow:0 30px 70px -45px rgba(110,50,20,.6)}
+.card h2{font-size:var(--s5);line-height:1;letter-spacing:-.03em}
+.card h2 em{color:var(--terra)}
+.rows{margin-top:22px;border-top:1px solid var(--line)}
+.rows a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows a:last-child{border-bottom:0}
+.rows b{display:block;font:400 var(--s3)/1.1 var(--serif);color:var(--ink);letter-spacing:-.015em}
+.rows small{display:block;margin-top:4px;font-size:15px;color:var(--muted)}
+.rows i{font-style:normal;font-size:22px;color:var(--ink);transition:transform 1s var(--slow)}
+.rows a:hover i{transform:translateX(8px)}
+.sign{padding:90px 0 26px;font:300 13vw/.9 var(--serif);letter-spacing:-.045em;color:var(--ink)}
+.sign em{font-style:italic;color:var(--deep)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:18px 0 30px;border-top:1px solid rgba(42,36,32,.22)}
+
+/* motion: quiet and slow */
+.rise{display:block;overflow:hidden}
+.rise > span{display:block;transform:translateY(102%);animation:up 1.4s var(--slow) forwards}
+.name .rise:nth-child(2) > span{animation-delay:.12s}
+@keyframes up{to{transform:none}}
+.fade{opacity:0;animation:fade 1.4s var(--slow) forwards}
+.f1{animation-delay:.35s}.f2{animation-delay:.55s}.f3{animation-delay:.75s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero figure{clip-path:inset(100% 0 0 0);animation:unveil 1.8s .25s var(--slow) forwards}
+.hero figure img{transform:scale(1.1);animation:settle 2.6s .25s var(--slow) forwards}
+@keyframes unveil{to{clip-path:inset(0)}} @keyframes settle{to{transform:none}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1.4s var(--slow),transform 1.4s var(--slow)}
+.reveal.in{opacity:1;transform:none}
+.lines .line{display:block;overflow:hidden}
+.lines .line > span{display:block;transform:translateY(102%);transition:transform 1.3s var(--slow)}
+.lines.in .line > span{transform:none}
+.lines.in .line:nth-child(2) > span{transition-delay:.1s}.lines.in .line:nth-child(3) > span{transition-delay:.2s}
+.item.reveal:nth-child(2){transition-delay:.1s}.item.reveal:nth-child(3){transition-delay:.2s}.item.reveal:nth-child(4){transition-delay:.3s}
+
+@media (min-width:900px){
+  .wrap{width:min(1280px,calc(100% - 112px))}
+  .top{height:84px}.top nav{gap:34px}
+  .hero{padding:24px 0 0}
+  .hero .row{grid-template-columns:1fr minmax(300px,380px);gap:64px;align-items:end}
+  .hero .state{font-size:var(--s4);max-width:14em}
+  .name{margin-top:20px;font-size:min(17.5vw,250px);display:flex;align-items:baseline;gap:.08em}
+  .name span{display:inline-block}
+  .sec{padding:150px 0}
+  .head{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
+  .num{font-size:var(--s9);margin:0}
+  .sec h2.display{font-size:var(--s7)}
+  .index{grid-template-columns:repeat(4,1fr);gap:28px;margin-top:80px}
+  .index .item:nth-child(even){margin-top:90px}
+  .pause{padding:190px 0 170px}.pause blockquote{font-size:var(--s8);max-width:10.5em}
+  .trio{grid-template-columns:repeat(3,1fr);border-top:0}
+  .trio div{flex-direction:column;gap:10px;border-bottom:0;border-top:1px solid var(--line);padding-top:22px}
+  .trio b{font-size:var(--s6)}
+  .together .grid{display:grid;grid-template-columns:1.5fr 1fr;gap:72px;align-items:end;margin-top:72px}
+  .together figure{margin-top:0}
+  .together .state{font-size:var(--s4)}
+  .close{padding:170px 0 0}
+  .card{padding:56px 60px 20px;max-width:880px}
+  .card h2{font-size:var(--s6)}
+  .sign{padding:140px 0 34px;font-size:min(10.5vw,150px)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rise > span,.lines .line > span{transform:none}.fade,.reveal{opacity:1;transform:none}
+  .hero figure{clip-path:none}.hero figure img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="sun">
+  <div class="wrap">
+    <header class="top">
+      <span class="label">Designer · Maker · YouTuber</span>
+      <nav class="label"><a href="favorites">Favorites</a><a href="#watch">Watch</a><a href="brands">Brands</a></nav>
+    </header>
+
+    <section class="hero">
+      <div class="row">
+        <div>
+          <p class="state fade f1">I design calm, <em>warm</em> spaces, and the pieces that live in them.</p>
+          <p class="body fade f2" style="margin-top:14px;color:var(--ink)">I share it all on YouTube, slowly, so you can make a space that feels like you.</p>
+          <div class="acts fade f3"><a class="link" href="favorites">My favorite things →</a><a class="link" href="https://www.youtube.com/@maisyleigh">YouTube ↗</a></div>
+        </div>
+        <figure><img src="img/cozyleigh-maisy-desk.jpg" alt="Maisy tending a plant at her studio desk"></figure>
+      </div>
+      <h1 class="name"><span class="rise"><span>Maisy</span></span><span class="rise"><span><em>Leigh</em></span></span></h1>
+      <div class="base fade f3"><span class="label">Founder, Cozyleigh Studios</span><span class="label">Scroll ↓</span></div>
+    </section>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="num reveal">01</span>
+      <div>
+        <p class="label reveal">Start here</p>
+        <h2 class="display lines" style="margin-top:14px"><span class="line"><span>What are you</span></span><span class="line"><span>making <em>cozy?</em></span></span></h2>
+      </div>
+    </div>
+    <div class="index">
+      <a class="item reveal" href="favorites#desk"><div class="ph"><img src="img/sq-desk.jpg" alt="A warm desk with a matcha desk mat"></div><h3>My desk <small>I</small></h3><p>Every piece on it, linked.</p></a>
+      <a class="item reveal" href="favorites#tips"><div class="ph"><img src="img/cozyleigh-maisy-journaling.jpg" alt="Maisy journaling at a low table" style="object-position:50% 40%"></div><h3><span>Desk <em>tips</em></span> <small>II</small></h3><p>Calm, comfy, kind to your back.</p></a>
+      <a class="item reveal" href="favorites#rituals"><div class="ph"><img src="img/sq-tea.jpg" alt="Kyusu teapot on a maple tray"></div><h3><span>Slow <em>rituals</em></span> <small>III</small></h3><p>Matcha, tea, quiet mornings.</p></a>
+      <a class="item reveal" href="favorites#books"><div class="ph"><img src="img/sq-reading.jpg" alt="Maisy reading in a cozy chair"></div><h3><span>Books I <em>love</em></span> <small>IV</small></h3><p>The ones that shaped me.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="pause sun mid">
+  <div class="wrap">
+    <blockquote class="lines"><span class="line"><span>A clear space</span></span><span class="line"><span>leads to a</span></span><span class="line"><span><em>clear mind.</em></span></span></blockquote>
+    <span class="label reveal">From my most-saved post</span>
+  </div>
+</section>
+
+<section class="sec together">
+  <div class="wrap">
+    <div class="head">
+      <span class="num reveal">02</span>
+      <div>
+        <p class="label reveal">Made together</p>
+        <h2 class="display lines" style="margin-top:14px"><span class="line"><span>A designer, an artist</span></span><span class="line"><span><em>&amp;</em> an engineer.</span></span></h2>
+      </div>
+    </div>
+    <div class="trio reveal">
+      <div><b>Maisy</b><span class="label">Design</span></div>
+      <div><b><em>Ashleigh</em></b><span class="label">Art</span></div>
+      <div><b>Tristan</b><span class="label">Engineering</span></div>
+    </div>
+    <div class="grid">
+      <figure class="reveal"><img src="img/cozyleigh-family-studio.jpg" alt="Maisy, Tristan and Ashleigh in the Cozyleigh studio"></figure>
+      <div class="reveal">
+        <p class="state">“After all, the triangle is <em>the strongest shape.”</em></p>
+        <p class="body" style="margin-top:18px">My sister Ashleigh brings the color and art. Tristan builds every piece to last. I set how each one should feel.</p>
+        <p style="margin-top:16px"><a class="link" href="https://cozyleigh.studio/">Visit Cozyleigh Studios ↗</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close sun low">
+  <div class="wrap">
+    <div class="card reveal">
+      <p class="label">03 · Stay close</p>
+      <h2 class="display" style="margin-top:14px">Come <em>sit a while.</em></h2>
+      <div class="rows">
+        <a href="https://discord.gg/cozyleigh-community"><span><b>Our Discord</b><small>Desk photos, cozy chats, studio news</small></span><i>→</i></a>
+        <a href="https://www.instagram.com/maisyleigh/"><span><b>Instagram</b><small>Daily desk moments</small></span><i>→</i></a>
+        <a href="https://www.youtube.com/@maisyleigh"><span><b>YouTube</b><small>Slow vlogs from home and the studio</small></span><i>→</i></a>
+      </div>
+    </div>
+    <p class="sign lines"><span class="line"><span>From our cozy home,</span></span><span class="line"><span><em>to yours.</em></span></span></p>
+    <div class="foot"><span class="label">© Maisy Leigh</span><span class="label">For brands &amp; press</span></div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const els = document.querySelectorAll('.reveal,.lines');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: .2, rootMargin: '0px 0px -6% 0px' });
+  els.forEach(e => io.observe(e));
+})();
+</script>
+</body>
+</html>
