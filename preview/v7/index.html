@@ -180,6 +180,15 @@ h1,h2,h3,p,blockquote,figure{margin:0}
   .trio b{font-size:var(--s5)}
   .sign{font-size:min(9vw,128px)}
 }
+/* phones: the name leads, then the line and the photo */
+.hide-l{display:none}
+@media (max-width:899px){
+  .hide-s{display:none}.hide-l{display:inline}
+  .hero{display:flex;flex-direction:column}
+  .hero .name{order:0;margin:6px 0 0}
+  .hero .row{order:1;margin-top:28px}
+  .hero .base{order:2}
+}
 </style>
 </head>
 <body>
@@ -187,7 +196,7 @@ h1,h2,h3,p,blockquote,figure{margin:0}
 <div class="sun">
   <div class="wrap">
     <header class="top">
-      <span class="label">Designer · Maker · YouTuber</span>
+      <span class="label"><span class="hide-s">Designer · Maker · YouTuber</span><span class="hide-l">Hi, I’m Maisy</span></span>
       <nav class="label"><a href="favorites">Favorites</a><a href="#watch">Watch</a><a href="brands">Brands</a></nav>
     </header>
 
