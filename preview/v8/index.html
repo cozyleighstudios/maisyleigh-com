@@ -50,8 +50,8 @@ p,h1,h2,h3{margin:0}
 .pin{position:relative;height:280vh}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
 .stage .bg{position:absolute;inset:0;transform:scale(calc(1.12 - var(--p,0) * .1))}
-.stage .bg img{object-position:50% 60%}
-.stage .shade{position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,rgba(30,20,12,.35),transparent 30%,transparent 70%,rgba(30,20,12,.35))}
+.stage .bg img{object-position:50% 60%;filter:brightness(.66) saturate(.72) contrast(.94) blur(1.5px)}
+.stage .shade{position:absolute;inset:0;z-index:3;background:radial-gradient(60% 55% at 50% 50%,transparent 40%,rgba(30,18,10,.32) 100%),linear-gradient(180deg,rgba(30,20,12,.3),transparent 28%,transparent 72%,rgba(30,20,12,.35))}
 .card{position:absolute;z-index:5;left:50%;top:50%;width:min(62vw,360px);aspect-ratio:4/5;transform:translate(-50%,-50%) scale(calc(1 - var(--p,0) * .06));box-shadow:0 40px 90px -40px rgba(20,10,5,.7)}
 .card img{object-position:50% 30%}
 .word{position:absolute;z-index:6;color:#fffaf2;font:700 clamp(18px,2.1vw,30px)/1 var(--serif);letter-spacing:-.005em;opacity:0;filter:blur(6px);transform:translateY(8px);transition:opacity 1s var(--slow),filter 1s var(--slow),transform 1s var(--slow);text-shadow:0 2px 18px rgba(30,15,5,.35);white-space:nowrap}
@@ -70,7 +70,7 @@ p,h1,h2,h3{margin:0}
 
 /* interlude: one full-bleed photograph, her pieces by the stream */
 .interlude{height:78vh;min-height:420px}
-.interlude img{object-position:50% 55%}
+.interlude img{object-position:50% 78%}
 
 /* start here: two-up stories grid, captions centred under each photo */
 .grid{display:grid;gap:44px;padding:90px 20px;max-width:1240px;margin:0 auto}
