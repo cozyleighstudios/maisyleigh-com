@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Work with me · Maisy Leigh</title>
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="wm" href="./">Maisy Leigh</a>
+    <nav class="nav" aria-label="Main"><a href="work.html">Work</a><a href="favorites.html">Favorites</a><a href="inquire.html" aria-current="page">Work with me</a><a href="about.html">About</a></nav>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i></button>
+  </div>
+</header>
+<nav class="sheet" id="sheet" aria-label="Menu"><a href="work.html">Work</a><a href="favorites.html">Favorites</a><a href="inquire.html">Work with me</a><a href="about.html">About</a></nav>
+<main>
+
+<section class="wrap page-top">
+  <div class="split flip">
+    <figure class="clover"><img src="img/maisy-matcha.jpg" width="886" height="886" alt="Maisy Leigh holding a cup of matcha in her studio"></figure>
+    <div>
+      <h1 class="state">I make calm, warm videos with a few brands each year, and design products with makers I admire.</h1>
+      <div class="rows">
+        <details><summary>Short videos</summary><p>Reels and Shorts filmed at my desk or in the studio. Xbox reached 26.5M views. Philips Hue reached 1.5M views and 30K saves.</p></details>
+        <details><summary>YouTube videos</summary><p>A longer story on my channel, with your product as part of my day.</p></details>
+        <details><summary>Product design</summary><p>Pieces designed together, like the Zen Keycaps with Osume and the Zen Light with Gantri.</p></details>
+        <details><summary>Speaking and teaching</summary><p>I taught a session at Adobe MAX.</p></details>
+      </div>
+    </div>
+  </div>
+  <hr class="rule">
+  <div class="block">
+    <div>
+      <h2>Let's work together</h2>
+      <p>Tell me about your product, your timing and what you hope people feel. I'll write back.</p>
+      <a class="btn" href="mailto:hello@cozyleigh.studio?subject=Working%20together">Email me</a>
+      <p class="note">hello@cozyleigh.studio</p>
+    </div>
+    <dl class="stats">
+      <div><dt>YouTube subscribers</dt><dd>773K</dd></div>
+      <div><dt>Instagram followers</dt><dd>487K</dd></div>
+      <div><dt>Video views since 2020</dt><dd>196M</dd></div>
+      <div><dt>Instagram audience aged 25 to 44</dt><dd>80%</dd></div>
+    </dl>
+  </div>
+</section>
+<div class="end"></div>
+
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <a class="big" href="./">Maisy Leigh</a>
+    <ul><li><a href="work.html">Work</a></li><li><a href="favorites.html">Favorites</a></li><li><a href="inquire.html">Work with me</a></li><li><a href="about.html">About</a></li></ul>
+    <ul class="soc"><li><a href="https://www.youtube.com/@maisyleigh">YouTube</a></li><li><a href="https://www.instagram.com/maisyleigh/">Instagram</a></li><li><a href="https://cozyleigh.studio">Cozyleigh Studios</a></li></ul>
+    <small>© 2026 Maisy Leigh</small>
+  </div>
+</footer>
+<script>
+document.documentElement.classList.add('m');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var b=document.querySelector('.burger'),s=document.getElementById('sheet');
+b.addEventListener('click',function(){var o=s.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+</script>
+</body>
+</html>

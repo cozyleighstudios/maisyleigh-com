@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Work · Maisy Leigh</title>
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="wm" href="./">Maisy Leigh</a>
+    <nav class="nav" aria-label="Main"><a href="work.html" aria-current="page">Work</a><a href="favorites.html">Favorites</a><a href="inquire.html">Work with me</a><a href="about.html">About</a></nav>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i></button>
+  </div>
+</header>
+<nav class="sheet" id="sheet" aria-label="Menu"><a href="work.html">Work</a><a href="favorites.html">Favorites</a><a href="inquire.html">Work with me</a><a href="about.html">About</a></nav>
+<main>
+
+<section class="wrap page-top">
+  <h1 class="state" style="margin:0 0 clamp(28px,4.4vw,64px);max-width:17em;font-size:clamp(26px,2.9vw,42px);line-height:1.22">Videos I've filmed with brands, and products I've designed. Each one opens the real thing.</h1>
+  <div class="works">
+    <a class="work rv" href="https://www.youtube.com/watch?v=VQe19UXl4Xo"><div class="ph"><img src="img/work-xbox.jpg" width="900" height="1125" alt="Hands holding a camo Xbox wireless controller" loading="eager"></div><h3>Xbox</h3><p>Short video · 26.5M views</p></a>
+    <a class="work rv" href="https://www.instagram.com/reel/CjDTxBAgVT2/"><div class="ph"><img src="img/work-hue.jpg" width="720" height="900" alt="Maisy's desk lit pink by Philips Hue lights" loading="eager"></div><h3>Philips Hue</h3><p>Short video · 1.5M views, 30K saves</p></a>
+    <a class="work rv" href="https://www.youtube.com/watch?v=cgWjMvCY6xg"><div class="ph"><img src="img/work-keycaps.jpg" width="900" height="1125" alt="Hands typing on a keyboard with the Zen Keycaps" loading="eager"></div><h3>Zen Keycaps, with Osume</h3><p>Product design · 7.1M views on the build video</p></a>
+    <a class="work rv" href="https://cozyleigh.studio"><div class="ph"><img src="img/studio-trays.jpg" width="1000" height="1500" alt="Cozyleigh Zen trays in the studio" loading="lazy"></div><h3>Cozyleigh Studios</h3><p>Founder and creative director</p></a>
+    <a class="work rv" href="https://cozyleigh.studio/products/zen-light"><div class="ph"><img src="img/work-zenlight.jpg" width="640" height="800" alt="The Zen Light, a paper-shade table lamp, on a desk" loading="lazy"></div><h3>Zen Light, with Gantri</h3><p>Product design · made by Gantri</p></a>
+    <a class="work rv" href="https://www.youtube.com/watch?v=B2nWgSMnz0I"><div class="ph"><img src="img/work-adobe.jpg" width="900" height="1125" alt="A Chromebook Plus open on Adobe Express templates" loading="lazy"></div><h3>Adobe Express × Chromebook Plus</h3><p>Short video · 459K views</p></a>
+    <a class="work rv" href="https://www.youtube.com/watch?v=ZtdPfqdv600"><div class="ph"><img src="img/work-logitech.jpg" width="900" height="1125" alt="A pink Logitech G keyboard with a cloud wrist rest" loading="lazy"></div><h3>Logitech G</h3><p>Short video · 183K on Instagram, 127K on YouTube</p></a>
+    <a class="work rv" href="https://cozyleigh.studio"><div class="ph"><img src="img/studio-lavender.jpg" width="1000" height="1500" alt="A lavender Cozyleigh charger stand in the studio" loading="lazy"></div><h3>Charger Stand</h3><p>Product design · Cozyleigh Studios</p></a>
+    <a class="work rv" href="https://www.youtube.com/watch?v=nfJKsQNcZWo"><div class="ph"><img src="img/door-setup.jpg" width="1200" height="800" alt="Maisy's desk with a monitor, keyboard and desk shelf" loading="lazy"></div><h3>My cozy and zen desk</h3><p>YouTube · the full desk tour</p></a>
+  </div>
+  <div class="also rv">
+    <p class="label">Also worked with</p>
+    <p class="serif">Nintendo, Samsung, Slack, Ergonofis, Best Buy, Shopify, Notion, Google, Epic Games, Windows, T-Mobile, Flodesk and Superhuman. I also taught a session at Adobe MAX.</p>
+  </div>
+</section>
+<div class="end"></div>
+
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <a class="big" href="./">Maisy Leigh</a>
+    <ul><li><a href="work.html">Work</a></li><li><a href="favorites.html">Favorites</a></li><li><a href="inquire.html">Work with me</a></li><li><a href="about.html">About</a></li></ul>
+    <ul class="soc"><li><a href="https://www.youtube.com/@maisyleigh">YouTube</a></li><li><a href="https://www.instagram.com/maisyleigh/">Instagram</a></li><li><a href="https://cozyleigh.studio">Cozyleigh Studios</a></li></ul>
+    <small>© 2026 Maisy Leigh</small>
+  </div>
+</footer>
+<script>
+document.documentElement.classList.add('m');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var b=document.querySelector('.burger'),s=document.getElementById('sheet');
+b.addEventListener('click',function(){var o=s.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+</script>
+</body>
+</html>
