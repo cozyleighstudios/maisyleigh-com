@@ -17,7 +17,7 @@ img{display:block;max-width:100%;height:auto}
 .label{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--label)}
 .serif{font-family:larken,Georgia,serif;font-weight:700;color:var(--ink)}
 
-header .wrap{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);min-height:60px}
+header .bar{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);min-height:60px}
 .name{font-size:20px;letter-spacing:-.01em}
 nav{display:flex;gap:4px}
 nav a{display:flex;align-items:center;min-height:44px;padding:0 10px;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
@@ -32,10 +32,10 @@ nav a:last-child{padding-right:0}
 .also span{margin:0 8px;color:var(--label)}
 
 /* the one warm object: her photo, matted on the email sunset grain */
-.print{position:relative;padding:14px 14px 0;background:linear-gradient(180deg,#C9B473 0%,#E2A06A 15%,#F6A27E 33%,#F5A17F 48%,#F4AC88 64%,#FACB9C 82%,#FED8AC 100%);isolation:isolate}
-.print::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.6;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.4 -.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.print{position:relative;padding:18px 18px 0;background:linear-gradient(180deg,#E2A06A 0%,#F6A27E 28%,#F5A17F 48%,#F4AC88 64%,#FACB9C 82%,#FED8AC 100%);isolation:isolate}
+.print::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.85;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.4 -.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .print img{width:100%}
-.print .line{padding:16px 2px 18px;font-size:21px;line-height:1.2;color:var(--deep);font-style:italic}
+.print .line{padding:18px 2px 22px;font-size:21px;line-height:1.2;color:var(--deep);font-style:italic}
 .print .line span{display:inline-block;opacity:0;transform:translateY(6px);animation:rise .45s ease-out both}
 @keyframes rise{to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.print .line span{animation:none;opacity:1;transform:none}}
@@ -51,7 +51,7 @@ nav a:last-child{padding-right:0}
 
 @media (min-width:768px){
   .wrap{padding:0 40px}
-  .hello{grid-template-columns:1fr 1fr;gap:48px;align-items:end;padding-top:48px;padding-bottom:56px}
+  .hello{grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-top:48px;padding-bottom:56px}
   .hello h1{font-size:44px}
   .row{grid-template-columns:56px 240px 1fr 24px;padding:18px 0}
   .row p{grid-column:3;margin:0}
@@ -69,10 +69,10 @@ nav a:last-child{padding-right:0}
 </style>
 </head>
 <body>
-<header><div class="wrap">
+<header><div class="wrap"><div class="bar">
   <a class="name serif" href="#">Maisy Leigh</a>
   <nav><a href="#">Favorites</a><a href="#">Brands</a></nav>
-</div></header>
+</div></div></header>
 
 <main>
 <section class="wrap hello">
