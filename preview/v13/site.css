@@ -14,8 +14,8 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--text);font:400 var(--fs-body)/1.5 var(--sans);-webkit-font-smoothing:antialiased}
 img{display:block;width:100%;height:auto}
 a{color:inherit}
-h1,h2,h3,p,ul,dl,dd,figure{margin:0;padding:0}
-ul{list-style:none}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0;padding:0}
+ul,ol{list-style:none}
 .wrap{padding-inline:var(--pad)}
 .serif{font-family:var(--serif);font-weight:500;color:var(--ink);letter-spacing:-.012em}
 .more{display:inline-flex;align-items:center;min-height:44px;font:500 13px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
@@ -94,6 +94,7 @@ html.m .rv.in{opacity:1;transform:none}
 .rows details p{padding:0 0 20px;max-width:30em;font-size:16px;line-height:1.55}
 .rows .row span:last-child{font-size:14px;color:var(--muted);white-space:nowrap}
 .rows .row:hover span:first-child{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.block .rows{margin-top:0}
 .clover img{aspect-ratio:1/1;object-fit:cover}
 .rule{border:0;border-top:1px solid var(--line);margin:clamp(48px,7vw,104px) 0 0}
 .block{padding-top:clamp(32px,4.4vw,64px);display:grid;gap:clamp(24px,5vw,72px)}
