@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Maisy Leigh</title>
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<style>
+/* A portfolio page built with the Cozyleigh Showcase theme's tokens and parts
+   (cozyleigh.css, cozyleigh-kit.css, cozyleigh-editorial.css). */
+:root{
+  --cl-serif:"larken",Georgia,"Times New Roman",serif; --cl-sans:"futura-pt","Futura","Helvetica Neue",Arial,sans-serif;
+  --cl-ink:#3b3731; --cl-text:#5a5248; --cl-muted:#6f655b; --cl-paper:#FFFDF8; --cl-sand:#f6f1ea; --cl-line:#e6e5e4;
+  --cl-fs-display:clamp(36px,5.2vw,72px); --cl-fs-h2:clamp(28px,2.6vw,36px); --cl-fs-lede:clamp(18px,1.6vw,22px);
+  --cl-fs-body:16px; --cl-measure:36em; --cl-r-s:10px; --cl-r-pill:999px;
+  --cl-space-section:clamp(64px,8vw,120px); --cl-pad:20px; --cl-header-h:60px;
+  --cl-soft:cubic-bezier(.22,.61,.36,1);
+}
+@media (min-width:1024px){:root{--cl-fs-body:18px;--cl-header-h:84px;--cl-pad:32px}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--cl-header-h) + 16px)}
+body{margin:0;background:var(--cl-paper);color:var(--cl-text);font:400 var(--cl-fs-body)/1.6 var(--cl-sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,dl,dd,ul{margin:0;padding:0}
+ul{list-style:none}
+.cl-wrap{max-width:calc(1200px + var(--cl-pad)*2);margin-inline:auto;padding-inline:var(--cl-pad)}
+.cl-eyebrow{font:500 12px/1.4 var(--cl-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--cl-muted)}
+.cl-h2{font:500 var(--cl-fs-h2)/1.15 var(--cl-serif);letter-spacing:-.005em;color:var(--cl-ink);text-wrap:balance}
+.cl-lede{font:400 var(--cl-fs-lede)/1.45 var(--cl-serif);color:var(--cl-ink);max-width:var(--cl-measure);text-wrap:pretty}
+.cl-link{font:500 16px/1.4 var(--cl-sans);color:var(--cl-ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;display:inline-flex;align-items:center;min-height:44px}
+.cl-link:hover{text-decoration-thickness:2px}
+.cl-btn{display:inline-flex;align-items:center;justify-content:center;border-radius:var(--cl-r-pill);font:500 16px/1.2 var(--cl-sans);text-decoration:none;transition:background .25s var(--cl-soft),color .25s var(--cl-soft)}
+.cl-btn-primary{min-height:52px;padding:15px 28px;background:var(--cl-ink);color:var(--cl-paper)}
+.cl-btn-primary:hover{background:#26231f}
+.cl-section{padding-block:var(--cl-space-section)}
+.cl-band{background:var(--cl-sand)}
+html.cl-m .cl-rv{opacity:0;transform:translateY(14px);transition:opacity .5s var(--cl-soft),transform .5s var(--cl-soft)}
+html.cl-m .cl-rv.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.cl-m .cl-rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* Header */
+.hd{position:sticky;top:0;z-index:20;background:var(--cl-paper);border-bottom:1px solid var(--cl-line)}
+.hd-in{height:var(--cl-header-h);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.wm{font:500 22px/1 var(--cl-serif);letter-spacing:-.01em;text-decoration:none;background:linear-gradient(90deg,#F59178 0%,#F5A17F 30%,#E2A06A 62%,#AEB263 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-block:12px}
+@media (min-width:1024px){.wm{font-size:26px}}
+.nav{display:none;gap:36px}
+.nav a{font:400 18px/1 var(--cl-sans);color:var(--cl-ink);text-decoration:none;padding-block:14px}
+.nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.hd-cta{display:none}
+.menu-btn{font:500 16px/1 var(--cl-sans);color:var(--cl-ink);background:none;border:0;padding:14px 0;min-height:44px;cursor:pointer}
+.menu{display:none;border-top:1px solid var(--cl-line);padding-block:8px 16px}
+.menu.is-open{display:block}
+.menu a{display:block;font:400 20px/1 var(--cl-serif);color:var(--cl-ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--cl-line)}
+.menu li:last-child a{border-bottom:0}
+@media (min-width:1024px){.nav{display:flex}.hd-cta{display:inline-flex;min-height:44px;padding:11px 22px}.menu-btn,.menu,.menu.is-open{display:none}}
+
+/* Intro */
+.intro{padding-block:clamp(40px,7vw,104px) clamp(40px,6vw,88px)}
+.intro-grid{display:grid;gap:32px}
+.intro h1{font:500 var(--cl-fs-display)/1.04 var(--cl-serif);letter-spacing:-.015em;color:var(--cl-ink);margin-top:20px;text-wrap:balance}
+.intro .cl-lede{margin-top:24px}
+.intro-act{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;margin-top:32px}
+.intro-pic img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.intro-pic figcaption{font:400 14px/1.4 var(--cl-sans);color:var(--cl-muted);margin-top:10px}
+@media (min-width:750px){
+  .intro-grid{grid-template-columns:minmax(0,1fr) clamp(220px,26vw,340px);gap:clamp(40px,6vw,96px);align-items:end}
+  .intro-pic img{aspect-ratio:4/5}
+}
+.facts{border-block:1px solid var(--cl-line)}
+.facts ul{display:grid;grid-template-columns:1fr}
+.facts li{padding:18px 0;border-bottom:1px solid var(--cl-line);display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.facts li:last-child{border-bottom:0}
+.facts b{font:500 26px/1 var(--cl-serif);color:var(--cl-ink);letter-spacing:-.01em}
+.facts span{font:500 12px/1.4 var(--cl-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--cl-muted);text-align:right}
+@media (min-width:750px){
+  .facts ul{grid-template-columns:repeat(3,1fr)}
+  .facts li{border-bottom:0;padding:26px 0;display:block}
+  .facts li+li{border-left:1px solid var(--cl-line);padding-left:32px}
+  .facts b{display:block;font-size:34px;margin-bottom:10px}
+  .facts span{text-align:left}
+}
+
+/* Work */
+.work-head{display:flex;align-items:end;justify-content:space-between;gap:24px;padding-bottom:20px;border-bottom:1px solid var(--cl-line);margin-bottom:clamp(28px,4vw,56px)}
+.work-head .cl-h2{margin-top:10px}
+.work-head .yrs{font:500 12px/1.4 var(--cl-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--cl-muted);white-space:nowrap;padding-bottom:6px}
+.feat{display:grid;gap:24px;text-decoration:none}
+.feat-pic{overflow:hidden;border-radius:var(--cl-r-s)}
+.feat-pic img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .8s var(--cl-soft)}
+.feat:hover .feat-pic img{transform:scale(1.02)}
+.num{font:500 12px/1.4 var(--cl-sans);letter-spacing:.12em;color:var(--cl-muted)}
+.feat h3{font:500 clamp(30px,3.4vw,48px)/1.08 var(--cl-serif);letter-spacing:-.01em;color:var(--cl-ink);margin-top:10px}
+.feat p{margin-top:16px;max-width:30em}
+.spec{margin-top:24px;border-top:1px solid var(--cl-line)}
+.spec div{display:grid;grid-template-columns:88px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--cl-line);font-size:16px;line-height:1.45}
+.spec dt{font:500 12px/1.9 var(--cl-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--cl-muted)}
+.spec dd{color:var(--cl-ink)}
+.feat .go{margin-top:14px}
+@media (min-width:750px){.feat{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:center}}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 14px;margin-top:clamp(48px,6vw,88px)}
+@media (min-width:750px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 28px}}
+.pj{display:block;text-decoration:none}
+.pj-pic{overflow:hidden;border-radius:var(--cl-r-s);background:var(--cl-sand)}
+.pj-pic img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s var(--cl-soft)}
+.pj:hover .pj-pic img{transform:scale(1.03)}
+.pj .num{display:block;margin-top:14px}
+.pj h3{font:500 20px/1.2 var(--cl-serif);color:var(--cl-ink);margin-top:4px}
+.pj p{font-size:15px;line-height:1.45;margin-top:4px}
+.pj .res{font:500 15px/1.4 var(--cl-sans);color:var(--cl-ink);margin-top:8px}
+@media (min-width:1024px){.pj h3{font-size:24px}.pj p,.pj .res{font-size:16px}}
+.also{margin-top:clamp(48px,6vw,88px);padding-top:28px;border-top:1px solid var(--cl-line);display:grid;gap:12px}
+.also .cl-lede{max-width:44em}
+@media (min-width:750px){.also{grid-template-columns:200px 1fr;gap:32px}}
+
+/* About */
+.about{display:grid;gap:32px}
+.about-pic img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.about-pic figcaption{font:400 14px/1.4 var(--cl-sans);color:var(--cl-muted);margin-top:10px}
+.about .cl-h2{margin-top:12px}
+.about .cl-lede{margin-top:20px}
+.about p.body{margin-top:16px;max-width:var(--cl-measure)}
+.about .cl-link{margin-top:12px}
+@media (min-width:750px){.about{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:center}}
+
+/* From my desk */
+.sec-head{text-align:center;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head .cl-h2{margin-top:10px}
+.sec-head p{margin:10px auto 0;max-width:30em}
+.doors{display:grid;gap:28px}
+@media (min-width:750px){.doors{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}}
+.door{display:block;text-decoration:none}
+.door-pic{overflow:hidden;border-radius:var(--cl-r-s)}
+.door-pic img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .8s var(--cl-soft)}
+.door:hover .door-pic img{transform:scale(1.03)}
+.door h3{font:400 24px/1.2 var(--cl-serif);color:var(--cl-ink);margin-top:14px}
+.door p{font-size:15px;line-height:1.45;margin-top:4px}
+
+/* Contact */
+.contact{text-align:center}
+.contact h2{font:500 var(--cl-fs-display)/1.04 var(--cl-serif);letter-spacing:-.015em;color:var(--cl-ink);margin-top:16px;text-wrap:balance}
+.contact p{margin:20px auto 0;max-width:28em}
+.contact .cl-btn{margin-top:32px}
+.contact .mail{display:block;margin-top:14px;font-size:15px;color:var(--cl-muted)}
+
+/* Footer */
+.ft{border-top:1px solid var(--cl-line);padding-block:28px 40px}
+.ft-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 32px}
+.ft ul{display:flex;flex-wrap:wrap;gap:0 24px}
+.ft a{font:400 15px/1 var(--cl-sans);color:var(--cl-ink);text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.ft a:hover{text-decoration:underline;text-underline-offset:4px}
+.ft small{font-size:14px;color:var(--cl-muted)}
+</style>
+</head>
+<body>
+
+<header class="hd">
+  <div class="cl-wrap">
+    <div class="hd-in">
+      <a class="wm" href="#top">Maisy Leigh</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#desk">From my desk</a>
+      </nav>
+      <a class="cl-btn cl-btn-primary hd-cta" href="#contact">Work with me</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#desk">From my desk</a></li>
+      <li><a href="#contact">Work with me</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="intro">
+  <div class="cl-wrap intro-grid">
+    <div>
+      <p class="cl-eyebrow">Designer · YouTuber · Founder of Cozyleigh Studios</p>
+      <h1>I'm Maisy Leigh. I design cozy desks, and the pieces that go on them.</h1>
+      <p class="cl-lede">I film calm, warm videos about the spaces we work in, and I run a small studio that makes desk pieces by hand.</p>
+      <div class="intro-act">
+        <a class="cl-btn cl-btn-primary" href="#work">See my work</a>
+        <a class="cl-link" href="#contact">Work with me →</a>
+      </div>
+    </div>
+    <figure class="intro-pic" style="margin:0">
+      <img src="img/maisy-matcha.jpg" width="886" height="886" alt="Maisy Leigh holding a cup of matcha in her studio" fetchpriority="high">
+      <figcaption>At the studio, 2024</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="cl-wrap">
+  <div class="facts">
+    <ul>
+      <li><b>773K</b><span>YouTube subscribers</span></li>
+      <li><b>487K</b><span>Instagram followers</span></li>
+      <li><b>196M</b><span>Video views since 2020</span></li>
+    </ul>
+  </div>
+</div>
+
+<section class="cl-section" id="work">
+  <div class="cl-wrap">
+    <div class="work-head cl-rv">
+      <div>
+        <p class="cl-eyebrow">Selected work</p>
+        <h2 class="cl-h2">Things I've designed and filmed</h2>
+      </div>
+      <p class="yrs">2020 to 2026</p>
+    </div>
+
+    <a class="feat cl-rv" href="https://cozyleigh.studio">
+      <div class="feat-pic"><img src="img/work-cozyleigh.jpg" width="1800" height="1200" alt="Three Cozyleigh charger stands in rust, ginkgo and moss on a maple desk shelf by a stream" loading="lazy"></div>
+      <div>
+        <span class="num">01</span>
+        <h3>Cozyleigh Studios</h3>
+        <p>The studio I started and run with my family. We design charger stands, trays and desk shelves, and make each one by hand.</p>
+        <dl class="spec">
+          <div><dt>Role</dt><dd>Founder and creative director</dd></div>
+          <div><dt>Work</dt><dd>Product design, brand, photography</dd></div>
+          <div><dt>Made</dt><dd>By hand, in our own studio</dd></div>
+        </dl>
+        <span class="cl-link go">Visit cozyleigh.studio →</span>
+      </div>
+    </a>
+
+    <div class="grid">
+      <a class="pj cl-rv" href="https://www.youtube.com/watch?v=VQe19UXl4Xo">
+        <div class="pj-pic"><img src="img/work-xbox.jpg" width="900" height="1125" alt="Hands holding a camo Xbox wireless controller" loading="lazy"></div>
+        <span class="num">02 · Short video</span>
+        <h3>Xbox</h3>
+        <p>Cozy game nights with matching controllers</p>
+        <p class="res">26.5M views</p>
+      </a>
+      <a class="pj cl-rv" href="https://www.instagram.com/reel/CjDTxBAgVT2/">
+        <div class="pj-pic"><img src="img/work-hue.jpg" width="720" height="900" alt="Maisy's desk lit pink by Philips Hue lights" loading="lazy"></div>
+        <span class="num">03 · Short video</span>
+        <h3>Philips Hue</h3>
+        <p>The coziest desk lighting</p>
+        <p class="res">1.5M views · 30K saves</p>
+      </a>
+      <a class="pj cl-rv" href="https://www.youtube.com/watch?v=cgWjMvCY6xg">
+        <div class="pj-pic"><img src="img/work-keycaps.jpg" width="900" height="1125" alt="Hands typing on a keyboard with the Zen Keycaps" loading="lazy"></div>
+        <span class="num">04 · Product design</span>
+        <h3>Zen Keycaps, with Osume</h3>
+        <p>A keycap set we designed together</p>
+        <p class="res">7.1M views on the build video</p>
+      </a>
+      <a class="pj cl-rv" href="https://cozyleigh.studio/products/zen-light">
+        <div class="pj-pic"><img src="img/work-zenlight.jpg" width="640" height="800" alt="The Zen Light, a paper-shade table lamp, on a desk" loading="lazy"></div>
+        <span class="num">05 · Product design</span>
+        <h3>Zen Light, with Gantri</h3>
+        <p>Our table lamp, made by Gantri</p>
+        <p class="res">Sold by Gantri and in our shop</p>
+      </a>
+      <a class="pj cl-rv" href="https://www.youtube.com/watch?v=B2nWgSMnz0I">
+        <div class="pj-pic"><img src="img/work-adobe.jpg" width="900" height="1125" alt="A Chromebook Plus open on Adobe Express templates" loading="lazy"></div>
+        <span class="num">06 · Short video</span>
+        <h3>Adobe Express × Chromebook Plus</h3>
+        <p>The ultimate creator combo</p>
+        <p class="res">459K views</p>
+      </a>
+      <a class="pj cl-rv" href="https://www.youtube.com/watch?v=ZtdPfqdv600">
+        <div class="pj-pic"><img src="img/work-logitech.jpg" width="900" height="1125" alt="A pink Logitech G keyboard with a cloud wrist rest on a green desk mat" loading="lazy"></div>
+        <span class="num">07 · Short video</span>
+        <h3>Logitech G</h3>
+        <p>My Aurora gaming setup</p>
+        <p class="res">183K on Instagram · 127K on YouTube</p>
+      </a>
+    </div>
+
+    <div class="also cl-rv">
+      <p class="cl-eyebrow">Also worked with</p>
+      <p class="cl-lede">Nintendo, Samsung, Slack, Ergonofis, Best Buy, Shopify, Notion, Google, Epic Games, Windows, T-Mobile, Flodesk and Superhuman. I also taught a session at Adobe MAX.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cl-section cl-band" id="about">
+  <div class="cl-wrap about">
+    <figure class="about-pic cl-rv" style="margin:0">
+      <img src="img/maisy-making.jpg" width="1000" height="1250" alt="Maisy Leigh working on a wood piece in the workshop" loading="lazy">
+      <figcaption>In the workshop</figcaption>
+    </figure>
+    <div class="cl-rv">
+      <p class="cl-eyebrow">About</p>
+      <h2 class="cl-h2">I wanted tech to feel warm.</h2>
+      <p class="cl-lede">When I started filming my desk in 2020, most tech videos were black, white and minimal. I made mine bright and cozy.</p>
+      <p class="body">In 2024 I left my job to design and make the pieces myself. Today I run Cozyleigh Studios with my family: a designer, an artist and an engineer. I still film my desk, and now I film the studio too.</p>
+      <a class="cl-link" href="https://canvasrebel.com/meet-maisy-leigh/">Read my CanvasRebel interview →</a>
+    </div>
+  </div>
+</section>
+
+<section class="cl-section" id="desk">
+  <div class="cl-wrap">
+    <div class="sec-head cl-rv">
+      <p class="cl-eyebrow">From my desk</p>
+      <h2 class="cl-h2">Here for the desk setup?</h2>
+      <p>Everything on my desk, the things I use every day, and what I've learned about making a space cozy.</p>
+    </div>
+    <div class="doors">
+      <a class="door cl-rv" href="https://shopmy.us/shop/maisyleigh?Section_id=2956985">
+        <div class="door-pic"><img src="img/door-setup.jpg" width="1200" height="800" alt="Maisy's desk with a monitor, keyboard and desk shelf" loading="lazy"></div>
+        <h3>My desk setup</h3>
+        <p>Every piece on my desk, with links</p>
+      </a>
+      <a class="door cl-rv" href="https://shopmy.us/shop/maisyleigh?Section_id=4630788">
+        <div class="door-pic"><img src="img/door-favorites.jpg" width="1200" height="800" alt="A tea tray and small things on a desk" loading="lazy"></div>
+        <h3>Favorites</h3>
+        <p>My matcha and tea rituals</p>
+      </a>
+      <a class="door cl-rv" href="https://www.youtube.com/watch?v=c2BhLw1Oo8Y">
+        <div class="door-pic"><img src="img/door-tips.jpg" width="1200" height="800" alt="A calm corner of the desk in soft light" loading="lazy"></div>
+        <h3>Desk tips</h3>
+        <p>How to make your desk cozy</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cl-section cl-band contact" id="contact">
+  <div class="cl-wrap cl-rv">
+    <p class="cl-eyebrow">Work with me</p>
+    <h2>Have a project in mind?</h2>
+    <p>I take on a few brand partnerships and design projects each year. Tell me about yours and I'll write back.</p>
+    <a class="cl-btn cl-btn-primary" href="mailto:hello@cozyleigh.studio?subject=Working%20together">Email me</a>
+    <span class="mail">hello@cozyleigh.studio</span>
+  </div>
+</section>
+
+</main>
+
+<footer class="ft">
+  <div class="cl-wrap ft-in">
+    <ul>
+      <li><a href="https://www.youtube.com/@maisyleigh">YouTube</a></li>
+      <li><a href="https://www.instagram.com/maisyleigh/">Instagram</a></li>
+      <li><a href="https://cozyleigh.studio">Cozyleigh Studios</a></li>
+    </ul>
+    <small>© 2026 Maisy Leigh</small>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('cl-m');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.cl-rv').forEach(function(el){io.observe(el)});
+var mb=document.querySelector('.menu-btn'),mn=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=mn.classList.toggle('is-open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
+mn.addEventListener('click',function(e){if(e.target.tagName==='A'){mn.classList.remove('is-open');mb.setAttribute('aria-expanded',false);mb.textContent='Menu'}});
+</script>
+</body>
+</html>
