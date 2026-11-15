@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Wood Collection · Maisy Leigh</title>
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="wm" href="./">Maisy Leigh</a>
+    <nav class="nav" aria-label="Main"><a href="work.html" aria-current="page">Work</a><a href="desk.html">On my desk</a><a href="inquire.html">Work with me</a><a href="about.html">About</a></nav>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i></button>
+  </div>
+</header>
+<nav class="sheet" id="sheet" aria-label="Menu"><a href="work.html">Work</a><a href="desk.html">On my desk</a><a href="inquire.html">Work with me</a><a href="about.html">About</a></nav>
+<main>
+
+<section class="wrap page-top">
+  <p class="label"><a href="work.html" style="text-decoration:none">&larr; Work</a></p>
+  <h1 class="state" style="margin-top:14px">The Wood Collection</h1>
+  <p class="lede">A desk shelf, a tray and a book stand in maple, white oak and walnut.</p>
+  <dl class="facts"><div><dt>Year</dt><dd>2026</dd></div><div><dt>My part</dt><dd>Design, proportions, photos</dd></div><div><dt>Made with</dt><dd>Tristan, who cuts and joins every piece by hand.</dd></div></dl>
+  <div class="banner"><img src="img/wood-set.jpg" width="1280" height="1600" alt="A wooden Zen Tray holding a book stand with three books, a small plant and a green Fa tray" style="aspect-ratio:4/5"></div>
+  <div class="steps">
+    <div class="step rv"><span class="eyebrow">The idea</span><div><blockquote>The pieces on my desk needed somewhere to sit.</blockquote><p style="margin-top:14px">A tray for the small things, a stand for the books I keep close, a shelf to lift the screen.</p></div></div>
+    <div class="step rv"><span class="eyebrow">Three woods</span><div><img class="photo tall" src="img/wood-trays.jpg" width="1000" height="1500" alt="Three wooden Zen Trays in maple, white oak and walnut on a desk" loading="lazy"><dl class="facts"><div><dt>Maple</dt><dd>The lightest.</dd></div><div><dt>White oak</dt><dd>Warm, with more grain.</dd></div><div><dt>Walnut</dt><dd>The darkest.</dd></div></dl></div></div>
+    <div class="step rv"><span class="eyebrow">In the workshop</span><div><img class="photo" src="img/wood-team.jpg" width="1600" height="1067" alt="The four of us around the studio table, sanding and oiling wood pieces" loading="lazy"><p style="margin-top:14px">Every piece is cut, joined, sanded and oiled in our studio. Batch days are all four of us at one table.</p></div></div>
+    <div class="step rv"><span class="eyebrow">The piece</span><div><div class="pairph"><img class="photo tall" src="img/wood-stands.jpg" width="1280" height="1600" alt="Two wooden book stands, one maple and one oak" loading="lazy"><img class="photo tall" src="img/wood-matcha.jpg" width="1280" height="1600" alt="A walnut Zen Tray holding a matcha bowl, a whisk and a cup" loading="lazy"></div><p style="margin-top:14px">The book stand holds a few books upright. The tray comes in two sizes.</p></div></div>
+    <div class="step rv"><span class="eyebrow">In use</span><div><img class="photo tall" src="img/wood-hands.jpg" width="1280" height="1600" alt="Two hands carrying a wooden Zen Tray with a teapot and three cups" loading="lazy"><p style="margin-top:14px">For tea, for books, or for the small things on a desk.</p><a class="more" href="https://cozyleigh.studio">See it at Cozyleigh Studios</a></div></div>
+  </div>
+</section>
+<div class="end"></div>
+
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <a class="big" href="./">Maisy Leigh</a>
+    <ul><li><a href="work.html">Work</a></li><li><a href="desk.html">On my desk</a></li><li><a href="inquire.html">Work with me</a></li><li><a href="about.html">About</a></li></ul>
+    <ul class="soc"><li><a href="https://www.youtube.com/@maisyleigh">YouTube</a></li><li><a href="https://www.instagram.com/maisyleigh/">Instagram</a></li><li><a href="https://www.tiktok.com/@maisyleighs">TikTok</a></li><li><a href="https://cozyleigh.studio">Cozyleigh Studios</a></li></ul>
+    <small>&copy; 2026 Maisy Leigh</small>
+  </div>
+</footer>
+<script>
+document.documentElement.classList.add('m');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var b=document.querySelector('.burger'),s=document.getElementById('sheet');
+b.addEventListener('click',function(){var o=s.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+</script>
+</body>
+</html>
