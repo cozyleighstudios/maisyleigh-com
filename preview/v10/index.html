@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Maisy Leigh</title>
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<style>
+:root{--paper:#F7F2EA;--ink:#2f2622;--text:#4b423b;--label:#6c625a;--rule:#d9cfc2;--deep:#4a2e1f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--text);font-family:futura-pt,"Futura",sans-serif;font-size:18px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.label{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--label)}
+.serif{font-family:larken,Georgia,serif;font-weight:700;color:var(--ink)}
+
+header .wrap{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);min-height:60px}
+.name{font-size:20px;letter-spacing:-.01em}
+nav{display:flex;gap:4px}
+nav a{display:flex;align-items:center;min-height:44px;padding:0 10px;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+nav a:last-child{padding-right:0}
+
+.hello{display:grid;gap:32px;padding-top:28px;padding-bottom:40px}
+.hello h1{font-size:34px;line-height:1.08;letter-spacing:-.015em;margin:14px 0 14px}
+.hello p.lede{max-width:30em}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;margin-top:22px;background:var(--ink);color:var(--paper);font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;border-radius:2px}
+.also{margin-top:14px;font-size:16px}
+.also a{display:inline-block;padding:6px 0;border-bottom:1px solid var(--label);color:var(--ink)}
+.also span{margin:0 8px;color:var(--label)}
+
+/* the one warm object: her photo, matted on the email sunset grain */
+.print{position:relative;padding:14px 14px 0;background:linear-gradient(180deg,#C9B473 0%,#E2A06A 15%,#F6A27E 33%,#F5A17F 48%,#F4AC88 64%,#FACB9C 82%,#FED8AC 100%);isolation:isolate}
+.print::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.6;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.4 -.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.print img{width:100%}
+.print .line{padding:16px 2px 18px;font-size:21px;line-height:1.2;color:var(--deep);font-style:italic}
+.print .line span{display:inline-block;opacity:0;transform:translateY(6px);animation:rise .45s ease-out both}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.print .line span{animation:none;opacity:1;transform:none}}
+.cap{margin-top:10px}
+
+.contents{border-top:1px solid var(--ink);padding-bottom:56px}
+.contents .head{display:flex;justify-content:space-between;padding:14px 0}
+.row{display:grid;grid-template-columns:40px 1fr 20px;column-gap:8px;align-items:baseline;padding:16px 0;border-top:1px solid var(--rule)}
+.row .n{font-size:15px;font-style:italic;color:var(--label)}
+.row h2{font-size:22px;line-height:1.15}
+.row p{grid-column:2;font-size:16px;line-height:1.45;margin-top:2px}
+.row .go{grid-row:1;grid-column:3;color:var(--ink);text-align:right}
+
+@media (min-width:768px){
+  .wrap{padding:0 40px}
+  .hello{grid-template-columns:1fr 1fr;gap:48px;align-items:end;padding-top:48px;padding-bottom:56px}
+  .hello h1{font-size:44px}
+  .row{grid-template-columns:56px 240px 1fr 24px;padding:18px 0}
+  .row p{grid-column:3;margin:0}
+  .row .go{grid-column:4}
+}
+@media (min-width:1100px){
+  .hello{grid-template-columns:6fr 1fr 5fr}
+  .hello .print-col{grid-column:3}
+  .hello h1{font-size:52px}
+  body{font-size:19px}
+  .print .line{font-size:23px}
+  .row{grid-template-columns:72px 320px 1fr 24px}
+  .row h2{font-size:24px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="name serif" href="#">Maisy Leigh</a>
+  <nav><a href="#">Favorites</a><a href="#">Brands</a></nav>
+</div></header>
+
+<main>
+<section class="wrap hello">
+  <div>
+    <p class="label">No. 01 &nbsp;·&nbsp; Hello</p>
+    <h1 class="serif">Hi, I’m Maisy Leigh.</h1>
+    <p class="lede">I’m a designer and YouTuber, and I founded Cozyleigh Studios with my family. I share cozy desk setups and small ways to make a space feel like you.</p>
+    <a class="btn" href="#">See my desk setup</a>
+    <p class="also"><a href="https://www.youtube.com/@MaisyLeigh">YouTube</a><span>·</span><a href="https://www.instagram.com/maisyleigh/">Instagram</a></p>
+  </div>
+  <figure class="print-col">
+    <div class="print">
+      <img src="img/maisy-matcha.jpg" width="886" height="886" alt="Maisy Leigh holding a cup of matcha in her studio" fetchpriority="high">
+      <p class="line serif" aria-label="Making life warm again, one design at a time."><span style="animation-delay:.1s">Making</span> <span style="animation-delay:.2s">life</span> <span style="animation-delay:.3s">warm</span> <span style="animation-delay:.4s">again,</span> <span style="animation-delay:.55s">one</span> <span style="animation-delay:.65s">design</span> <span style="animation-delay:.75s">at</span> <span style="animation-delay:.85s">a</span> <span style="animation-delay:.95s">time.</span></p>
+    </div>
+    <figcaption class="label cap">Matcha at the studio, 2024</figcaption>
+  </figure>
+</section>
+
+<section class="wrap"><div class="contents">
+  <div class="head"><p class="label">In this journal</p><p class="label">04 pages</p></div>
+  <a class="row" href="#"><span class="n serif">01</span><h2 class="serif">My desk setup</h2><p>Every piece on my desk, with links.</p><span class="go">→</span></a>
+  <a class="row" href="#"><span class="n serif">02</span><h2 class="serif">Favorites</h2><p>Books, tea and things at home I keep reaching for.</p><span class="go">→</span></a>
+  <a class="row" href="#"><span class="n serif">03</span><h2 class="serif">Desk tips</h2><p>Eight small changes from my videos.</p><span class="go">→</span></a>
+  <a class="row" href="#"><span class="n serif">04</span><h2 class="serif">Work with me</h2><p>Brand work with Xbox, Philips Hue, Adobe and more.</p><span class="go">→</span></a>
+</div></section>
+</main>
+</body>
+</html>
