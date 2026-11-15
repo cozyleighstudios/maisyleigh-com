@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>About · Maisy Leigh</title>
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="wm" href="./">Maisy Leigh</a>
+    <nav class="nav" aria-label="Main"><a href="work.html">Work</a><a href="desk.html">On my desk</a><a href="inquire.html">Work with me</a><a href="about.html" aria-current="page">About</a></nav>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i></button>
+  </div>
+</header>
+<nav class="sheet" id="sheet" aria-label="Menu"><a href="work.html">Work</a><a href="desk.html">On my desk</a><a href="inquire.html">Work with me</a><a href="about.html">About</a></nav>
+<main>
+
+<section class="wrap page-top">
+  <div class="split">
+    <h1 class="state">I wanted tech to feel warm. When I started filming my desk in 2020, most tech videos were black, white and minimal. I made mine bright and cozy.</h1>
+    <div class="side">
+      <p class="label">Contact</p>
+      <p><a href="mailto:hello@cozyleigh.studio">hello@cozyleigh.studio</a></p>
+      <p class="label">Elsewhere</p>
+      <p><a href="https://www.youtube.com/@maisyleigh">YouTube</a><br><a href="https://www.instagram.com/maisyleigh/">Instagram</a><br><a href="https://www.tiktok.com/@maisyleighs">TikTok</a><br><a href="https://cozyleigh.studio">Cozyleigh Studios</a></p>
+    </div>
+  </div>
+  <div class="banner"><img src="img/family-studio.jpg" width="1182" height="665" alt="Maisy, Tristan and Ashleigh at a work table in the Cozyleigh studio"></div>
+  <div class="prose">
+    <p>I'm a designer. I left my software job to design and make the pieces myself, and today I run Cozyleigh Studios with my family: a designer, an artist and an engineer.</p>
+    <p>I still film my desk, and now I film the studio too.</p>
+  </div>
+  <p class="sub rv"><img class="hand" src="img/h-since.png" width="121" height="19" style="width:121px" alt="Since 2020"></p>
+  <dl class="tl rv">
+    <div><dt>2020</dt><dd>My first desk setup video, as a software engineer and designer.</dd></div>
+    <div><dt>2021</dt><dd>Design &amp; Code With Me. I built my first personal website on camera.</dd></div>
+    <div><dt>2022</dt><dd>Our first piece, the Cozyleigh Desk Mat.</dd></div>
+    <div><dt>2023</dt><dd>The Zen Light, designed with Gantri.</dd></div>
+    <div><dt>2024</dt><dd>The Zen MagSafe Charger Stand.</dd></div>
+    <div><dt>2025</dt><dd>We moved into our studio.</dd></div>
+    <div><dt>2026</dt><dd>The Wood Collection, made by hand.</dd></div>
+  </dl>
+  <div class="prose"><a class="more" href="https://canvasrebel.com/meet-maisy-leigh/">Read my CanvasRebel interview</a></div>
+</section>
+<div class="end"></div>
+
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <a class="big" href="./">Maisy Leigh</a>
+    <ul><li><a href="work.html">Work</a></li><li><a href="desk.html">On my desk</a></li><li><a href="inquire.html">Work with me</a></li><li><a href="about.html">About</a></li></ul>
+    <ul class="soc"><li><a href="https://www.youtube.com/@maisyleigh">YouTube</a></li><li><a href="https://www.instagram.com/maisyleigh/">Instagram</a></li><li><a href="https://www.tiktok.com/@maisyleighs">TikTok</a></li><li><a href="https://cozyleigh.studio">Cozyleigh Studios</a></li></ul>
+    <small>&copy; 2026 Maisy Leigh</small>
+  </div>
+</footer>
+<script>
+document.documentElement.classList.add('m');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var b=document.querySelector('.burger'),s=document.getElementById('sheet');
+b.addEventListener('click',function(){var o=s.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+</script>
+</body>
+</html>

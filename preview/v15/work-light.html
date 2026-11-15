@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Zen Light · Maisy Leigh</title>
+<link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="wm" href="./">Maisy Leigh</a>
+    <nav class="nav" aria-label="Main"><a href="work.html" aria-current="page">Work</a><a href="desk.html">On my desk</a><a href="inquire.html">Work with me</a><a href="about.html">About</a></nav>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i></button>
+  </div>
+</header>
+<nav class="sheet" id="sheet" aria-label="Menu"><a href="work.html">Work</a><a href="desk.html">On my desk</a><a href="inquire.html">Work with me</a><a href="about.html">About</a></nav>
+<main>
+
+<section class="wrap page-top">
+  <p class="label"><a href="work.html" style="text-decoration:none">&larr; Work</a></p>
+  <h1 class="state" style="margin-top:14px">Zen Light</h1>
+  <p class="lede">A paper-lantern desk light, designed with Gantri.</p>
+  <dl class="facts"><div><dt>Year</dt><dd>2023</dd></div><div><dt>My part</dt><dd>Concept and design</dd></div><div><dt>Made with</dt><dd>Gantri, who make and ship it.</dd></div></dl>
+  <div class="banner"><img src="img/light-table.jpg" width="1068" height="1600" alt="The Zen Light glowing on a low maple table beside a mug and a plant" style="aspect-ratio:4/5"></div>
+  <div class="steps">
+    <div class="step rv"><img class="hand" src="img/h-idea.png" width="271" height="49" style="width:98px" alt="The idea"><div><blockquote>A lantern for the desk. Soft light, in a shape you can stack.</blockquote><p style="margin-top:14px">I wanted the warm light I film in, in a piece small enough to sit beside a monitor.</p></div></div>
+    <div class="step rv"><img class="hand" src="img/h-sketches.png" width="395" height="67" style="width:142px" alt="My sketches"><div><div class="pairph"><img class="photo tall" src="img/light-sketch.jpg" width="1067" height="1600" alt="Maisy drawing the Zen Light on paper, a small paper model beside the page" loading="lazy"><img class="photo tall" src="img/light-drawing.jpg" width="1067" height="1600" alt="Maisy at her desk, sketching beside a paper model of the light" loading="lazy"></div><p style="margin-top:14px">It started on paper, at my desk.</p></div></div>
+    <div class="step rv"><img class="hand" src="img/h-paper.png" width="386" height="61" style="width:139px" alt="Paper models"><div><div class="pairph"><img class="photo tall" src="img/light-model.jpg" width="1067" height="1600" alt="A hand holding a folded paper model of the light over the sketches" loading="lazy"><img class="photo tall" src="img/light-screen.jpg" width="1067" height="1600" alt="The paper model held up in front of the design on screen" loading="lazy"></div><p style="margin-top:14px">I folded small models to check the proportions before anything was made.</p></div></div>
+    <div class="step rv"><img class="hand" src="img/h-screen.png" width="300" height="39" style="width:108px" alt="On screen"><div><img class="photo tall" src="img/light-cad.jpg" width="1068" height="1600" alt="Maisy at her desk with the Zen Light design open on her monitor" loading="lazy"><p style="margin-top:14px">Then the design went on screen, and back and forth with the team at Gantri.</p></div></div>
+    <div class="step rv"><img class="hand" src="img/h-piece.png" width="306" height="61" style="width:110px" alt="The piece"><div><img class="photo" src="img/light-three.jpg" width="1600" height="1067" alt="Maisy at a low table with the Zen Light in three sizes and three colors" loading="lazy"><dl class="facts"><div><dt>Made by</dt><dd>Gantri, in California. They make and ship each one.</dd></div><div><dt>Where</dt><dd>On a desk, a shelf or a side table.</dd></div></dl></div></div>
+    <div class="step rv"><img class="hand" src="img/h-home.png" width="253" height="49" style="width:91px" alt="At home"><div><img class="photo tall" src="img/light-shelf.jpg" width="1280" height="1600" alt="The Zen Light glowing on a wall shelf" loading="lazy"><p style="margin-top:14px">On the shelf above a desk.</p><a class="more" href="https://cozyleigh.studio/products/zen-light">See the Zen Light</a></div></div>
+  </div>
+</section>
+<div class="end"></div>
+
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <a class="big" href="./">Maisy Leigh</a>
+    <ul><li><a href="work.html">Work</a></li><li><a href="desk.html">On my desk</a></li><li><a href="inquire.html">Work with me</a></li><li><a href="about.html">About</a></li></ul>
+    <ul class="soc"><li><a href="https://www.youtube.com/@maisyleigh">YouTube</a></li><li><a href="https://www.instagram.com/maisyleigh/">Instagram</a></li><li><a href="https://www.tiktok.com/@maisyleighs">TikTok</a></li><li><a href="https://cozyleigh.studio">Cozyleigh Studios</a></li></ul>
+    <small>&copy; 2026 Maisy Leigh</small>
+  </div>
+</footer>
+<script>
+document.documentElement.classList.add('m');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var b=document.querySelector('.burger'),s=document.getElementById('sheet');
+b.addEventListener('click',function(){var o=s.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+</script>
+</body>
+</html>
