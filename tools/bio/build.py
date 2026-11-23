@@ -51,7 +51,7 @@ def read_shop():
             c = d.get('collection', d)
             c['pins'] = [p for p in c.get('pins') or [] if not p.get('isHidden')]
             cols[cid] = {k: c.get(k) for k in ('id', 'name', 'description', 'Section_id', 'image', 'custom_image', 'social_image', 'social_links')}
-            cols[cid]['pins'] = [{k: p.get(k) for k in ('id', 'title', 'image', 'link', 'domain', 'affiliate_link', 'click_token')} for p in c['pins']]
+            cols[cid]['pins'] = [slim(p) for p in c['pins']]
         if len(cols) < 3 or sum(len(c['pins']) for c in cols.values()) < 10:
             raise ValueError('ShopMy answered with almost nothing')
         json.dump(cols, open(SNAP, 'w'), indent=1, ensure_ascii=False)
@@ -59,6 +59,16 @@ def read_shop():
     except Exception as ex:  # noqa: BLE001 - any failure means: use the kept copy
         problems.append(f'ShopMy could not be read ({ex}); built from the copy kept in tools/bio/shopmy.json.')
         return json.load(open(SNAP)) if os.path.exists(SNAP) else None
+
+
+def slim(p):
+    """What we keep of an item. ShopMy's own commission links change on every read, so only 'earns' is kept of them."""
+    aff = p.get('affiliate_link') or ''
+    earns = bool(p.get('click_token')) or '<custom_id>' in aff or 'shopmy.us' in aff
+    out = {k: p.get(k) for k in ('id', 'title', 'image', 'link', 'domain')}
+    out['earns'] = earns
+    out['affiliate_link'] = None if earns else aff
+    return out
 
 
 def cdn(u):
@@ -173,7 +183,7 @@ def link_of(pin, slug):
         q = [(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not k.startswith('utm_')]
         q += [('utm_source', 'maisyleigh.com'), ('utm_medium', 'bio'), ('utm_campaign', slug)]
         return urllib.parse.urlunsplit((u.scheme, u.netloc, u.path, urllib.parse.urlencode(q), u.fragment))
-    if pin.get('click_token') or '<custom_id>' in aff or 'shopmy.us' in aff:
+    if pin.get('earns') or pin.get('click_token') or '<custom_id>' in aff or 'shopmy.us' in aff:
         return f"https://go.shopmy.us/p-{pin['id']}"  # ShopMy earns on it: let ShopMy make the tap's link
     return aff or link
 

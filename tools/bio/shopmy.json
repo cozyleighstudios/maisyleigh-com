@@ -15,8 +15,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643699-1783102372109-55603859-211d-419e-8be7-bab673b90490_DSCF9737.jpeg",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem&utm_source=shopmy",
-    "click_token": "zCPQ9uQKThPrGB"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 63643712,
@@ -24,8 +24,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643712-1783102384176-zoom-63642613-1781032378676-DSCF0118.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-tray?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-tray?utm_medium=affiliate&utm_campaign=shop-desk-ecosystem&utm_source=shopmy",
-    "click_token": "yPIMopo7snt4kN"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 63643721,
@@ -33,8 +33,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/882e77d2-9a30-4846-be63-9ab692349eec_Matcha_M_1080x.webp",
     "link": "https://cozyleigh.studio/collections/cozyleigh-collection/products/cozyleigh-deskmat?variant=50497924563160&utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/cozyleigh-collection/products/cozyleigh-deskmat?variant=50497924563160&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem&utm_source=shopmy",
-    "click_token": "o6XAP8GjAJAaBu"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 69075490,
@@ -42,8 +42,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-69075490-1783102424423--1783102214927-DSCF9749.jpg",
     "link": "https://cozyleigh.studio/products/fa-trinket-tray?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/fa-trinket-tray?utm_medium=affiliate&utm_campaign=shop-desk-ecosystem&utm_source=shopmy",
-    "click_token": "joFTcV8fKuCDgY"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 69076508,
@@ -51,8 +51,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-69076508-1783102574706--1783102552611-IMG_7874.jpg",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-puck?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-puck?utm_medium=affiliate&utm_campaign=shop-desk-ecosystem&utm_source=shopmy",
-    "click_token": "unet9mD2XaBUVQ"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 88912816,
@@ -60,8 +60,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88912816-1790201874018-OK_ZenRender_ProductShot_C2025V2.jpg",
     "link": "https://cozyleigh.studio/products/zen-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-keycaps?utm_medium=affiliate&utm_campaign=shop-desk-ecosystem&utm_source=shopmy",
-    "click_token": "uuz3W4WelPQRO7"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 88912919,
@@ -69,8 +69,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88912919-1790201899625-OK_ZenRender_ACR75_231115_487fdbbb-7a1d-4bcd-b373-c7d673f606e0.jpg",
     "link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-desk-ecosystem",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_medium=affiliate&utm_campaign=shop-desk-ecosystem&utm_source=shopmy",
-    "click_token": "rH49OWz5XKlPYY"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -90,8 +90,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643040-1783102588050-zoom-63642613-1781032378676-DSCF0118.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-tray?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wood-collection",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-tray?utm_medium=affiliate&utm_campaign=shop-wood-collection&utm_source=shopmy",
-    "click_token": "vchdhtN1HtKDli"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 63643041,
@@ -99,8 +99,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643041-1783102606918-zoom-63642664-1781032391293-DSCF0154.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wood-collection",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_medium=affiliate&utm_campaign=shop-wood-collection&utm_source=shopmy",
-    "click_token": "X5LVjhC50pRxAT"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 63643044,
@@ -108,8 +108,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643044-1783102621582-zoom-63642764-1781032419552-DSCF5291_18_58_26_19.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wood-collection",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_medium=affiliate&utm_campaign=shop-wood-collection&utm_source=shopmy",
-    "click_token": "nZXNJ8TuAacgZk"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -129,8 +129,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643808-1783102682401-zoom-63643435-1781032615568-custom_resized_b3ac5183-ae80-4bdf-8852-cda3d10097a6_1296x.png",
     "link": "https://gantri.sjv.io/3k00En",
     "domain": "gantri.sjv.io",
-    "affiliate_link": "https://gantri.sjv.io/3k00En",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://gantri.sjv.io/3k00En"
    },
    {
     "id": 63643908,
@@ -138,8 +138,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643908-1783102701137-pin-63643908-1781032767335-custom_resized_4f049200-539e-476b-88ed-976f87b103a",
     "link": "https://gantri.sjv.io/OYddbP",
     "domain": "gantri.sjv.io",
-    "affiliate_link": "https://gantri.sjv.io/OYddbP",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://gantri.sjv.io/OYddbP"
    }
   ]
  },
@@ -159,8 +159,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002091-1790224978254-il_fullxfull.3570832006_5m1y.jpg",
     "link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wallpapers-icons",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_medium=affiliate&utm_campaign=shop-wallpapers-icons&utm_source=shopmy",
-    "click_token": "hcmJ4PZVYjqo2U"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89004603,
@@ -168,8 +168,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88951192-1790211610603-DSCF6496.jpg",
     "link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wallpapers-icons",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wallpapers-icons",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wallpapers-icons"
    },
    {
     "id": 89004611,
@@ -177,8 +177,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002045-1790224957412-il_fullxfull.3808161341_4r8w.jpg",
     "link": "https://cozyleigh.studio/products/cherry-blossom-laptop-iphone-and-ipad-wallpaper-spring-wallpaper-cute-aesthetic-pretty-art?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wallpapers-icons",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/cherry-blossom-laptop-iphone-and-ipad-wallpaper-spring-wallpaper-cute-aesthetic-pretty-art?utm_medium=affiliate&utm_campaign=shop-wallpapers-icons&utm_source=shopmy",
-    "click_token": "zueYFQXPU5QaSI"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89004616,
@@ -186,8 +186,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002524-1790225164955-il_fullxfull.3439884487_dk6q.jpg",
     "link": "https://cozyleigh.studio/products/dreamy-skies-iphone-ipad-desktop-wallpapers-8-wallpaper-set-cozy-pastel-aesthetic?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-wallpapers-icons",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/dreamy-skies-iphone-ipad-desktop-wallpapers-8-wallpaper-set-cozy-pastel-aesthetic?utm_medium=affiliate&utm_campaign=shop-wallpapers-icons&utm_source=shopmy",
-    "click_token": "iu8bAg5f40BhbZ"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -207,8 +207,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/720b7a3b-19d2-42af-bf16-8eb57e7b7ba74-magsafe-stand.jpg",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=magsafe-stand",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=magsafe-stand&utm_source=shopmy",
-    "click_token": "EHnzw7TTN6evy8"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94181544,
@@ -216,8 +216,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/992b46d7-e735-4e7d-a6f9-e4c37a6b05c82-fa-trinket-tray.jpg",
     "link": "https://cozyleigh.studio/products/fa-trinket-tray?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=fa-trinket-tray",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/fa-trinket-tray?utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=fa-trinket-tray&utm_source=shopmy",
-    "click_token": "QcFU9HkHUWG1nY"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94181683,
@@ -225,8 +225,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/66949dc8-afa6-46ea-9974-cb3d46f089a33-teapot-keycap.jpg",
     "link": "https://cozyleigh.studio/products/zen-marshmallow-metal-artisan?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=teapot-keycap",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-marshmallow-metal-artisan?utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=teapot-keycap&utm_source=shopmy",
-    "click_token": "h9R1sNk1QAzhNw"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94181600,
@@ -234,8 +234,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88912919-1790201899625-OK_ZenRender_ACR75_231115_487fdbbb-7a1d-4bcd-b373-c7d673f606e0.jpg",
     "link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=keycaps",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=keycaps",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=keycaps"
    },
    {
     "id": 94416079,
@@ -243,8 +243,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-94416079-1792003248939-cozyleigh-art-rural-life-in-fall-digital-wallpaper-01.jpg",
     "link": "https://cozyleigh.studio/products/rural-life-in-fall-laptop-iphone-and-ipad-wallpaper-wistful-orchids-cute-aesthetic-pretty-art?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=fall-wallpaper",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/rural-life-in-fall-laptop-iphone-and-ipad-wallpaper-wistful-orchids-cute-aesthetic-pretty-art?utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=fall-wallpaper&utm_source=shopmy",
-    "click_token": "tANyiFJK4MuY4O"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94180314,
@@ -252,8 +252,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53584495-1776637402715-49450cc6-0a87-48aa-8f57-46cd48cdbd27.png",
     "link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
     "domain": "anrdoezrs.net",
-    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture"
    },
    {
     "id": 94183967,
@@ -261,8 +261,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-94183967-1791933978711-fb5e29b4-edb7-431e-89a1-dfa1206802ff.jpg%3BmaxHeight%3D1920%3BmaxWidth%3D900",
     "link": "https://bestbuycreators.7tiv.net/aNkMeQ",
     "domain": "bestbuycreators.7tiv.net",
-    "affiliate_link": "https://bestbuycreators.7tiv.net/aNkMeQ",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://bestbuycreators.7tiv.net/aNkMeQ"
    },
    {
     "id": 94184788,
@@ -270,8 +270,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88913229-1790201974805-gPVUNGXXVK7BCgyzJbHQ025VI-__VAB6FCDaidDtwnY.jpg",
     "link": "https://collabs.shop/lde9mi",
     "domain": "collabs.shop",
-    "affiliate_link": "https://collabs.shop/lde9mi",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://collabs.shop/lde9mi"
    },
    {
     "id": 94180413,
@@ -279,8 +279,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88914078-1790202190196-c6c09209-3656-4d7c-826c-ec0673599e99.jpg",
     "link": "https://bestbuycreators.7tiv.net/k422Jn",
     "domain": "bestbuycreators.7tiv.net",
-    "affiliate_link": "https://bestbuycreators.7tiv.net/k422Jn",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://bestbuycreators.7tiv.net/k422Jn"
    },
    {
     "id": 94180355,
@@ -288,8 +288,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/f572cadc-4f4f-466d-b505-cc8c9f8cadd7_Screenshot2026-05-23at7.26.56PM.png",
     "link": "https://glnk.io/jloqy/maisyleigh",
     "domain": "glnk.io",
-    "affiliate_link": "https://glnk.io/jloqy/maisyleigh",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://glnk.io/jloqy/maisyleigh"
    },
    {
     "id": 94180532,
@@ -297,8 +297,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-61338279-1780069824316-lift-mouse-top-angle-offwhite-gallery-1.png",
     "link": "https://logitech.cfzu.net/eng44Z",
     "domain": "logitech.cfzu.net",
-    "affiliate_link": "https://logitech.cfzu.net/eng44Z",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://logitech.cfzu.net/eng44Z"
    },
    {
     "id": 94180540,
@@ -306,8 +306,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53085810-1776380222759-taggtofs-pendant-lamp-shade-white-bamboo__1405017_pe970318_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/taggtofs-pendant-lamp-shade-white-bamboo-00566734/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Ftaggtofs-pendant-lamp-shade-white-bamboo-00566734%2F",
-    "click_token": "f85SWqoLbJS8GR"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94180582,
@@ -315,8 +315,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643435-1781032615568-custom_resized_b3ac5183-ae80-4bdf-8852-cda3d10097a6_1296x.png",
     "link": "https://gantri.sjv.io/3k00En",
     "domain": "gantri.sjv.io",
-    "affiliate_link": "https://gantri.sjv.io/3k00En",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://gantri.sjv.io/3k00En"
    },
    {
     "id": 94180773,
@@ -324,8 +324,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88914524-1790202293759-GUEST_29ff6e6e-e212-40d5-973d-c8d2c8bbfef0",
     "link": "https://bestbuycreators.7tiv.net/9Vddy0",
     "domain": "bestbuycreators.7tiv.net",
-    "affiliate_link": "https://bestbuycreators.7tiv.net/9Vddy0",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://bestbuycreators.7tiv.net/9Vddy0"
    },
    {
     "id": 94181507,
@@ -333,8 +333,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63642613-1781032378676-DSCF0118.jpg",
     "link": "https://cozyleigh.studio/products/zen-tray?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=zen-tray",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-tray?utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=zen-tray&utm_source=shopmy",
-    "click_token": "FEtQlG7rc17omJ"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94181528,
@@ -342,8 +342,8 @@
     "image": "https://static.shopmy.us/pins/zoom-69076508-1783102574706--1783102552611-IMG_7874.jpg",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-puck?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=puck",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-puck?utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=puck&utm_source=shopmy",
-    "click_token": "EICEUZdnLldr8l"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94181988,
@@ -351,8 +351,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-94181988-1791933458164-cozyleigh-studio-desk-2024-day.jpg",
     "link": "https://cozyleigh.studio/pages/from-the-studio?utm_source=shopmy&utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=wall-shelves#zen-wall-shelves",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/pages/from-the-studio?utm_medium=affiliate&utm_campaign=20261013-maisyleigh-reel-desk-ritual&utm_content=wall-shelves#zen-wall-shelves&utm_source=shopmy",
-    "click_token": "SetK1nzBNEtWAV"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94182160,
@@ -360,8 +360,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1778134501920",
     "link": "https://littleking.online/products/porcelain-ceramic-mugs",
     "domain": "littleking.online",
-    "affiliate_link": "https://apiv3.shopmy.us/api/redirect_click?clickId=8759d116-bec3-4982-8576-7acdf74c784c&cid=<custom_id>&url=https%3A%2F%2Flittleking.online%2Fproducts%2Fporcelain-ceramic-mugs%3Futm_source%3DShopMy%26utm_medium%3Daffiliate%26utm_campaign%3DMaisy%20Leigh%26utm_content%3DMy%20Desk%20Ritual%26utm_referrer%3Dshopmy.us",
-    "click_token": "6dT18rNdjlwVZr"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 94185160,
@@ -369,8 +369,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-94185160-1791934297222-c3abe0d2-3129-4e47-8904-aadaf47eb4af.jpg%3BmaxHeight%3D1920%3BmaxWidth%3D900",
     "link": "https://bestbuycreators.7tiv.net/L0GMmO",
     "domain": "bestbuycreators.7tiv.net",
-    "affiliate_link": "https://bestbuycreators.7tiv.net/L0GMmO",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://bestbuycreators.7tiv.net/L0GMmO"
    },
    {
     "id": 94876779,
@@ -378,8 +378,8 @@
     "image": "https://static.shopmy.us/uploads/a57fb285-6f17-4517-bc11-3ad494c7bbaa_IMG_3272_2048x.jpeg",
     "link": "https://cozyleigh.studio/products/cozyleigh-deskmat",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/cozyleigh-deskmat?utm_source=shopmy",
-    "click_token": "5KMwKP2PUEXXec"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -399,8 +399,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-90379754-1790706132164-OK_ZenRender_ProductShot_C2025V2_3000x.jpg",
     "link": "https://cozyleigh.studio/products/zen-keycaps?utm_source=shopmy&utm_campaign=shop-autumn-desk&utm_medium=affiliate",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-keycaps?utm_campaign=shop-autumn-desk&utm_medium=affiliate&utm_source=shopmy",
-    "click_token": "0x4n7hmNVrr0OF"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 90380517,
@@ -408,8 +408,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-90380517-1790706288508-DSCF5291_18_58_26_19_1200x1200.jpg",
     "link": "https://cozyleigh.studio/products/zen-desk-shelf?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-autumn-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-desk-shelf?utm_medium=affiliate&utm_campaign=shop-autumn-desk&utm_source=shopmy",
-    "click_token": "0RfjohQtAnBkOc"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 90380649,
@@ -417,8 +417,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-90380649-1790706311580-DSCF9737.jpg",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-autumn-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?utm_medium=affiliate&utm_campaign=shop-autumn-desk&utm_source=shopmy",
-    "click_token": "Q0qbPWuf2aSWpG"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 90380711,
@@ -426,8 +426,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-90380711-1790706327485-custom_resized_b3ac5183-ae80-4bdf-8852-cda3d10097a6.png",
     "link": "https://cozyleigh.studio/products/zen-light?utm_source=shopmy&utm_campaign=shop-autumn-desk&utm_medium=affiliate",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-light?utm_campaign=shop-autumn-desk&utm_medium=affiliate&utm_source=shopmy",
-    "click_token": "kSAJgo2UiITkFg"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 90380843,
@@ -435,8 +435,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-90380843-1790706349875-IMG_3272_1320x.jpg",
     "link": "https://cozyleigh.studio/products/cozyleigh-deskmat?utm_source=shopmy&utm_campaign=shop-autumn-desk&utm_medium=affiliate",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/cozyleigh-deskmat?utm_campaign=shop-autumn-desk&utm_medium=affiliate&utm_source=shopmy",
-    "click_token": "wZMoUlU3pNIybv"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 90380938,
@@ -444,8 +444,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-90380938-1790706365089-compressed-IMG_4857.jpg",
     "link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-in-fall-digital-wallpaper?utm_source=shopmy&utm_campaign=shop-autumn-desk&utm_medium=affiliate",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-in-fall-digital-wallpaper?utm_campaign=shop-autumn-desk&utm_medium=affiliate&utm_source=shopmy",
-    "click_token": "uMo0PGyKphynTC"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 90381145,
@@ -453,8 +453,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-61338279-1780069824316-lift-mouse-top-angle-offwhite-gallery-1.png",
     "link": "https://logitech.cfzu.net/eng44Z",
     "domain": "logitech.cfzu.net",
-    "affiliate_link": "https://logitech.cfzu.net/eng44Z",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://logitech.cfzu.net/eng44Z"
    },
    {
     "id": 90381297,
@@ -462,8 +462,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88913229-1790201974805-gPVUNGXXVK7BCgyzJbHQ025VI-__VAB6FCDaidDtwnY.jpg",
     "link": "https://collabs.shop/lde9mi",
     "domain": "collabs.shop",
-    "affiliate_link": "https://collabs.shop/lde9mi",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://collabs.shop/lde9mi"
    },
    {
     "id": 90382108,
@@ -471,8 +471,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-90382108-1790706545330-Ember_Ortho_F_Black.png",
     "link": "https://ember.pxf.io/y2QBmN",
     "domain": "ember.pxf.io",
-    "affiliate_link": "https://ember.pxf.io/y2QBmN",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://ember.pxf.io/y2QBmN"
    }
   ]
  },
@@ -492,8 +492,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643699-1783102372109-55603859-211d-419e-8be7-bab673b90490_DSCF9737.jpeg",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk"
    },
    {
     "id": 88950459,
@@ -501,8 +501,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/4e10d21c-6cda-4c95-8d8d-f28a292c0a44_Matcha_M_1080x.webp",
     "link": "https://cozyleigh.studio/collections/cozyleigh-ecosystem/products/cozyleigh-deskmat?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/cozyleigh-ecosystem/products/cozyleigh-deskmat?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/collections/cozyleigh-ecosystem/products/cozyleigh-deskmat?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk"
    },
    {
     "id": 88950548,
@@ -510,8 +510,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63642764-1781032419552-DSCF5291_18_58_26_19.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk"
    },
    {
     "id": 88950623,
@@ -519,8 +519,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53584495-1776637402715-49450cc6-0a87-48aa-8f57-46cd48cdbd27.png",
     "link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
     "domain": "anrdoezrs.net",
-    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture"
    },
    {
     "id": 88950724,
@@ -528,8 +528,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-52967075-1776348257160-10143-cm-sand--product-photos-3171b726-0886-4dcb-9654-eadce422cae2_1741971395702.jpg",
     "link": "https://gantri.sjv.io/OYddbP",
     "domain": "gantri.sjv.io",
-    "affiliate_link": "https://gantri.sjv.io/OYddbP",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://gantri.sjv.io/OYddbP"
    },
    {
     "id": 88950841,
@@ -537,8 +537,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63642664-1781032391293-DSCF0154.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk"
    },
    {
     "id": 88950952,
@@ -546,8 +546,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88912919-1790201899625-OK_ZenRender_ACR75_231115_487fdbbb-7a1d-4bcd-b373-c7d673f606e0.jpg",
     "link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk"
    },
    {
     "id": 88951069,
@@ -555,8 +555,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-61338279-1780069824316-lift-mouse-top-angle-offwhite-gallery-1.png",
     "link": "https://logitech.cfzu.net/eng44Z",
     "domain": "logitech.cfzu.net",
-    "affiliate_link": "https://logitech.cfzu.net/eng44Z",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://logitech.cfzu.net/eng44Z"
    },
    {
     "id": 88951192,
@@ -564,8 +564,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88951192-1790211610603-DSCF6496.jpg",
     "link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-cozy-zen-desk"
    }
   ]
  },
@@ -585,8 +585,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53584495-1776637402715-49450cc6-0a87-48aa-8f57-46cd48cdbd27.png",
     "link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
     "domain": "anrdoezrs.net",
-    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture"
    },
    {
     "id": 54870349,
@@ -594,8 +594,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53132582-1776398169996-white_b7ab68f6-be6d-4acf-8e2e-7637fc1a0cf2.png",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk&utm_source=shopmy",
-    "click_token": "AYcejwqbU5EfGg"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 54870381,
@@ -603,8 +603,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53132635-1776398194479-IMG_3272.jpg",
     "link": "https://cozyleigh.studio/collections/cozyleigh-collection/products/cozyleigh-deskmat?variant=50497924563160&utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/cozyleigh-collection/products/cozyleigh-deskmat?variant=50497924563160&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk&utm_source=shopmy",
-    "click_token": "kexn57iGvfOC72"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 54870388,
@@ -612,8 +612,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-54742850-1777141763871-IMG_4912_2048x.png",
     "link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-art-print?srsltid=AfmBOoqZu7ydPNHROifWBN7hL8xLwm76vlxNmOAPV8o0D4eIe65xQ3ZM&utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-art-print?srsltid=AfmBOoqZu7ydPNHROifWBN7hL8xLwm76vlxNmOAPV8o0D4eIe65xQ3ZM&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk&utm_source=shopmy",
-    "click_token": "y0Kf09z2XbJnqb"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 70949399,
@@ -621,8 +621,8 @@
     "image": "https://static.shopmy.us/pins/zoom-53085432-1776380096496-stockholm-2025-sideboard-oak-veneer__1397699_pe967720_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/stockholm-2025-sideboard-oak-veneer-10586604/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fstockholm-2025-sideboard-oak-veneer-10586604%2F",
-    "click_token": "ArFfjvqVmNxLby"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 70949432,
@@ -630,8 +630,8 @@
     "image": "https://static.shopmy.us/pins/zoom-53085810-1776380222759-taggtofs-pendant-lamp-shade-white-bamboo__1405017_pe970318_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/taggtofs-pendant-lamp-shade-white-bamboo-00566734/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Ftaggtofs-pendant-lamp-shade-white-bamboo-00566734%2F",
-    "click_token": "D94ZN5yYsWfMgx"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 70949477,
@@ -639,8 +639,8 @@
     "image": "https://static.shopmy.us/pins/zoom-63642664-1781032391293-DSCF0154.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_medium=affiliate&utm_campaign=shop-full-cozy-desk&utm_source=shopmy",
-    "click_token": "3aqZ5JAusXFKnB"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 70949483,
@@ -648,8 +648,8 @@
     "image": "https://static.shopmy.us/pins/zoom-63642764-1781032419552-DSCF5291_18_58_26_19.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_medium=affiliate&utm_campaign=shop-full-cozy-desk&utm_source=shopmy",
-    "click_token": "9w0slCVPzr24j2"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 70949485,
@@ -657,8 +657,8 @@
     "image": "https://static.shopmy.us/pins/zoom-63642613-1781032378676-DSCF0118.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-tray?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-tray?utm_medium=affiliate&utm_campaign=shop-full-cozy-desk&utm_source=shopmy",
-    "click_token": "ouU8TwwZlw4WFS"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 70949495,
@@ -666,8 +666,8 @@
     "image": "https://static.shopmy.us/pins/pin-54742488-1781032580511-custom_resized_4f049200-539e-476b-88ed-976f87b103a",
     "link": "https://gantri.sjv.io/3k00En",
     "domain": "gantri.sjv.io",
-    "affiliate_link": "https://gantri.sjv.io/3k00En",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://gantri.sjv.io/3k00En"
    },
    {
     "id": 70949498,
@@ -675,8 +675,8 @@
     "image": "https://static.shopmy.us/pins/zoom-69075490-1783102424423--1783102214927-DSCF9749.jpg",
     "link": "https://cozyleigh.studio/products/fa-trinket-tray?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/fa-trinket-tray?utm_medium=affiliate&utm_campaign=shop-full-cozy-desk&utm_source=shopmy",
-    "click_token": "cEsyoIPRUATnb5"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 70949502,
@@ -684,8 +684,8 @@
     "image": "https://static.shopmy.us/pins/zoom-69076508-1783102574706--1783102552611-IMG_7874.jpg",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-puck?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-full-cozy-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-puck?utm_medium=affiliate&utm_campaign=shop-full-cozy-desk&utm_source=shopmy",
-    "click_token": "g6WiqZwS5grC0b"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -705,8 +705,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88913229-1790201974805-gPVUNGXXVK7BCgyzJbHQ025VI-__VAB6FCDaidDtwnY.jpg",
     "link": "https://collabs.shop/lde9mi",
     "domain": "collabs.shop",
-    "affiliate_link": "https://collabs.shop/lde9mi",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://collabs.shop/lde9mi"
    },
    {
     "id": 88913424,
@@ -714,8 +714,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88913424-1790202017787-OK_ZenRender_ProductShot_C2025V2_3000x.jpg",
     "link": "https://cozyleigh.studio/products/zen-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=shop-desk-tech",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-keycaps?utm_medium=affiliate&utm_campaign=shop-desk-tech&utm_source=shopmy",
-    "click_token": "qFTI183qKVQyIY"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 88913676,
@@ -723,8 +723,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88913676-1790202077845-21DPvtuv%2BzL._AC_.jpg",
     "link": "https://www.amazon.com/dp/B0F5SNBZVF?tag=maisyleigh-20",
     "domain": "amazon.com",
-    "affiliate_link": "https://r.amzlink.to?btn_ref=org-5c1708b96da5502d&btn_pub_ref=<custom_id>&btn_url=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0F5SNBZVF%2Fref%3Dnosim%3Ftag%3Dmaisyleigh-20",
-    "click_token": "q2407ccUgztmIf"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 88913879,
@@ -732,8 +732,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88913879-1790202136641-51lQv2lULDL._AC_.jpg",
     "link": "https://www.amazon.com/dp/B0DZDDCC47?tag=maisyleigh-20",
     "domain": "amazon.com",
-    "affiliate_link": "https://r.amzlink.to?btn_ref=org-5c1708b96da5502d&btn_pub_ref=<custom_id>&btn_url=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0DZDDCC47%2Fref%3Dnosim%3Ftag%3Dmaisyleigh-20",
-    "click_token": "I93ov19ocZhFu2"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 88914078,
@@ -741,8 +741,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88914078-1790202190196-c6c09209-3656-4d7c-826c-ec0673599e99.jpg",
     "link": "https://bestbuycreators.7tiv.net/k422Jn",
     "domain": "bestbuycreators.7tiv.net",
-    "affiliate_link": "https://bestbuycreators.7tiv.net/k422Jn",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://bestbuycreators.7tiv.net/k422Jn"
    },
    {
     "id": 88914524,
@@ -750,8 +750,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88914524-1790202293759-GUEST_29ff6e6e-e212-40d5-973d-c8d2c8bbfef0",
     "link": "https://bestbuycreators.7tiv.net/9Vddy0",
     "domain": "bestbuycreators.7tiv.net",
-    "affiliate_link": "https://bestbuycreators.7tiv.net/9Vddy0",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://bestbuycreators.7tiv.net/9Vddy0"
    },
    {
     "id": 88914702,
@@ -759,8 +759,8 @@
     "image": "https://static.shopmy.us/pins/zoom-61338279-1780069824316-lift-mouse-top-angle-offwhite-gallery-1.png",
     "link": "https://logitech.cfzu.net/eng44Z",
     "domain": "logitech.cfzu.net",
-    "affiliate_link": "https://logitech.cfzu.net/eng44Z",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://logitech.cfzu.net/eng44Z"
    },
    {
     "id": 88915441,
@@ -768,8 +768,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53584495-1776637402715-49450cc6-0a87-48aa-8f57-46cd48cdbd27.png",
     "link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
     "domain": "anrdoezrs.net",
-    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture"
    },
    {
     "id": 88916109,
@@ -777,8 +777,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88916109-1790202680525-White_New.jpg",
     "link": "https://rocco.sjv.io/enZZkD",
     "domain": "rocco.sjv.io",
-    "affiliate_link": "https://rocco.sjv.io/enZZkD",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://rocco.sjv.io/enZZkD"
    }
   ]
  },
@@ -798,8 +798,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88916499-1790202780786-33922066_fpx.tif",
     "link": "https://bestbuycreators.7tiv.net/rENNJ5",
     "domain": "bestbuycreators.7tiv.net",
-    "affiliate_link": "https://bestbuycreators.7tiv.net/rENNJ5",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://bestbuycreators.7tiv.net/rENNJ5"
    },
    {
     "id": 88916755,
@@ -807,8 +807,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88916755-1790202854260-20249966-d1ef-4ade-95da-e4fb44ecc8ba.png",
     "link": "https://bestbuycreators.7tiv.net/PzddmX",
     "domain": "bestbuycreators.7tiv.net",
-    "affiliate_link": "https://bestbuycreators.7tiv.net/PzddmX",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://bestbuycreators.7tiv.net/PzddmX"
    }
   ]
  },
@@ -828,8 +828,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/f572cadc-4f4f-466d-b505-cc8c9f8cadd7_Screenshot2026-05-23at7.26.56PM.png",
     "link": "https://glnk.io/jloqy/maisyleigh",
     "domain": "glnk.io",
-    "affiliate_link": "https://glnk.io/jloqy/maisyleigh",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://glnk.io/jloqy/maisyleigh"
    },
    {
     "id": 89004313,
@@ -837,8 +837,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770702328813",
     "link": "https://www.lumens.com/matcha-whisk-holder-set-by-owiu-goods-OWI2607461.html",
     "domain": "lumens.com",
-    "affiliate_link": "https://lumens.evyy.net/c/2340682/185983/3281?subId1=<custom_id>&u=https%3A%2F%2Fwww.lumens.com%2Fmatcha-whisk-holder-set-by-owiu-goods-OWI2607461.html",
-    "click_token": "VsNWGdmU6sf12Y"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89004319,
@@ -846,8 +846,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-60212334-1779579682149-OWIP558549",
     "link": "https://www.lumens.com/simple-matcha-set-by-owiu-goods-OWI2607575.html",
     "domain": "lumens.com",
-    "affiliate_link": "https://lumens.evyy.net/c/2340682/185983/3281?subId1=<custom_id>&u=https%3A%2F%2Fwww.lumens.com%2Fsimple-matcha-set-by-owiu-goods-OWI2607575.html",
-    "click_token": "Uyrd7JveZADZOm"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89004320,
@@ -855,8 +855,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1778468469789",
     "link": "https://www.lumens.com/matcha-bowl-by-owiu-goods-OWI2607443.html",
     "domain": "lumens.com",
-    "affiliate_link": "https://lumens.evyy.net/c/2340682/185983/3281?subId1=<custom_id>&u=https%3A%2F%2Fwww.lumens.com%2Fmatcha-bowl-by-owiu-goods-OWI2607443.html",
-    "click_token": "n4aj2JZY60M6PG"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89004334,
@@ -864,8 +864,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-44186322-1771795183154-OWIP558484_alt01",
     "link": "https://www.lumens.com/ceramic-cup-by-owiu-goods-OWI2607422.html",
     "domain": "lumens.com",
-    "affiliate_link": "https://lumens.evyy.net/c/2340682/185983/3281?subId1=<custom_id>&u=https%3A%2F%2Fwww.lumens.com%2Fceramic-cup-by-owiu-goods-OWI2607422.html",
-    "click_token": "xrXFCdqcOHaScA"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -885,8 +885,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88926703-1790205636407-FTCvarityboxflowerteabestseller_1024x.jpg",
     "link": "https://the-qi.com/products/bluelotus-chrysanthemum-rose-flower-tea?rfsn=9286573.17ddaf9",
     "domain": "the-qi.com",
-    "affiliate_link": "https://the-qi.com/products/bluelotus-chrysanthemum-rose-flower-tea?rfsn=9286573.17ddaf9",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://the-qi.com/products/bluelotus-chrysanthemum-rose-flower-tea?rfsn=9286573.17ddaf9"
    },
    {
     "id": 88926935,
@@ -894,8 +894,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88926935-1790205693963-NewTheQiBlueLotus_7779b7e2-a4ad-4507-a4b1-03799638aa20_1024x.jpg",
     "link": "https://the-qi.com/products/organic-blue-lotus-flower-tea?rfsn=9286573.17ddaf9",
     "domain": "the-qi.com",
-    "affiliate_link": "https://the-qi.com/products/organic-blue-lotus-flower-tea?rfsn=9286573.17ddaf9",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://the-qi.com/products/organic-blue-lotus-flower-tea?rfsn=9286573.17ddaf9"
    },
    {
     "id": 88927075,
@@ -903,8 +903,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88927075-1790205730603-TheQidailyritualset_1024x.png",
     "link": "https://the-qi.com/products/healing-daily-selfcare-flower-tea-ritual-gift-set?rfsn=9286573.17ddaf9",
     "domain": "the-qi.com",
-    "affiliate_link": "https://the-qi.com/products/healing-daily-selfcare-flower-tea-ritual-gift-set?rfsn=9286573.17ddaf9",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://the-qi.com/products/healing-daily-selfcare-flower-tea-ritual-gift-set?rfsn=9286573.17ddaf9"
    },
    {
     "id": 88927204,
@@ -912,8 +912,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88927204-1790205761973-TheQiglasscupandsaucerset.png",
     "link": "https://the-qi.com/products/glass-cups-saucers-set-of-2?rfsn=9286573.17ddaf9",
     "domain": "the-qi.com",
-    "affiliate_link": "https://the-qi.com/products/glass-cups-saucers-set-of-2?rfsn=9286573.17ddaf9",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://the-qi.com/products/glass-cups-saucers-set-of-2?rfsn=9286573.17ddaf9"
    },
    {
     "id": 88927323,
@@ -921,8 +921,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88927323-1790205793760-Dewdropcupecom.png",
     "link": "https://the-qi.com/products/dewdrop-cup?rfsn=9286573.17ddaf9",
     "domain": "the-qi.com",
-    "affiliate_link": "https://the-qi.com/products/dewdrop-cup?rfsn=9286573.17ddaf9",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://the-qi.com/products/dewdrop-cup?rfsn=9286573.17ddaf9"
    },
    {
     "id": 88927454,
@@ -930,8 +930,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88927454-1790205826394-TheQidewdropteapot.jpg",
     "link": "https://the-qi.com/products/small-glass-server?rfsn=9286573.17ddaf9",
     "domain": "the-qi.com",
-    "affiliate_link": "https://the-qi.com/products/small-glass-server?rfsn=9286573.17ddaf9",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://the-qi.com/products/small-glass-server?rfsn=9286573.17ddaf9"
    }
   ]
  },
@@ -951,8 +951,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763678691053",
     "link": "https://www.crateandbarrel.com/breville-oracle-jet-automatic-espresso-machine-in-black-truffle/s239133?localedetail=US",
     "domain": "crateandbarrel.com",
-    "affiliate_link": "https://cratebarrel.pxf.io/c/2340682/1761190/20651?subId1=<custom_id>&u=https%3A%2F%2Fwww.crateandbarrel.com%2Fbreville-oracle-jet-automatic-espresso-machine-in-black-truffle%2Fs239133%3Flocaledetail%3DUS",
-    "click_token": "ZtdDyEZUCS64GQ"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60211875,
@@ -960,8 +960,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/f572cadc-4f4f-466d-b505-cc8c9f8cadd7_Screenshot2026-05-23at7.26.56PM.png",
     "link": "https://glnk.io/jloqy/maisyleigh",
     "domain": "glnk.io",
-    "affiliate_link": "https://glnk.io/jloqy/maisyleigh",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://glnk.io/jloqy/maisyleigh"
    },
    {
     "id": 60211898,
@@ -969,8 +969,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53012715-1776360669007-R03870731_DAWN_M",
     "link": "https://www.selfridges.com/GB/en/cat/our-place-essentials-sunset-glass-tumblers-set-of-four_R03870731/",
     "domain": "selfridges.com",
-    "affiliate_link": "https://prf.hn/click/camref:1011lpZYj/pubref:<custom_id>/destination:https%3A%2F%2Fwww.selfridges.com%2FGB%2Fen%2Fcat%2Four-place-essentials-sunset-glass-tumblers-set-of-four_R03870731%2F",
-    "click_token": "rVvVZArayhpdWU"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60211904,
@@ -978,8 +978,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767682685926",
     "link": "https://littleking.online/products/glass-tumbler-13-fl-oz",
     "domain": "littleking.online",
-    "affiliate_link": "https://apiv3.shopmy.us/api/redirect_click?clickId=cf54f60b-b5bf-468b-8d8d-f0ddc5e607d9&cid=<custom_id>&url=https%3A%2F%2Flittleking.online%2Fproducts%2Fglass-tumbler-13-fl-oz%3Futm_source%3DShopMy%26utm_medium%3Daffiliate%26utm_campaign%3DMaisy%20Leigh%26utm_content%3DCozy%20Home%20Caf%C3%A9%20%26%20Kitchen%26utm_referrer%3Dshopmy.us",
-    "click_token": "Fx3BtgYyzo6j32"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60211907,
@@ -987,8 +987,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53012462-1776360600743-our-place-dream-cooker-all-in-one-multicooker-spice.jpg",
     "link": "https://fromourplace.com/products/dream-cooker",
     "domain": "fromourplace.com",
-    "affiliate_link": "https://apiv3.shopmy.us/api/redirect_click?clickId=ad3b9a58-57d1-41d7-9e8d-48d4c0f5265e&cid=<custom_id>&url=https%3A%2F%2Ffromourplace.com%2Fproducts%2Fdream-cooker%3Futm_source%3DShopMy%26utm_medium%3Daffiliate%26utm_campaign%3Dmaisyleigh%26utm_content%3DCozy%20Home%20Caf%C3%A9%20%26%20Kitchen%26utm_referrer%3Dshopmy.us",
-    "click_token": "KbboGb6mQppfhm"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60211910,
@@ -996,8 +996,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-52740710-1776258031916-our-place-LargeWonderOven-WonderOvenBakersKit-Steam.jpg",
     "link": "https://fromourplace.ca/products/large-wonder-oven-wonder-oven-bakers-kit",
     "domain": "fromourplace.ca",
-    "affiliate_link": "https://apiv3.shopmy.us/api/redirect_click?clickId=13cd841e-b3ae-4eeb-8f57-39fbfff6dffb&cid=<custom_id>&url=https%3A%2F%2Ffromourplace.ca%2Fproducts%2Flarge-wonder-oven-wonder-oven-bakers-kit%3Futm_source%3DShopMy%26utm_medium%3Daffiliate%26utm_campaign%3Dmaisyleigh%26utm_content%3DCozy%20Home%20Caf%C3%A9%20%26%20Kitchen%26utm_referrer%3Dshopmy.us",
-    "click_token": "KHygD10CNHSIh5"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60212171,
@@ -1005,8 +1005,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/da25eeae-e7c1-4969-a009-61be114d88ca_pistachio-rice-cooker.webp",
     "link": "https://fromourplace.ca/products/rice-cooker",
     "domain": "fromourplace.ca",
-    "affiliate_link": "https://apiv3.shopmy.us/api/redirect_click?clickId=ff29c6ab-a389-4a3d-9620-1c993cbd5e9d&cid=<custom_id>&url=https%3A%2F%2Ffromourplace.ca%2Fproducts%2Frice-cooker%3Futm_source%3DShopMy%26utm_medium%3Daffiliate%26utm_campaign%3Dmaisyleigh%26utm_content%3DCozy%20Home%20Caf%C3%A9%20%26%20Kitchen%26utm_referrer%3Dshopmy.us",
-    "click_token": "NoVTBpvrJOkCAM"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60213570,
@@ -1014,8 +1014,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770702328813",
     "link": "https://www.lumens.com/matcha-whisk-holder-set-by-owiu-goods-OWI2607461.html",
     "domain": "lumens.com",
-    "affiliate_link": "https://lumens.evyy.net/c/2340682/185983/3281?subId1=<custom_id>&u=https%3A%2F%2Fwww.lumens.com%2Fmatcha-whisk-holder-set-by-owiu-goods-OWI2607461.html",
-    "click_token": "mBpftil2I4n8pz"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60213571,
@@ -1023,8 +1023,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-60212334-1779579682149-OWIP558549",
     "link": "https://www.lumens.com/simple-matcha-set-by-owiu-goods-OWI2607575.html",
     "domain": "lumens.com",
-    "affiliate_link": "https://lumens.evyy.net/c/2340682/185983/3281?subId1=<custom_id>&u=https%3A%2F%2Fwww.lumens.com%2Fsimple-matcha-set-by-owiu-goods-OWI2607575.html",
-    "click_token": "CPpCFFbImKRizc"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60213573,
@@ -1032,8 +1032,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-44186322-1771795183154-OWIP558484_alt01",
     "link": "https://www.lumens.com/ceramic-cup-by-owiu-goods-OWI2607422.html",
     "domain": "lumens.com",
-    "affiliate_link": "https://lumens.evyy.net/c/2340682/185983/3281?subId1=<custom_id>&u=https%3A%2F%2Fwww.lumens.com%2Fceramic-cup-by-owiu-goods-OWI2607422.html",
-    "click_token": "bPlW4lYV3LUagV"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 60213576,
@@ -1041,8 +1041,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1778468469789",
     "link": "https://www.lumens.com/matcha-bowl-by-owiu-goods-OWI2607443.html",
     "domain": "lumens.com",
-    "affiliate_link": "https://lumens.evyy.net/c/2340682/185983/3281?subId1=<custom_id>&u=https%3A%2F%2Fwww.lumens.com%2Fmatcha-bowl-by-owiu-goods-OWI2607443.html",
-    "click_token": "GZq8pfFrMLkHtG"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -1062,8 +1062,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53086191-1776380344869-nordkisa-open-wardrobe-with-sliding-door-bamboo__0756080_pe748763_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/nordkisa-open-wardrobe-with-sliding-door-bamboo-30439476/?gad_source=1&gad_campaignid=11019953980&gbraid=0AAAAAD27g7wnTcO3bDjjH9fGK9z-FcpMP&gclid=Cj0KCQjwkYLPBhC3ARIsAIyHi3R2qiC5TYJAB1JDoYhuSJtZSimL5em8R9B5EMQ2RSfGjcm4bpWgVe8aApJIEALw_wcB",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fnordkisa-open-wardrobe-with-sliding-door-bamboo-30439476%2F",
-    "click_token": "lIXbcTA5cnYWQZ"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 84135532,
@@ -1071,8 +1071,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53234949-1776451087696-9e171368bb0da59a9690b48340c362af8842c4f1.jpg",
     "link": "https://www.rugsusa.com/products/melrose-checked-rug-cream-round?variant=47064955715640",
     "domain": "rugsusa.com",
-    "affiliate_link": "https://goto.rugsusa.com/c/2340682/555367/9280?subId1=<custom_id>&u=https%3A%2F%2Fwww.rugsusa.com%2Fproducts%2Fmelrose-checked-rug-cream-round%3Fvariant%3D47064955715640",
-    "click_token": "06eYGePKvIgx7p"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 84135543,
@@ -1080,8 +1080,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53085471-1776380109490-stockholm-2025-tv-unit-with-sliding-doors-oak-veneer__1397700_pe967721_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/stockholm-2025-tv-unit-with-sliding-doors-oak-veneer-90586638/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fstockholm-2025-tv-unit-with-sliding-doors-oak-veneer-90586638%2F",
-    "click_token": "YTzUeZEAE3aZle"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 84135546,
@@ -1089,8 +1089,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53085746-1776380200609-gullsudare-pendant-lamp-shade-white-handmade__1399276_pe968294_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/gullsudare-pendant-lamp-shade-white-handmade-80583616/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fgullsudare-pendant-lamp-shade-white-handmade-80583616%2F",
-    "click_token": "eITksYKv9gQWjC"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 84135556,
@@ -1098,8 +1098,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53082544-1776378940123-Omhu125967_OLIVE_-_5778_2000x2000px-removebg.png",
     "link": "https://us.omhucph.com/products/corner-closed?variant=52689496211820&ref=maisyleigh",
     "domain": "us.omhucph.com",
-    "affiliate_link": "https://us.omhucph.com/products/corner-closed?variant=52689496211820&ref=maisyleigh",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://us.omhucph.com/products/corner-closed?variant=52689496211820&ref=maisyleigh"
    },
    {
     "id": 84135557,
@@ -1107,8 +1107,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774553507249",
     "link": "https://www.bloomingdales.com/shop/product/samsung-ls03d-55-4k-the-frame-qled-hdr-smart-tv-with-slim-fit-wall-mount-2024?ID=5139246",
     "domain": "bloomingdales.com",
-    "affiliate_link": "https://click.linksynergy.com/deeplink?id=8yaPBDQV8ls&mid=13867&u1=<custom_id>&murl=https%3A%2F%2Fwww.bloomingdales.com%2Fshop%2Fproduct%2Fsamsung-ls03d-55-4k-the-frame-qled-hdr-smart-tv-with-slim-fit-wall-mount-2024%3FID%3D5139246",
-    "click_token": "gO0WEedG8NhJqv"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 84135564,
@@ -1116,8 +1116,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-48498765-1774081284630-GUEST_b4968faa-115b-4f61-9e23-ff54e686b294",
     "link": "https://howl.link/xhtgc6ioebdir",
     "domain": "howl.link",
-    "affiliate_link": "https://howl.link/xhtgc6ioebdir",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://howl.link/xhtgc6ioebdir"
    }
   ]
  },
@@ -1137,8 +1137,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/f572cadc-4f4f-466d-b505-cc8c9f8cadd7_Screenshot2026-05-23at7.26.56PM.png",
     "link": "https://glnk.io/jloqy/maisyleigh",
     "domain": "glnk.io",
-    "affiliate_link": "https://glnk.io/jloqy/maisyleigh",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://glnk.io/jloqy/maisyleigh"
    },
    {
     "id": 86086599,
@@ -1146,8 +1146,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/7c9f73c8-fd26-45ea-b79a-ead84ca70fb1_182C808E-34E2-4E4E-852E-2DD5F83EFC1D.jpg",
     "link": "https://heyhae.co/MAISYLEIGH",
     "domain": "heyhae.co",
-    "affiliate_link": "https://heyhae.co/MAISYLEIGH",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://heyhae.co/MAISYLEIGH"
    }
   ]
  },
@@ -1167,8 +1167,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88917134-1790202957215-A1_mini-compressed.jpg",
     "link": "https://www.awin1.com/cread.php?awinmid=46345&awinaffid=2052647&ued=https%3A%2F%2Fus.store.bambulab.com%2Fproducts%2Fa1-mini",
     "domain": "awin1.com",
-    "affiliate_link": "https://www.awin1.com/cread.php?awinmid=46345&awinaffid=2052647&ued=https%3A%2F%2Fus.store.bambulab.com%2Fproducts%2Fa1-mini",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.awin1.com/cread.php?awinmid=46345&awinaffid=2052647&ued=https%3A%2F%2Fus.store.bambulab.com%2Fproducts%2Fa1-mini"
    },
    {
     "id": 88917418,
@@ -1176,8 +1176,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88917418-1790203030784-P1S-compressed.jpg",
     "link": "https://www.awin1.com/cread.php?awinmid=46345&awinaffid=2052647&ued=https%3A%2F%2Fus.store.bambulab.com%2Fproducts%2Fp1s",
     "domain": "awin1.com",
-    "affiliate_link": "https://www.awin1.com/cread.php?awinmid=46345&awinaffid=2052647&ued=https%3A%2F%2Fus.store.bambulab.com%2Fproducts%2Fp1s",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.awin1.com/cread.php?awinmid=46345&awinaffid=2052647&ued=https%3A%2F%2Fus.store.bambulab.com%2Fproducts%2Fp1s"
    },
    {
     "id": 88917588,
@@ -1185,8 +1185,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/9908a683-d548-42b8-9954-7cd1bf3c498a_3.jpg",
     "link": "https://tidd.ly/4v0fENJ",
     "domain": "tidd.ly",
-    "affiliate_link": "https://tidd.ly/4v0fENJ",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://tidd.ly/4v0fENJ"
    },
    {
     "id": 88917655,
@@ -1194,8 +1194,8 @@
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/79bfc93d-cb18-45b9-aad1-e260de55fc3d_Screenshot2026-05-21at11.04.34AM.png",
     "link": "https://makerworld.com/en/models/827471-bamboo-moss-pole-90mm#profileId-771299",
     "domain": "makerworld.com",
-    "affiliate_link": "https://makerworld.com/en/models/827471-bamboo-moss-pole-90mm#profileId-771299",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://makerworld.com/en/models/827471-bamboo-moss-pole-90mm#profileId-771299"
    }
   ]
  },
@@ -1215,8 +1215,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53132582-1776398169996-white_b7ab68f6-be6d-4acf-8e2e-7637fc1a0cf2.png",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk&utm_source=shopmy",
-    "click_token": "QMTkffETsz7mQO"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89001161,
@@ -1224,8 +1224,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53132635-1776398194479-IMG_3272.jpg",
     "link": "https://cozyleigh.studio/collections/cozyleigh-collection/products/cozyleigh-deskmat?variant=50497924563160&utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/cozyleigh-collection/products/cozyleigh-deskmat?variant=50497924563160&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk&utm_source=shopmy",
-    "click_token": "Nq2pbaPwXLpN6n"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89001511,
@@ -1233,8 +1233,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63642764-1781032419552-DSCF5291_18_58_26_19.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-desk-shelf?utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk&utm_source=shopmy",
-    "click_token": "II0w8UWRcs5Gvv"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89001527,
@@ -1242,8 +1242,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53584495-1776637402715-49450cc6-0a87-48aa-8f57-46cd48cdbd27.png",
     "link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
     "domain": "anrdoezrs.net",
-    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture"
    },
    {
     "id": 89001547,
@@ -1251,8 +1251,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63642664-1781032391293-DSCF0154.jpg",
     "link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/the-wood-collection/products/zen-book-stand?utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk&utm_source=shopmy",
-    "click_token": "HcFilRQXqEf1xv"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89001577,
@@ -1260,8 +1260,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88912919-1790201899625-OK_ZenRender_ACR75_231115_487fdbbb-7a1d-4bcd-b373-c7d673f606e0.jpg",
     "link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-marshmallow-keycaps?utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk&utm_source=shopmy",
-    "click_token": "qUBsor3DRGLbRQ"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89001589,
@@ -1269,8 +1269,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-61338279-1780069824316-lift-mouse-top-angle-offwhite-gallery-1.png",
     "link": "https://logitech.cfzu.net/eng44Z",
     "domain": "logitech.cfzu.net",
-    "affiliate_link": "https://logitech.cfzu.net/eng44Z",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://logitech.cfzu.net/eng44Z"
    },
    {
     "id": 89001627,
@@ -1278,8 +1278,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-63643908-1783102701137-pin-63643908-1781032767335-custom_resized_4f049200-539e-476b-88ed-976f87b103a",
     "link": "https://gantri.sjv.io/OYddbP",
     "domain": "gantri.sjv.io",
-    "affiliate_link": "https://gantri.sjv.io/OYddbP",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://gantri.sjv.io/OYddbP"
    },
    {
     "id": 89001641,
@@ -1287,8 +1287,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-88951192-1790211610603-DSCF6496.jpg",
     "link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://cozyleigh.studio/products/mysweetchubs-zen-flower-shop-digital-wallpaper?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-cozy-zen-desk"
    }
   ]
  },
@@ -1308,8 +1308,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53584495-1776637402715-49450cc6-0a87-48aa-8f57-46cd48cdbd27.png",
     "link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
     "domain": "anrdoezrs.net",
-    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture"
    },
    {
     "id": 89003100,
@@ -1317,8 +1317,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89001928-1790224907438-Mini-Planter-Pots-with-Plants-on-Desk_917ba3dd-160c-450d-8eec-6d2dd1854493.jpg",
     "link": "https://kansodesigns.co/collections/upcycled-planters",
     "domain": "kansodesigns.co",
-    "affiliate_link": "https://kansodesigns.co/collections/upcycled-planters?utm_source=shopmy",
-    "click_token": "GmRdDj8MaH8jVI"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89003115,
@@ -1326,8 +1326,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002005-1790224939987-pdp_stone-diffuser_front_white_gallery_1_v9_image.png",
     "link": "https://vitruvi.com/products/stone-essential-oil-diffuser",
     "domain": "vitruvi.com",
-    "affiliate_link": "https://www.awin1.com/awclick.php?mid=92235&id=740219&clickref=<custom_id>&ued=https%3A%2F%2Fvitruvi.com%2Fproducts%2Fstone-essential-oil-diffuser",
-    "click_token": "ueFtLSv8jgb1wY"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89003128,
@@ -1335,8 +1335,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002091-1790224978254-il_fullxfull.3570832006_5m1y.jpg",
     "link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-home-office-tour",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_medium=affiliate&utm_campaign=yt-home-office-tour&utm_source=shopmy",
-    "click_token": "djb3ZYwwnEX3dg"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89003212,
@@ -1344,8 +1344,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89003212-1790225476153-10047-sm-sand--product-photos-4b098803-dcc2-4df5-8214-73a7e1cb93c0_1745537020126.jpg",
     "link": "https://gantri.sjv.io/LX5N1V",
     "domain": "gantri.sjv.io",
-    "affiliate_link": "https://gantri.sjv.io/LX5N1V",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://gantri.sjv.io/LX5N1V"
    }
   ]
  },
@@ -1365,8 +1365,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89001790-1790224845726-DSCF7374.jpg",
     "link": "https://stickietech.com/products/switch-travel-pouch-cocoa-brown",
     "domain": "stickietech.com",
-    "affiliate_link": "https://stickietech.com/products/switch-travel-pouch-cocoa-brown?utm_source=shopmy",
-    "click_token": "pltNtlu3IOSDEe"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89001928,
@@ -1374,8 +1374,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89001928-1790224907438-Mini-Planter-Pots-with-Plants-on-Desk_917ba3dd-160c-450d-8eec-6d2dd1854493.jpg",
     "link": "https://kansodesigns.co/collections/upcycled-planters",
     "domain": "kansodesigns.co",
-    "affiliate_link": "https://kansodesigns.co/collections/upcycled-planters?utm_source=shopmy",
-    "click_token": "L9pev60TGHtHDl"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002005,
@@ -1383,8 +1383,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002005-1790224939987-pdp_stone-diffuser_front_white_gallery_1_v9_image.png",
     "link": "https://vitruvi.com/products/stone-essential-oil-diffuser",
     "domain": "vitruvi.com",
-    "affiliate_link": "https://www.awin1.com/awclick.php?mid=92235&id=740219&clickref=<custom_id>&ued=https%3A%2F%2Fvitruvi.com%2Fproducts%2Fstone-essential-oil-diffuser",
-    "click_token": "OWYFvCKo73Ht8Z"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002045,
@@ -1392,8 +1392,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002045-1790224957412-il_fullxfull.3808161341_4r8w.jpg",
     "link": "https://cozyleigh.studio/products/cherry-blossom-laptop-iphone-and-ipad-wallpaper-spring-wallpaper-cute-aesthetic-pretty-art?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-gaming-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/cherry-blossom-laptop-iphone-and-ipad-wallpaper-spring-wallpaper-cute-aesthetic-pretty-art?utm_medium=affiliate&utm_campaign=yt-gaming-desk&utm_source=shopmy",
-    "click_token": "RBl9XHGXJVVDeb"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002091,
@@ -1401,8 +1401,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002091-1790224978254-il_fullxfull.3570832006_5m1y.jpg",
     "link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-gaming-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_medium=affiliate&utm_campaign=yt-gaming-desk&utm_source=shopmy",
-    "click_token": "Byfuqewav0LrJa"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -1422,8 +1422,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002258-1790225052734-31BZywWGLQL._AC_.jpg",
     "link": "https://www.amazon.com/dp/B01N5UOYC4",
     "domain": "amazon.com",
-    "affiliate_link": "https://r.amzlink.to?btn_ref=org-5c1708b96da5502d&btn_pub_ref=<custom_id>&btn_url=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB01N5UOYC4%2Fref%3Dnosim%3Ftag%3D%3Camazon_tag%3E",
-    "click_token": "Dvbtr7HWWKvL4Z"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002341,
@@ -1431,8 +1431,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002341-1790225091487-51i6BNZciYL._AC_SX300_SY300_QL70_ML2_.jpg",
     "link": "https://www.amazon.com/dp/B01MXXQKGM?tag=maisyleigh-20",
     "domain": "amazon.com",
-    "affiliate_link": "https://www.amazon.com/dp/B01MXXQKGM?tag=maisyleigh-20",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.amazon.com/dp/B01MXXQKGM?tag=maisyleigh-20"
    },
    {
     "id": 89002386,
@@ -1440,8 +1440,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002386-1790225115213-MagSafe_wallet1_54e5f15c-0d22-4d0f-8c5e-83a8230530cb.png",
     "link": "https://www.moft.com/products/snap-on-phone-stand-wallet-classic",
     "domain": "moft.com",
-    "affiliate_link": "https://go.skimresources.com/?id=154591X1623638&xcust=<custom_id>&sref=<cur_ref>&url=https%3A%2F%2Fwww.moft.com%2Fproducts%2Fsnap-on-phone-stand-wallet-classic",
-    "click_token": "J2JZDpfbR2S85J"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002473,
@@ -1449,8 +1449,8 @@
     "image": "//www.orbitkey.com/cdn/shop/files/Nestv2-Black-1_grande.jpg?v=1751955232",
     "link": "https://www.orbitkey.com/products/nest-v2?rfsn=5706061.ae62e2",
     "domain": "orbitkey.com",
-    "affiliate_link": "https://www.orbitkey.com/products/nest-v2?rfsn=5706061.ae62e2",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.orbitkey.com/products/nest-v2?rfsn=5706061.ae62e2"
    },
    {
     "id": 89002524,
@@ -1458,8 +1458,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002524-1790225164955-il_fullxfull.3439884487_dk6q.jpg",
     "link": "https://cozyleigh.studio/products/dreamy-skies-iphone-ipad-desktop-wallpapers-8-wallpaper-set-cozy-pastel-aesthetic?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-wfh-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/dreamy-skies-iphone-ipad-desktop-wallpapers-8-wallpaper-set-cozy-pastel-aesthetic?utm_medium=affiliate&utm_campaign=yt-wfh-desk&utm_source=shopmy",
-    "click_token": "JH0YlfN6AvppPY"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002559,
@@ -1467,8 +1467,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89001928-1790224907438-Mini-Planter-Pots-with-Plants-on-Desk_917ba3dd-160c-450d-8eec-6d2dd1854493.jpg",
     "link": "https://kansodesigns.co/collections/upcycled-planters",
     "domain": "kansodesigns.co",
-    "affiliate_link": "https://kansodesigns.co/collections/upcycled-planters?utm_source=shopmy",
-    "click_token": "E0Lf5TMVfhKgGB"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002581,
@@ -1476,8 +1476,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002005-1790224939987-pdp_stone-diffuser_front_white_gallery_1_v9_image.png",
     "link": "https://vitruvi.com/products/stone-essential-oil-diffuser",
     "domain": "vitruvi.com",
-    "affiliate_link": "https://www.awin1.com/awclick.php?mid=92235&id=740219&clickref=<custom_id>&ued=https%3A%2F%2Fvitruvi.com%2Fproducts%2Fstone-essential-oil-diffuser",
-    "click_token": "pNO0Duqm8PMo18"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002612,
@@ -1485,8 +1485,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002091-1790224978254-il_fullxfull.3570832006_5m1y.jpg",
     "link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-wfh-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_medium=affiliate&utm_campaign=yt-wfh-desk&utm_source=shopmy",
-    "click_token": "zoMpS5Qg5r3IHr"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -1506,8 +1506,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002804-1790225295048-1_26463b7c-7a99-4c84-bb03-83d420625cae.jpg",
     "link": "https://kbdfans.com/products/gateron-ink-v2-black-switches",
     "domain": "kbdfans.com",
-    "affiliate_link": "https://kbdfans.com/products/gateron-ink-v2-black-switches?utm_source=shopmy",
-    "click_token": "VlJup2aaHFcKpj"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 89002856,
@@ -1515,8 +1515,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002856-1790225320260-41boF245SxL._AC_.jpg",
     "link": "https://www.amazon.com/dp/B07DB7ZT5P?tag=maisyleigh-20",
     "domain": "amazon.com",
-    "affiliate_link": "https://www.amazon.com/dp/B07DB7ZT5P?tag=maisyleigh-20",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.amazon.com/dp/B07DB7ZT5P?tag=maisyleigh-20"
    },
    {
     "id": 89002903,
@@ -1524,8 +1524,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002903-1790225342338-311zGioNz9L._SX342_SY445_QL70_ML2_.jpg",
     "link": "https://www.amazon.com/dp/B08LYT7DZD?tag=maisyleigh-20",
     "domain": "amazon.com",
-    "affiliate_link": "https://www.amazon.com/dp/B08LYT7DZD?tag=maisyleigh-20",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.amazon.com/dp/B08LYT7DZD?tag=maisyleigh-20"
    }
   ]
  },
@@ -1545,8 +1545,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89003391-1790225581062-11biwGvPd0L._AC_.jpg",
     "link": "https://www.amazon.com/dp/B0DL6ZN6GK?tag=maisyleigh-20",
     "domain": "amazon.com",
-    "affiliate_link": "https://www.amazon.com/dp/B0DL6ZN6GK?tag=maisyleigh-20",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.amazon.com/dp/B0DL6ZN6GK?tag=maisyleigh-20"
    },
    {
     "id": 89003417,
@@ -1554,8 +1554,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-89002091-1790224978254-il_fullxfull.3570832006_5m1y.jpg",
     "link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-warm-wfh-desk",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/220-icons-5-wallpapers-free-lifetime-updates-minimal-pastel-ios-app-icon-pack-bundle?utm_medium=affiliate&utm_campaign=yt-warm-wfh-desk&utm_source=shopmy",
-    "click_token": "nE33UZlstP3Ygn"
+    "earns": true,
+    "affiliate_link": null
    }
   ]
  },
@@ -1575,8 +1575,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-52967075-1776348257160-10143-cm-sand--product-photos-3171b726-0886-4dcb-9654-eadce422cae2_1741971395702.jpg",
     "link": "https://gantri.sjv.io/OYddbP",
     "domain": "gantri.sjv.io",
-    "affiliate_link": "https://gantri.sjv.io/OYddbP",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://gantri.sjv.io/OYddbP"
    },
    {
     "id": 52740710,
@@ -1584,8 +1584,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-52740710-1776258031916-our-place-LargeWonderOven-WonderOvenBakersKit-Steam.jpg",
     "link": "https://fromourplace.ca/products/large-wonder-oven-wonder-oven-bakers-kit",
     "domain": "fromourplace.ca",
-    "affiliate_link": "https://apiv3.shopmy.us/api/redirect_click?clickId=75e6e4bb-12e8-4622-8a8e-72273cdc2502&cid=<custom_id>&url=https%3A%2F%2Ffromourplace.ca%2Fproducts%2Flarge-wonder-oven-wonder-oven-bakers-kit%3Futm_source%3DShopMy%26utm_medium%3Daffiliate%26utm_campaign%3Dmaisyleigh%26utm_content%3DSlow%20Living%20at%20the%20Studio%20%E2%98%81%EF%B8%8F%20making%20this%20space%20a%20home%2C%20new%20cozy%20desk%20corner%2C%20diy%20shoji%20door%26utm_referrer%3Dshopmy.us",
-    "click_token": "JsRS7BRIYyJ2Cv"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53012462,
@@ -1593,8 +1593,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53012462-1776360600743-our-place-dream-cooker-all-in-one-multicooker-spice.jpg",
     "link": "https://fromourplace.com/products/dream-cooker",
     "domain": "fromourplace.com",
-    "affiliate_link": "https://apiv3.shopmy.us/api/redirect_click?clickId=a4cf43cf-c92d-4a2d-b747-e3ceeee8d15b&cid=<custom_id>&url=https%3A%2F%2Ffromourplace.com%2Fproducts%2Fdream-cooker%3Futm_source%3DShopMy%26utm_medium%3Daffiliate%26utm_campaign%3Dmaisyleigh%26utm_content%3DSlow%20Living%20at%20the%20Studio%20%E2%98%81%EF%B8%8F%20making%20this%20space%20a%20home%2C%20new%20cozy%20desk%20corner%2C%20diy%20shoji%20door%26utm_referrer%3Dshopmy.us",
-    "click_token": "1BQxdffXg1sK4Q"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53012688,
@@ -1602,8 +1602,8 @@
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767682685926",
     "link": "https://littleking.online/products/glass-tumbler-13-fl-oz",
     "domain": "littleking.online",
-    "affiliate_link": "https://apiv3.shopmy.us/api/redirect_click?clickId=5b40ae2c-c3a6-4395-acf8-20145467e8f0&cid=<custom_id>&url=https%3A%2F%2Flittleking.online%2Fproducts%2Fglass-tumbler-13-fl-oz%3Futm_source%3DShopMy%26utm_medium%3Daffiliate%26utm_campaign%3DMaisy%20Leigh%26utm_content%3DSlow%20Living%20at%20the%20Studio%20%E2%98%81%EF%B8%8F%20making%20this%20space%20a%20home%2C%20new%20cozy%20desk%20corner%2C%20diy%20shoji%20door%26utm_referrer%3Dshopmy.us",
-    "click_token": "xD3lrES3j9qH81"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53012715,
@@ -1611,8 +1611,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53012715-1776360669007-R03870731_DAWN_M",
     "link": "https://www.selfridges.com/GB/en/cat/our-place-essentials-sunset-glass-tumblers-set-of-four_R03870731/",
     "domain": "selfridges.com",
-    "affiliate_link": "https://prf.hn/click/camref:1011lpZYj/pubref:<custom_id>/destination:https%3A%2F%2Fwww.selfridges.com%2FGB%2Fen%2Fcat%2Four-place-essentials-sunset-glass-tumblers-set-of-four_R03870731%2F",
-    "click_token": "nWGZkzyzmC4MSV"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53085432,
@@ -1620,8 +1620,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53085432-1776380096496-stockholm-2025-sideboard-oak-veneer__1397699_pe967720_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/stockholm-2025-sideboard-oak-veneer-10586604/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fstockholm-2025-sideboard-oak-veneer-10586604%2F",
-    "click_token": "3DgnYkB4Bf7teq"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53085505,
@@ -1629,8 +1629,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53085505-1776380120202-stockholm-2025-tv-unit-with-sliding-doors-oak-veneer__1397700_pe967721_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/stockholm-2025-tv-unit-with-sliding-doors-oak-veneer-90586638/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fstockholm-2025-tv-unit-with-sliding-doors-oak-veneer-90586638%2F",
-    "click_token": "750kjlAtUWjIf4"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53085601,
@@ -1638,8 +1638,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53085601-1776380151783-stockholm-2025-shelving-unit-bench-oak-veneer__1397705_pe967726_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/stockholm-2025-shelving-unit-bench-oak-veneer-90586515/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fstockholm-2025-shelving-unit-bench-oak-veneer-90586515%2F",
-    "click_token": "B3KDMs8FqEWteK"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53085746,
@@ -1647,8 +1647,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53085746-1776380200609-gullsudare-pendant-lamp-shade-white-handmade__1399276_pe968294_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/gullsudare-pendant-lamp-shade-white-handmade-80583616/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fgullsudare-pendant-lamp-shade-white-handmade-80583616%2F",
-    "click_token": "ta5xJBoTcZN4e1"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53085810,
@@ -1656,8 +1656,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53085810-1776380222759-taggtofs-pendant-lamp-shade-white-bamboo__1405017_pe970318_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/taggtofs-pendant-lamp-shade-white-bamboo-00566734/",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Ftaggtofs-pendant-lamp-shade-white-bamboo-00566734%2F",
-    "click_token": "MgNfpNHXaaV8f2"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53086041,
@@ -1665,8 +1665,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53086041-1776380297488-BrevilleOracleJtAlmAV3SSF25_VND",
     "link": "https://www.crateandbarrel.com/breville-oracle-jet-automatic-espresso-machine-in-almond-nougat/s494140",
     "domain": "crateandbarrel.com",
-    "affiliate_link": "https://cratebarrel.pxf.io/c/2340682/1761190/20651?subId1=<custom_id>&u=https%3A%2F%2Fwww.crateandbarrel.com%2Fbreville-oracle-jet-automatic-espresso-machine-in-almond-nougat%2Fs494140",
-    "click_token": "Of1USNT1ggIfzZ"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53086191,
@@ -1674,8 +1674,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53086191-1776380344869-nordkisa-open-wardrobe-with-sliding-door-bamboo__0756080_pe748763_s5.jpg",
     "link": "https://www.ikea.com/us/en/p/nordkisa-open-wardrobe-with-sliding-door-bamboo-30439476/?gad_source=1&gad_campaignid=11019953980&gbraid=0AAAAAD27g7wnTcO3bDjjH9fGK9z-FcpMP&gclid=Cj0KCQjwkYLPBhC3ARIsAIyHi3R2qiC5TYJAB1JDoYhuSJtZSimL5em8R9B5EMQ2RSfGjcm4bpWgVe8aApJIEALw_wcB",
     "domain": "ikea.com",
-    "affiliate_link": "https://ikea.onepath.io/c/2340682/4082731/59213?subId1=<custom_id>&u=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fnordkisa-open-wardrobe-with-sliding-door-bamboo-30439476%2F",
-    "click_token": "YKgeDOegpaKixH"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53132582,
@@ -1683,8 +1683,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53132582-1776398169996-white_b7ab68f6-be6d-4acf-8e2e-7637fc1a0cf2.png",
     "link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-slow-living-studio",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/products/zen-magsafe-charger-stand-1?variant=50395317764312&utm_medium=affiliate&utm_campaign=yt-slow-living-studio&utm_source=shopmy",
-    "click_token": "fwZDjSWejTFNYh"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53132635,
@@ -1692,8 +1692,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53132635-1776398194479-IMG_3272.jpg",
     "link": "https://cozyleigh.studio/collections/cozyleigh-collection/products/cozyleigh-deskmat?variant=50497924563160&utm_source=shopmy&utm_medium=affiliate&utm_campaign=yt-slow-living-studio",
     "domain": "cozyleigh.studio",
-    "affiliate_link": "https://cozyleigh.studio/collections/cozyleigh-collection/products/cozyleigh-deskmat?variant=50497924563160&utm_medium=affiliate&utm_campaign=yt-slow-living-studio&utm_source=shopmy",
-    "click_token": "KctYFn8xOXOqyr"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53209126,
@@ -1701,8 +1701,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53209126-1776443589775-AspectGen2LEDGrowlightWhiteOverFiddleLeafFig.webp",
     "link": "https://soltech.com/products/aspect-gen-2-led-growlight",
     "domain": "soltech.com",
-    "affiliate_link": "https://go.skimresources.com/?id=154591X1623638&xcust=<custom_id>&sref=<cur_ref>&url=https%3A%2F%2Fsoltech.com%2Fproducts%2Faspect-gen-2-led-growlight",
-    "click_token": "KpTcw3YK6QtIRL"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53209187,
@@ -1710,8 +1710,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53209187-1776443606484-AuraGrowLightTablelamp-NaturalBase-WithPlants.webp",
     "link": "https://soltech.com/products/aura-ambient-grow-light",
     "domain": "soltech.com",
-    "affiliate_link": "https://go.skimresources.com/?id=154591X1623638&xcust=<custom_id>&sref=<cur_ref>&url=https%3A%2F%2Fsoltech.com%2Fproducts%2Faura-ambient-grow-light",
-    "click_token": "NGEXotNtnzymiK"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53209344,
@@ -1719,8 +1719,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53209344-1776443654951-CHA-EW-009-024_Variant.jpg",
     "link": "https://www.sundays-company.com/products/slow-mornings-counter-stool-natural?variant=41588594212935&srsltid=AfmBOopzVqxkXqNUSJqjRhbC49W1kFJKfS9P-oypjJnbq_xvAlqRVn-i__M&com_cvv=8fb3d522dc163aeadb66e08cd7450cbbdddc64c6cf2e8891f6d48747c6d56d2c",
     "domain": "sundays-company.com",
-    "affiliate_link": "https://www.awin1.com/awclick.php?mid=61693&id=740219&clickref=<custom_id>&ued=https%3A%2F%2Fwww.sundays-company.com%2Fproducts%2Fslow-mornings-counter-stool-natural%3Fvariant%3D41588594212935%26com_cvv%3D8fb3d522dc163aeadb66e08cd7450cbbdddc64c6cf2e8891f6d48747c6d56d2c",
-    "click_token": "4FR7KXgUtjDTto"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53209400,
@@ -1728,8 +1728,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53170306-1776431854120-CHA-BC-003-050_1_CL4.jpg",
     "link": "https://www.sundays-company.com/collections/chairs/products/plane-dining-chair-oak#internal",
     "domain": "sundays-company.com",
-    "affiliate_link": "https://www.awin1.com/awclick.php?mid=61693&id=740219&clickref=<custom_id>&ued=https%3A%2F%2Fwww.sundays-company.com%2Fcollections%2Fchairs%2Fproducts%2Fplane-dining-chair-oak%23internal",
-    "click_token": "HJEv8qCOEERv3A"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53397494,
@@ -1737,8 +1737,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53397494-1776537762527-046677803506-915005987501-Hue_Gradient-Signe-floor-white-NAM-RTP-TRN",
     "link": "https://www.philips-hue.com/en-us/p/hue-white-and-color-ambiance-signe-gradient-floor-lamp/046677803506?origin=_cmp=20961164112_kwd=&gclsrc=aw.ds&gad_source=1&gad_campaignid=20967583196&gbraid=0AAAAAqwUBERmLIm_1amTYmyBbA9LwoDLa",
     "domain": "philips-hue.com",
-    "affiliate_link": "https://clk.tradedoubler.com/click?p=385885&a=3490661&epi=<custom_id>&url=https%3A%2F%2Fwww.philips-hue.com%2Fen-us%2Fp%2Fhue-white-and-color-ambiance-signe-gradient-floor-lamp%2F046677803506%3Forigin%3D_cmp%3D20961164112_kwd%3D",
-    "click_token": "venYATLyJxCitw"
+    "earns": true,
+    "affiliate_link": null
    },
    {
     "id": 53584495,
@@ -1746,8 +1746,8 @@
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53584495-1776637402715-49450cc6-0a87-48aa-8f57-46cd48cdbd27.png",
     "link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
     "domain": "anrdoezrs.net",
-    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture",
-    "click_token": null
+    "earns": false,
+    "affiliate_link": "https://www.anrdoezrs.net/click-100588292-17218906?url=https%3A%2F%2Fstore.steelcase.com%2Fgesture"
    }
   ]
  }
