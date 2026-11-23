@@ -1,0 +1,410 @@
+{
+  "_about": "What ShopMy doesn't hold: short names, codes, the desk order. Everything else is read from the public ShopMy shop by tools/bio/build.py.",
+  "curator": "maisyleigh",
+  "sections": [
+    4627846,
+    2956985,
+    4630788,
+    1643608,
+    2445964,
+    1643606
+  ],
+  "desk_collection": 8234820,
+  "videos": {
+    "7931130": {
+      "title": "My autumn desk",
+      "note": "Almost everything here is designed and made by my family in our studio."
+    },
+    "8234820": {
+      "title": "My desk ritual",
+      "reel": "DedO4ysOT5R",
+      "more_reels": [
+        "DedPvMbubNK"
+      ]
+    },
+    "4995448": {
+      "title": "The full cozy desk look"
+    },
+    "7419901": {
+      "title": "Our living room"
+    },
+    "5447476": {
+      "title": "Our home café and kitchen"
+    },
+    "7822513": {
+      "title": "Cozy & zen desk setup"
+    },
+    "7822646": {
+      "title": "Our home office tour"
+    },
+    "7822589": {
+      "title": "Work from home desk"
+    },
+    "7822553": {
+      "title": "Cozy gaming desk"
+    },
+    "7822633": {
+      "title": "Keyboard build"
+    },
+    "4845961": {
+      "title": "Slow living at the studio"
+    },
+    "7822669": {
+      "hide": true
+    }
+  },
+  "video_order": [
+    7931130,
+    8234820,
+    7419901,
+    4995448,
+    5447476,
+    7822513,
+    7822646,
+    7822589,
+    7822553,
+    7822633,
+    4845961
+  ],
+  "rooms": [
+    {
+      "collection": 7822715,
+      "title": "Tea and matcha",
+      "cover": 89004319
+    },
+    {
+      "collection": 7419901,
+      "title": "Our living room",
+      "cover": 84135556
+    },
+    {
+      "collection": 7816075,
+      "title": "The workshop",
+      "cover": 88917418
+    }
+  ],
+  "codes": [
+    {
+      "name": "Matchakari matcha",
+      "offer": "10% off",
+      "code": "MAISY10"
+    },
+    {
+      "name": "Colorful Standard",
+      "offer": "10% off",
+      "code": "MAISYLEIGHCS10"
+    },
+    {
+      "name": "Hey Hae gel nails",
+      "offer": "10% off",
+      "code": "MAISYLEIGH"
+    }
+  ],
+  "names": [
+    {
+      "match": "charger stand",
+      "label": "Charger stand",
+      "brand": "Zen MagSafe Stand",
+      "studio": true,
+      "photo": "charger-stand"
+    },
+    {
+      "match": "charger puck",
+      "label": "Charger puck",
+      "brand": "Zen MagSafe Puck",
+      "studio": true,
+      "photo": "charger-puck"
+    },
+    {
+      "match": "desk mat",
+      "label": "Desk mat",
+      "brand": "Cozyleigh Desk Mat",
+      "studio": true,
+      "photo": "desk-mat"
+    },
+    {
+      "match": "trinket tray",
+      "label": "Trinket tray",
+      "brand": "Fa Stackable Tray",
+      "studio": true,
+      "photo": "trinket-tray"
+    },
+    {
+      "match": "zen tray",
+      "label": "Tea tray",
+      "brand": "Zen Tray",
+      "studio": true,
+      "photo": "tea-tray"
+    },
+    {
+      "match": "wall shelves",
+      "label": "Wall shelves",
+      "brand": "Zen Wall Shelves",
+      "studio": true,
+      "photo": "wall-shelves"
+    },
+    {
+      "match": "desk shelf",
+      "label": "Monitor shelf",
+      "brand": "Zen Desk Shelf",
+      "studio": true,
+      "photo": "monitor-shelf"
+    },
+    {
+      "match": "book stand",
+      "label": "Book stand",
+      "brand": "Zen Book Stand",
+      "studio": true,
+      "photo": "book-stand"
+    },
+    {
+      "match": "metal artisan",
+      "label": "Metal keycap",
+      "brand": "Zen Metal Artisan",
+      "studio": true,
+      "photo": "metal-keycap"
+    },
+    {
+      "match": "keycaps",
+      "label": "Keycaps",
+      "brand": "With Osume",
+      "studio": true,
+      "photo": "keycaps"
+    },
+    {
+      "match": "mini light",
+      "label": "My small lamp",
+      "brand": "Zen Mini Light, by Gantri",
+      "studio": false,
+      "photo": "small-lamp"
+    },
+    {
+      "match": "compact table light",
+      "label": "My small lamp",
+      "brand": "Zen Mini Light, by Gantri",
+      "studio": false,
+      "photo": "small-lamp"
+    },
+    {
+      "match": "zen light",
+      "label": "My lamp",
+      "brand": "Zen Light, by Gantri",
+      "studio": false,
+      "photo": "my-lamp"
+    },
+    {
+      "match": "rural life in fall",
+      "label": "Wallpaper",
+      "brand": "By my sister Ash",
+      "studio": true,
+      "photo": "wallpaper"
+    },
+    {
+      "match": "wallpaper",
+      "label": "Wallpaper",
+      "brand": "By my sister Ash",
+      "studio": true
+    },
+    {
+      "match": "art print",
+      "label": "Art print",
+      "brand": "By my sister Ash",
+      "studio": true
+    },
+    {
+      "match": "app icons",
+      "label": "App icons",
+      "brand": "Cozyleigh",
+      "studio": true
+    },
+    {
+      "match": "steelcase",
+      "label": "My chair",
+      "brand": "Steelcase Gesture"
+    },
+    {
+      "match": "pro display",
+      "label": "My monitor",
+      "brand": "Apple Pro Display"
+    },
+    {
+      "match": "play75",
+      "label": "My keyboard",
+      "brand": "Play75"
+    },
+    {
+      "match": "logitech lift",
+      "label": "My mouse",
+      "brand": "Logitech Lift"
+    },
+    {
+      "match": "kanto",
+      "label": "My speakers",
+      "brand": "Kanto Ora"
+    },
+    {
+      "match": "wh-1000",
+      "label": "My headphones",
+      "brand": "Sony WH-1000XM5"
+    },
+    {
+      "match": "taggtofs",
+      "label": "My pendant",
+      "brand": "IKEA, bamboo"
+    },
+    {
+      "match": "bamboo pendant",
+      "label": "My pendant",
+      "brand": "IKEA, bamboo"
+    },
+    {
+      "match": "gullsudare",
+      "label": "Paper pendant",
+      "brand": "IKEA"
+    },
+    {
+      "match": "matcha for my lattes",
+      "label": "My matcha",
+      "brand": "Matchakari",
+      "code": "MAISY10"
+    },
+    {
+      "match": "hasami gloss mug",
+      "label": "My mug",
+      "brand": "Hasami Porcelain"
+    },
+    {
+      "match": "ember mug",
+      "label": "My mug",
+      "brand": "Ember Mug 2"
+    },
+    {
+      "match": "vitruvi",
+      "label": "My diffuser",
+      "brand": "Vitruvi Stone"
+    },
+    {
+      "match": "airpods",
+      "label": "My earbuds",
+      "brand": "AirPods Pro 3"
+    },
+    {
+      "match": "mac studio",
+      "label": "My computer",
+      "brand": "Mac Studio"
+    },
+    {
+      "match": "rocco",
+      "label": "Drinks fridge",
+      "brand": "Rocco"
+    },
+    {
+      "match": "x-h2s",
+      "label": "My camera",
+      "brand": "Fujifilm X-H2S"
+    },
+    {
+      "match": "heyhae",
+      "label": "Gel nails",
+      "brand": "Hey Hae",
+      "code": "MAISYLEIGH"
+    },
+    {
+      "match": "teddy",
+      "label": "Our sofa",
+      "brand": "OMHU Teddy"
+    },
+    {
+      "match": "the frame",
+      "label": "Our TV",
+      "brand": "Samsung The Frame"
+    },
+    {
+      "match": "checked rug",
+      "label": "Our rug",
+      "brand": "Rugs USA"
+    },
+    {
+      "match": "oracle",
+      "label": "Espresso machine",
+      "brand": "Breville Oracle Jet"
+    },
+    {
+      "match": "rice cooker",
+      "label": "Rice cooker",
+      "brand": "Our Place"
+    },
+    {
+      "match": "dream cooker",
+      "label": "Dream Cooker",
+      "brand": "Our Place"
+    },
+    {
+      "match": "wonder oven",
+      "label": "Wonder Oven",
+      "brand": "Our Place"
+    },
+    {
+      "match": "a1 mini",
+      "label": "Small 3D printer",
+      "brand": "Bambu Lab A1 mini"
+    },
+    {
+      "match": "p1s",
+      "label": "3D printer",
+      "brand": "Bambu Lab P1S"
+    },
+    {
+      "match": "x2d",
+      "label": "3D printer",
+      "brand": "Bambu Lab X2D"
+    },
+    {
+      "match": "magic trackpad",
+      "label": "My trackpad",
+      "brand": "Apple Magic Trackpad"
+    },
+    {
+      "match": "brio",
+      "label": "My webcam",
+      "brand": "Logitech Brio 4K"
+    },
+    {
+      "match": "sideboard",
+      "label": "Sideboard",
+      "brand": "IKEA Stockholm"
+    },
+    {
+      "match": "tv unit",
+      "label": "TV unit",
+      "brand": "IKEA Stockholm"
+    },
+    {
+      "match": "shelving unit",
+      "label": "Shelf bench",
+      "brand": "IKEA Stockholm"
+    },
+    {
+      "match": "nordkisa",
+      "label": "Wardrobe",
+      "brand": "IKEA, bamboo"
+    }
+  ],
+  "desk_extra": [
+    89003115
+  ],
+  "crops": {
+    "p88917134": [
+      0,
+      0.14,
+      1,
+      1
+    ],
+    "p88917418": [
+      0,
+      0.14,
+      1,
+      1
+    ]
+  }
+}
