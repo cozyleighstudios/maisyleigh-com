@@ -188,6 +188,35 @@ def link_of(pin, slug):
     return aff or link
 
 
+DATES = os.path.join(HERE, 'dates.json')
+B64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
+
+
+def posted(kind, code, dates):
+    """The day a video went up, 'YYYY-MM-DD', or '' if it can't be told. Kept in dates.json once known."""
+    if code in dates:
+        return dates[code]
+    day = ''
+    try:
+        if kind == 'reel':  # an Instagram post's code holds the moment it was posted
+            n = 0
+            for ch in code:
+                n = n * 64 + B64.index(ch)
+            import datetime
+            day = datetime.datetime.fromtimestamp(((n >> 23) + 1314220021721) / 1000, datetime.timezone.utc).strftime('%Y-%m-%d')
+        else:
+            page = curl('https://www.youtube.com/watch?v=' + code, origin=False).decode('utf8', 'ignore')
+            m = re.search(r'"(?:publishDate|datePublished|uploadDate)"(?: content)?[:=]\s*"(\d{4}-\d\d-\d\d)', page) or re.search(r'itemprop="datePublished" content="(\d{4}-\d\d-\d\d)', page)
+            day = m.group(1) if m else ''
+    except Exception:  # noqa: BLE001
+        day = ''
+    if day:
+        dates[code] = day
+    else:
+        problems.append(f'The post date of {code} could not be read; it is shown last until it can.')
+    return day
+
+
 def slugify(t):
     return re.sub(r'[^a-z0-9]+', '-', t.lower().replace('é', 'e').replace('&', 'and')).strip('-')
 
@@ -241,6 +270,7 @@ def main():
 
     # which collections are videos, and where each page lives
     videos = []
+    dates = json.load(open(DATES)) if os.path.exists(DATES) else {}
     for cid in [str(i) for i in CFG['video_order']] + [c for c in shop if int(c) not in CFG['video_order']]:
         c, v = shop.get(cid), CFG['videos'].get(cid, {})
         if not c or v.get('hide') or not c['pins']:
@@ -259,11 +289,14 @@ def main():
                 cover, _ = picture(f'https://i.ytimg.com/vi/{m_yt.group(1)}/hqdefault.jpg', 'y_' + m_yt.group(1), size=800, cover=True)
         if not cover:
             continue
-        videos.append({'cid': cid, 'kind': 'reel' if m_reel else 'yt', 'title': title, 'url': url, 'cover': cover, 'slug': slugify(title), 'note': v.get('note')})
+        videos.append({'cid': cid, 'kind': 'reel' if m_reel else 'yt', 'title': title, 'url': url, 'cover': cover, 'slug': slugify(title), 'note': v.get('note'),
+                       'when': posted('reel' if m_reel else 'yt', (m_reel or m_yt).group(1), dates)})
         for code in v.get('more_reels', []):  # another reel of the same things: its own cover, the same page
             extra, _ = picture(f'https://www.instagram.com/p/{code}/media/?size=l', 'r_' + code, size=540, ua=PHONE)
             if extra:
-                videos.append({**videos[-1], 'cover': extra, 'twin': True})
+                videos.append({**videos[-1], 'cover': extra, 'twin': True, 'when': posted('reel', code, dates)})
+    json.dump(dates, open(DATES, 'w'), indent=1, sort_keys=True)
+    videos.sort(key=lambda v: v['when'], reverse=True)  # newest first; python keeps ShopMy's order between equals
     rooms = [{'cid': str(r['collection']), 'title': r['title'], 'slug': slugify(r['title']), 'cover': r.get('cover')} for r in CFG['rooms'] if shop.get(str(r['collection']))]
     video_slug = {v['cid']: v['slug'] for v in videos}
     notes = []
