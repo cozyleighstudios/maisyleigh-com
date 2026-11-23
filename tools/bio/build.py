@@ -317,7 +317,7 @@ def main():
         print('NOTE:', n)
     for p in problems:
         print('PROBLEM:', p)
-    sys.exit(1 if problems else 0)
+    sys.exit(3 if problems else 0)  # 3 = pages written, but something could not be read
 
 
 if __name__ == '__main__':
