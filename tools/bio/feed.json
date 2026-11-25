@@ -1,30 +1,24 @@
 {
- "_about": "Your Instagram profile's reels, newest first, as the studio server saw them (trial reels and deleted posts left out). Written by tools/bio/feed-from-server.mts in cozyleigh-analytics-server. Two reels Instagram's API no longer returns (archived or deleted on Nov 25 2026) were taken out.",
- "read": "2026-11-25",
+ "_about": "Your Instagram profile reels, newest first, from the studio server (https://cozyleigh.studio/apps/engagement/bio-reels).",
+ "read": "2026-11-25T18:24:16.454Z",
  "posts": [
   {
    "code": "DgLE5ilNIMB",
    "date": "2026-11-25",
    "type": "reel",
-   "caption": "i used to feel so guilty about only working in big bursts. turns out i’m not unp"
-  },
-  {
-   "code": "DgGJt7itsEl",
-   "date": "2026-11-23",
-   "type": "reel",
-   "caption": "Morning in the studio ☕️🍁 as a creative & designer I dedicate towards entering "
+   "caption": "i used to feel so guilty about only working in big bursts. turns out i’m not unproductive. i was just scheduling it wron"
   },
   {
    "code": "Df7PlEdtnL8",
    "date": "2026-11-19",
    "type": "reel",
-   "caption": "ahhh a cozy couch for the office! 🫒☁️ i always felt like something was missing "
+   "caption": "ahhh a cozy couch for the office! 🫒☁️ i always felt like something was missing in this space so i changed my office lay"
   },
   {
    "code": "DfITr7gtQfh",
    "date": "2026-10-30",
    "type": "reel",
-   "caption": "A day at my desk with Mori 🌿 A gentle reminder to put my phone down and take a "
+   "caption": "A day at my desk with Mori 🌿 A gentle reminder to put my phone down and take a forest break, some company while I worke"
   },
   {
    "code": "DepEsgCNA_I",
@@ -36,7 +30,13 @@
    "code": "DedUtnCOkOo",
    "date": "2026-10-14",
    "type": "reel",
-   "caption": "calm desk = calm mind 😌🍂🖥️ lately i've been focusing on the little rituals in"
+   "caption": "calm desk = calm mind 😌🍂🖥️ lately i've been focusing on the little rituals in my life. they help me feel grounded and"
+  },
+  {
+   "code": "DedPwaTuZtF",
+   "date": "2026-10-14",
+   "type": "reel",
+   "caption": "asmr work from home morning ritual 🍵☁️"
   },
   {
    "code": "DdRiKgMO_R9",
@@ -48,7 +48,7 @@
    "code": "DdITi2kuC4o",
    "date": "2026-09-11",
    "type": "reel",
-   "caption": "welcome to my cozy japandi home 🍃🏡🍵📖 comment LINK and I'll send you everythi"
+   "caption": "welcome to my cozy japandi home 🍃🏡🍵📖 comment LINK and I'll send you everything in our living room ☁️"
   },
   {
    "code": "DdFpUuCuyFr",
@@ -63,10 +63,16 @@
    "caption": "asmr work from home sesh 🎧🤫☕️ follow for more cozy productivity vibes🍃"
   },
   {
+   "code": "Dc65LS5hupE",
+   "date": "2026-09-05",
+   "type": "reel",
+   "caption": "like a gateway into my cozy world 🎐"
+  },
+  {
    "code": "Dc5QMOROk0e",
    "date": "2026-09-05",
    "type": "reel",
-   "caption": "work from home with me 🖥️☕️✨ comment LINK and I’ll send you everything on my de"
+   "caption": "work from home with me 🖥️☕️✨ comment LINK and I’ll send you everything on my desk ☁️"
   },
   {
    "code": "Dc2OApkuyMt",
@@ -84,13 +90,13 @@
    "code": "DcwwADlNId8",
    "date": "2026-09-01",
    "type": "reel",
-   "caption": "declined every plan for this. zero regrets. 🕯️ cozy friday nights are sacred an"
+   "caption": "declined every plan for this. zero regrets. 🕯️ cozy friday nights are sacred and i will not be taking questions"
   },
   {
    "code": "DcwqGCwtT5g",
    "date": "2026-09-01",
    "type": "reel",
-   "caption": "hi! i’m maisy and it’s nice to meet you 😌💛🍵 join me on my cozy entrepreneur j"
+   "caption": "hi! i’m maisy and it’s nice to meet you 😌💛🍵 join me on my cozy entrepreneur journey as I build my own design studio @"
   },
   {
    "code": "Dctv4jbN075",
@@ -102,7 +108,7 @@
    "code": "DctuE-ANOqK",
    "date": "2026-08-31",
    "type": "reel",
-   "caption": "cozy hours + focused mind ☕️ maintaining my inner peace, one Focus session at a "
+   "caption": "cozy hours + focused mind ☕️ maintaining my inner peace, one Focus session at a time"
   },
   {
    "code": "DctfiKzOxtY",
@@ -133,6 +139,12 @@
    "date": "2026-08-29",
    "type": "reel",
    "caption": "when your life feels like a cozy game 🍃"
+  },
+  {
+   "code": "Dcek2jKxMNq",
+   "date": "2026-08-25",
+   "type": "reel",
+   "caption": "cooking in the studio 🪵📦📔 @cozyleigh.studios batch 1.0 of our zen book stands finally going out!"
   }
  ]
 }
