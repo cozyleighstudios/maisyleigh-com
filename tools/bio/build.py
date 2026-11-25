@@ -95,6 +95,17 @@ def trim(im, least=.04):
     return im.crop(box) if (l > w * least or t > h * least or r < w * (1 - least) or b < h * (1 - least)) else im
 
 
+def whiten(im):
+    """Make a product photo's plain backdrop white, so on the page's sand card it blends away (multiply).
+    Only when the four corners agree (a plain backdrop); a photo of a room is left as it is."""
+    w, h = im.size
+    corners = [im.getpixel(xy) for xy in ((3, 3), (w - 4, 3), (3, h - 4), (w - 4, h - 4))]
+    if max(max(c[i] for c in corners) - min(c[i] for c in corners) for i in range(3)) > 60:
+        return im
+    bg = [sorted(c[i] for c in corners)[2] for i in range(3)]
+    return Image.merge('RGB', [ch.point(lambda v, b=b: min(255, int(v * 255 / max(b, 1)))) for ch, b in zip(im.split(), bg)])
+
+
 def is_cutout(im):
     """True when the picture is a product on a white backdrop (so it sits on a paper card)."""
     s = im.convert('RGB').resize((40, 40))
@@ -117,7 +128,7 @@ def picture(url, name, size=700, square=False, ua=UA, cover=False):
             if box:  # a badge or band a brand's own photo carries
                 im = im.crop((int(box[0] * im.width), int(box[1] * im.height), int(box[2] * im.width), int(box[3] * im.height)))
             if square:
-                im = trim(im)
+                im = whiten(trim(im))
             if cover:
                 im = trim(im, .004)
             im.thumbnail((size, size * 2))
@@ -136,7 +147,7 @@ def own_photo(key):
     dst = os.path.join(IMG, 'own-' + key + '.jpg')
     if os.path.exists(src):
         if not os.path.exists(dst):
-            Image.open(src).convert('RGB').save(dst, quality=84)
+            whiten(Image.open(src).convert('RGB')).save(dst, quality=84)
         return f'img/own-{key}.jpg'
     return None
 
@@ -252,13 +263,16 @@ BAR = '''<header class="hd"><div class="wrap hd-in"><a class="wm" href="index.ht
 SOCIALS = '''<li><a href="https://www.youtube.com/@maisyleigh" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a></li><li><a href="https://www.instagram.com/maisyleigh/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a></li><li><a href="https://www.tiktok.com/@maisyleighs" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.8V9.4a6.3 6.3 0 1 0 5.4 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8l-1-.1z"/></svg></a></li><li><a href="https://x.com/maisyleigh_" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7 4.2H5z"/></svg></a></li>'''
 # The bio page opens like the old link page (links.html), but as @maisyleigh is positioned (Nov 24 2026): Maisy the designer,
 # at her own desk, in her own words. Family and studio stories belong to @cozyleigh.studios, so no studio group photo here.
-PROFILE = '''<div class="cover"><img src="img/cover-maisy-desk.jpg" width="1400" height="788" alt="Maisy at her desk in the morning light"></div>
-<section class="band b-top profile"><div class="wrap"><img class="avatar" src="img/profile-maisy.jpg" width="400" height="400" alt="Maisy Leigh">
-<h1 class="name">Maisy Leigh</h1><p class="line">making life warm again, one design at a time</p><p class="role">designer &amp; founder of <a href="https://www.instagram.com/cozyleigh.studios/">@cozyleigh.studios</a></p>
-<ul class="soc">'''+SOCIALS+'''</ul>
-<a class="btn shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile">Shop Cozyleigh Studios</a>
-<p class="note">Everything on my desk and around my home. Some links earn me a small commission.</p></div></section>'''
-FOOT = '''</main><footer class="ft"><div class="wrap"><small>&copy; 2026 Maisy Leigh</small></div></footer>%s</body></html>'''
+PROFILE = '''<header class="profile"><div class="wrap">
+<div class="cover"><img src="img/cover-maisy-desk.jpg" width="1400" height="788" alt="Maisy at her desk in the morning light"></div>
+<img class="avatar" src="img/profile-maisy.jpg" width="400" height="400" alt="Maisy Leigh">
+<h1 class="name">Maisy Leigh</h1>
+<p class="line">making life warm again, one design at a time</p>
+<p class="role">designer &amp; founder of <a href="https://www.instagram.com/cozyleigh.studios/">@cozyleigh.studios</a></p>
+<div class="actions"><ul class="soc">'''+SOCIALS+'''</ul>
+<a class="shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile">Shop Cozyleigh</a></div>
+</div></header>'''
+FOOT = '''</main><footer class="ft"><div class="wrap"><p>Some links earn me a small commission, at no cost to you.</p><small>&copy; 2026 Maisy Leigh</small></div></footer>%s</body></html>'''
 COPY_JS = '''<script>document.querySelectorAll('.code').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.code,t=b.querySelector('em');
 function done(){t.textContent='Copied';setTimeout(function(){t.textContent=c},1600)}
 if(navigator.clipboard){navigator.clipboard.writeText(c).then(done,function(){})}})});</script>'''
@@ -333,14 +347,12 @@ def build_spaces(shop):
             print('NOTE:', problems_note)
             items = items[:len(items) - extra]
         photo = own_photo(sp['photo']) if sp.get('photo') else None
-        wide = ' wide' if sp.get('wide') else ''
-        size = 'width="1500" height="1000"' if wide else 'width="1000" height="1250"'
-        pic = f'<img class="space{wide}" src="{photo}" {size} alt="{e(sp.get("alt", sp["title"]))}" loading="lazy">' if photo else ''
-        sections.append(f'<section class="band space-band" id="{slug}"><div class="wrap"><h2 class="space-title">{e(sp["title"])}</h2>{pic}{grid(items)}</div></section>')
+        pic = f'<img class="space" src="{photo}" width="1500" height="1000" alt="{e(sp.get("alt", sp["title"]))}" loading="lazy">' if photo else ''
+        sections.append(f'<section class="sec" id="{slug}"><div class="wrap"><div class="sec-hd"><h2>{e(sp["title"])}</h2><span>{len(items)} things</span></div>{pic}{grid(items)}</div></section>')
     if not sections:
         sys.exit('No space could be built. Nothing was written.')
-    codes = ''.join(f'<button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button>' for c in CFG['codes'])
-    body = ''.join(sections) + band('b-paper', 'My codes', f'<div class="codes">{codes}</div><p class="note">Tap a code to copy it.</p>')
+    codes = ''.join(f'<li><button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button></li>' for c in CFG['codes'])
+    body = ''.join(sections) + f'<section class="sec" id="codes"><div class="wrap"><div class="sec-hd"><h2>My codes</h2><span>Tap to copy</span></div><ul class="codes">{codes}</ul></div></section>'
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
     open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE) + body + FOOT % COPY_JS)

@@ -205,21 +205,21 @@
     },
     {
       "match": "mini light",
-      "label": "My small lamp",
+      "label": "Small lamp",
       "brand": "Zen Mini Light, by Gantri",
       "studio": false,
       "photo": "small-lamp"
     },
     {
       "match": "compact table light",
-      "label": "My small lamp",
+      "label": "Small lamp",
       "brand": "Zen Mini Light, by Gantri",
       "studio": false,
       "photo": "small-lamp"
     },
     {
       "match": "zen light",
-      "label": "My lamp",
+      "label": "Lamp",
       "brand": "Zen Light, by Gantri",
       "studio": false,
       "photo": "my-lamp"
@@ -251,42 +251,42 @@
     },
     {
       "match": "steelcase",
-      "label": "My chair",
+      "label": "Chair",
       "brand": "Steelcase Gesture"
     },
     {
       "match": "pro display",
-      "label": "My monitor",
-      "brand": "Apple Studio Display XDR"
+      "label": "Monitor",
+      "brand": "Apple Studio Display"
     },
     {
       "match": "play75",
-      "label": "My keyboard",
+      "label": "Keyboard",
       "brand": "Play75"
     },
     {
       "match": "logitech lift",
-      "label": "My mouse",
+      "label": "Mouse",
       "brand": "Logitech Lift"
     },
     {
       "match": "kanto",
-      "label": "My speakers",
+      "label": "Speakers",
       "brand": "Kanto Ora"
     },
     {
       "match": "wh-1000",
-      "label": "My headphones",
+      "label": "Headphones",
       "brand": "Sony WH-1000XM5"
     },
     {
       "match": "taggtofs",
-      "label": "My pendant",
+      "label": "Pendant",
       "brand": "IKEA, bamboo"
     },
     {
       "match": "bamboo pendant",
-      "label": "My pendant",
+      "label": "Pendant",
       "brand": "IKEA, bamboo"
     },
     {
@@ -296,33 +296,34 @@
     },
     {
       "match": "matcha for my lattes",
-      "label": "My matcha",
+      "label": "Matcha",
       "brand": "Matchakari",
-      "code": "MAISY10"
+      "code": "MAISY10",
+      "photo": "matcha"
     },
     {
       "match": "hasami gloss mug",
-      "label": "My mug",
+      "label": "Mug",
       "brand": "Hasami Porcelain"
     },
     {
       "match": "ember mug",
-      "label": "My mug",
+      "label": "Mug",
       "brand": "Ember Mug 2"
     },
     {
       "match": "vitruvi",
-      "label": "My diffuser",
+      "label": "Diffuser",
       "brand": "Vitruvi Stone"
     },
     {
       "match": "airpods",
-      "label": "My earbuds",
+      "label": "Earbuds",
       "brand": "AirPods Pro 3"
     },
     {
       "match": "mac studio",
-      "label": "My computer",
+      "label": "Computer",
       "brand": "Mac Studio"
     },
     {
@@ -332,7 +333,7 @@
     },
     {
       "match": "x-h2s",
-      "label": "My camera",
+      "label": "Camera",
       "brand": "Fujifilm X-H2S"
     },
     {
@@ -343,17 +344,17 @@
     },
     {
       "match": "teddy",
-      "label": "Our sofa",
+      "label": "Sofa",
       "brand": "OMHU Teddy"
     },
     {
       "match": "the frame",
-      "label": "Our TV",
+      "label": "TV",
       "brand": "Samsung The Frame"
     },
     {
       "match": "checked rug",
-      "label": "Our rug",
+      "label": "Rug",
       "brand": "Rugs USA"
     },
     {
@@ -393,12 +394,12 @@
     },
     {
       "match": "magic trackpad",
-      "label": "My trackpad",
+      "label": "Trackpad",
       "brand": "Apple Magic Trackpad"
     },
     {
       "match": "brio",
-      "label": "My webcam",
+      "label": "Webcam",
       "brand": "Logitech Brio 4K"
     },
     {
@@ -447,7 +448,7 @@
   "_notes": {
     "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old.",
     "spaces": "Nov 25 2026, Maisy: organise by space ('whats in my workshop', 'whats in my kitchen') instead of one page per post. Each space = ShopMy lists (items shown once, our pieces first) + a photo in tools/bio/photos.",
-    "space_photos": "Nov 25 2026: frames from her own reels (DU6NzAxDncf desk, DUJGw-tjrBi living room, DRhmV5HDnLT kitchen, DYmpX35u0RC workshop), cropped 4:5 clear of on-screen words.",
+    "space_photos": "Nov 25 2026: living room DSCF1476 (11.24), kitchen from the 'cozy café' reel DRhmV5HDnLT, workshop DSCF1427 (11.20), desk DSCF1157 (fall shoot).",
     "link_fixes": "Nov 25 2026, fixed in ShopMy: Wonder Oven and rice cooker now link to Our Place US; Sunset glasses and The Frame TV hidden there (discontinued / unavailable)."
   },
   "reel_pages": {
@@ -530,13 +531,12 @@
         94182160,
         94180582
       ],
-      "note": "Fall shoot DSCF1157 (Oct 2026), the desk between two windows. Items: what's in the photo, then the chair, mug and lamp.",
-      "wide": true
+      "note": "Fall shoot DSCF1157 (Oct 2026), the desk between two windows. Items: what's in the photo, then the chair, mug and lamp."
     },
     {
       "title": "What's in my living room",
       "photo": "space-living",
-      "alt": "Maisy on the olive corduroy sofa in the living room",
+      "alt": "Maisy on the rust corduroy sofa with her dog, the lantern and kitchen behind",
       "lists": [
         7419901
       ]
@@ -553,7 +553,7 @@
     {
       "title": "What's in my workshop",
       "photo": "space-workshop",
-      "alt": "Taking a print off the 3D printer bed",
+      "alt": "The workshop: the wall of 3D printers and trays of charger stands",
       "lists": [
         7816075
       ]
