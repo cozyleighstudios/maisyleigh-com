@@ -5,7 +5,7 @@
   --ink:#3b3731; --muted:#6f655b; --paper:#FFFDF8;
   --peach:#FEDBAE; --coral:#EF886E; --green:#AEBE6C;
   --c0:rgba(239,136,110,0); --g0:rgba(174,190,108,0); --p0:rgba(254,219,174,0);
-  --gutter:16px; --col:720px;
+  --sand:#F5F0E8; --hair:#ECE5DA; --gutter:16px; --col:720px;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -24,18 +24,30 @@ h1,h2,p,ul{margin:0;padding:0}
 .band{position:relative;isolation:isolate;padding:28px 0 36px}
 .band>.wrap{position:relative;z-index:1}
 .band.tight{padding-top:0}
-.b-top{padding:22px 0 26px;background:radial-gradient(ellipse 75% 95% at 60% 42%,var(--coral) 0,var(--c0) 72%),radial-gradient(ellipse 60% 85% at 102% 104%,var(--green) 0,var(--g0) 72%),var(--peach)}
-.b-green{background:radial-gradient(ellipse 90% 45% at -5% -5%,var(--peach) 0,var(--p0) 75%),radial-gradient(ellipse 80% 40% at 105% 104%,var(--peach) 0,var(--p0) 75%),radial-gradient(ellipse 60% 30% at 100% 35%,#c3cc7c 0,rgba(195,204,124,0) 75%),var(--green)}
-.b-peach{background:radial-gradient(ellipse 85% 22% at 100% -2%,var(--green) 0,var(--g0) 70%),radial-gradient(ellipse 95% 30% at 0% 48%,#fbb393 0,rgba(251,179,147,0) 72%),radial-gradient(ellipse 95% 26% at 65% 104%,var(--coral) 0,var(--c0) 75%),var(--peach)}
-.b-coral{background:radial-gradient(ellipse 80% 55% at 0% 100%,var(--peach) 0,var(--p0) 72%),radial-gradient(ellipse 60% 45% at 104% 96%,var(--green) 0,var(--g0) 72%),var(--coral)}
-.b-top::after,.b-green::after,.b-peach::after,.b-coral::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.62;mix-blend-mode:soft-light;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.4 -.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0/240px 240px}
+.b-top{padding:22px 0 26px;background:radial-gradient(ellipse 75% 95% at 60% 42%,rgba(239,136,110,.45) 0,var(--c0) 72%),radial-gradient(ellipse 60% 85% at 102% 104%,var(--green) 0,var(--g0) 72%),var(--peach)}
+.b-top::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.4 -.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0/240px 240px}
+
+/* Sections sit on paper (Maisy, Nov 25 2026: "i dont think we need to make it so colorful"). The logo colours stay in
+   the profile top and as small dots on the section labels. */
+.b-green,.b-peach,.b-coral{background:var(--paper)}
+.band+.band{border-top:1px solid var(--hair)}
+.band.tight{border-top:0}
+
+/* spaces */
+.space-band{padding:32px 0 36px}
+.space-title{font:700 26px/1.15 var(--serif);letter-spacing:-.015em;margin:0 0 14px}
+.space{aspect-ratio:4/5;object-fit:cover;border-radius:8px;margin-bottom:16px}
+.space.wide{aspect-ratio:3/2}
+@media (min-width:768px){.space{aspect-ratio:3/2}}
+@media (min-width:768px){.space-title{font-size:34px}}
 
 /* type */
 .lead{font:700 28px/1.12 var(--serif);letter-spacing:-.02em;max-width:14em;text-wrap:balance}
 .note{font-size:15px;line-height:1.5;margin-top:8px;max-width:34em}
 .sub{font:500 13px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;margin:0 0 14px}
 .more-sub{margin-top:36px}
-.b-paper .sub::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--coral);margin-right:8px}
+.sub::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);margin-right:9px;vertical-align:1px}
+.b-green .sub::before{background:var(--green)}.b-peach .sub::before{background:#F2B57E}
 
 /* grids */
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 8px}
@@ -45,17 +57,17 @@ h1,h2,p,ul{margin:0;padding:0}
 .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 8px}
 .g2 img{aspect-ratio:16/9;object-fit:cover;border-radius:6px}
 .t{display:block;text-decoration:none;min-width:0}
-.t .ph{display:block;aspect-ratio:1/1;border-radius:6px;overflow:hidden;background:var(--paper)}
+.t .ph{display:block;aspect-ratio:1/1;border-radius:6px;overflow:hidden;background:var(--sand)}
 .t .ph img{width:100%;height:100%;object-fit:cover}
 .t.cut .ph img{object-fit:contain;mix-blend-mode:multiply}
 .t b{display:block;font:500 15px/1.25 var(--sans);margin-top:8px;overflow-wrap:anywhere}
 .t>span:not(.ph){display:block;font:400 13px/1.3 var(--sans);margin-top:2px}
-.b-paper .t>span:not(.ph){color:var(--muted)}
+.t>span:not(.ph){color:var(--muted)}
 .t i{display:inline-block;font:500 11px/1 var(--sans);font-style:normal;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--ink);border-radius:4px;background:var(--paper);padding:5px 7px;margin-top:6px}
 
 /* codes and button */
 .codes{display:grid;gap:8px}
-.code{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:60px;padding:12px 14px;border:0;border-radius:8px;background:var(--paper);color:var(--ink);text-align:left;cursor:pointer;font:inherit}
+.code{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:60px;padding:12px 14px;border:0;border-radius:8px;background:var(--sand);color:var(--ink);text-align:left;cursor:pointer;font:inherit}
 .code b{display:block;font:700 20px/1.2 var(--serif);letter-spacing:-.012em}
 .code small{display:block;font-size:14px;color:var(--muted);margin-top:2px}
 .code em{font:500 13px/1 var(--sans);font-style:normal;letter-spacing:.08em;border:1px solid var(--ink);border-radius:4px;padding:9px 10px;white-space:nowrap}
@@ -72,10 +84,24 @@ h1,h2,p,ul{margin:0;padding:0}
 .vh .lead{font-size:26px}
 .vh .more{margin-top:6px}
 
+/* the bio page's top: same parts as the old link page (links.html), in the logo colours */
+.cover{position:relative;max-width:640px;margin:0 auto;aspect-ratio:16/9;overflow:hidden;background:var(--peach)}
+.cover img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.cover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(rgba(254,219,174,0),rgba(254,219,174,.6) 60%,var(--peach))}
+.profile{padding:1px 0 28px;text-align:center;background:radial-gradient(ellipse 80% 70% at 50% 62%,rgba(239,136,110,.45) 0,var(--c0) 72%),radial-gradient(ellipse 60% 60% at 104% 104%,var(--green) 0,var(--g0) 72%),var(--peach)}
+.avatar{position:relative;z-index:2;width:96px;height:96px;margin:-51px auto 10px;border-radius:50%;border:4px solid var(--paper);object-fit:cover;box-shadow:0 2px 10px rgba(59,55,49,.10)}
+.profile .name{font:700 30px/1.15 var(--serif);letter-spacing:-.015em}
+.profile .line{margin:6px auto 0;max-width:26em;font:400 17px/1.4 var(--sans)}
+.profile .role{margin:2px auto 0;font-size:14px;line-height:1.4}
+.profile .role a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.soc{display:flex;justify-content:center;gap:20px;margin:12px 0 0;padding:0;list-style:none}
+.soc a{display:flex;align-items:center;justify-content:center;width:44px;height:44px}
+.soc svg{width:22px;height:22px;fill:var(--ink)}
+.profile .btn{margin-top:12px}
+.profile .note{margin:14px auto 0;font-size:14px;max-width:28em}
+
 /* footer */
 .ft{text-align:center;padding-block:20px 28px}
-.ft ul{display:flex;flex-wrap:wrap;justify-content:center;gap:0 28px;list-style:none}
-.ft a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;text-decoration:none}
 .ft small{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
 
 @media (min-width:768px){
@@ -85,5 +111,5 @@ h1,h2,p,ul{margin:0;padding:0}
   .g3{gap:28px 14px}.g3.v{gap:8px}
   .g2{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 14px}
   .vh{grid-template-columns:200px 1fr;gap:28px}.vh.yt{grid-template-columns:320px 1fr}
-  .btn{max-width:360px}
+  .btn{max-width:360px}.profile .btn{margin-inline:auto}.cover{margin-top:24px;border-radius:12px}
 }

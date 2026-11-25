@@ -17,10 +17,7 @@
     },
     "8234820": {
       "title": "My desk ritual",
-      "reel": "DedO4ysOT5R",
-      "more_reels": [
-        "DedPvMbubNK"
-      ]
+      "reel": "DedO4ysOT5R"
     },
     "4995448": {
       "title": "The full cozy desk look"
@@ -101,6 +98,41 @@
     }
   ],
   "names": [
+    {
+      "match": "latte cup",
+      "label": "Latte cup",
+      "brand": "Owiu Goods"
+    },
+    {
+      "match": "sunset glass",
+      "label": "Sunset glasses",
+      "brand": "Our Place"
+    },
+    {
+      "match": "matcha whisk holder",
+      "label": "Whisk holder",
+      "brand": "Owiu Goods"
+    },
+    {
+      "match": "simple matcha set",
+      "label": "Matcha set",
+      "brand": "Owiu Goods"
+    },
+    {
+      "match": "glass tumblers",
+      "label": "Glass tumblers",
+      "brand": "Hasami Porcelain"
+    },
+    {
+      "match": "moss pole",
+      "label": "Moss pole",
+      "brand": "3D printed, MakerWorld"
+    },
+    {
+      "match": "bamboo wave",
+      "label": "Bamboo screen",
+      "brand": "Oriental Furniture"
+    },
     {
       "match": "charger stand",
       "label": "Charger stand",
@@ -225,7 +257,7 @@
     {
       "match": "pro display",
       "label": "My monitor",
-      "brand": "Apple Pro Display"
+      "brand": "Apple Studio Display XDR"
     },
     {
       "match": "play75",
@@ -406,5 +438,125 @@
       1,
       1
     ]
-  }
+  },
+  "reels_shown": 9,
+  "hide_reels": [
+    "DedPwaTuZtF",
+    "Dc65LS5hupE"
+  ],
+  "_notes": {
+    "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old.",
+    "spaces": "Nov 25 2026, Maisy: organise by space ('whats in my workshop', 'whats in my kitchen') instead of one page per post. Each space = ShopMy lists (items shown once, our pieces first) + a photo in tools/bio/photos.",
+    "space_photos": "Nov 25 2026: frames from her own reels (DU6NzAxDncf desk, DUJGw-tjrBi living room, DRhmV5HDnLT kitchen, DYmpX35u0RC workshop), cropped 4:5 clear of on-screen words.",
+    "link_fixes": "Nov 25 2026, fixed in ShopMy: Wonder Oven and rice cooker now link to Our Place US; Sunset glasses and The Frame TV hidden there (discontinued / unavailable)."
+  },
+  "reel_pages": {
+    "_about": "What's in each reel on the profile (Nov 25 2026). 'list' = the ShopMy collection whose items show, 'lead' = item ids shown first (from the reel's DM cards or what the reel is about). A reel not listed here opens on Instagram.",
+    "DgLE5ilNIMB": {
+      "title": "How I work in bursts",
+      "list": 8234820
+    },
+    "Df7PlEdtnL8": {
+      "title": "A cozy couch for my office",
+      "list": 8234820
+    },
+    "DfITr7gtQfh": {
+      "title": "A day at my desk with Mori",
+      "list": 8234820
+    },
+    "DepEsgCNA_I": {
+      "title": "Setting up my zen desk shelf",
+      "list": 8234820,
+      "lead": [
+        90380517
+      ]
+    },
+    "DedUtnCOkOo": {
+      "title": "Calm desk, calm mind",
+      "list": 8234820,
+      "lead": [
+        94180881,
+        94181544,
+        94181683,
+        94876779
+      ]
+    },
+    "DdRiKgMO_R9": {
+      "title": "Work from home with me",
+      "list": 8234820
+    },
+    "DdITi2kuC4o": {
+      "title": "Our cozy japandi home",
+      "list": 7419901
+    },
+    "DdFpUuCuyFr": {
+      "title": "My therapy after a chaotic day",
+      "list": 8234820
+    },
+    "Dc652xoN5AK": {
+      "title": "Work from home with me",
+      "list": 8234820
+    },
+    "Dc2OApkuyMt": {
+      "title": "Our cozy japandi home",
+      "list": 7419901
+    },
+    "DXkHU-BDrzF": {
+      "title": "The full cozy desk look",
+      "list": 4995448
+    },
+    "DRe8shvDikX": {
+      "title": "Our home café and kitchen",
+      "list": 5447476
+    }
+  },
+  "spaces": [
+    {
+      "title": "What's on my desk",
+      "photo": "space-desk",
+      "alt": "Maisy's desk between two windows: maple desk shelf, monitor, phone on the charger stand, AirPods on the puck, keyboard and matcha desk mat",
+      "lists": [],
+      "lead": [
+        94876779,
+        94180881,
+        94181528,
+        90380517,
+        94181600,
+        94181544,
+        94180532,
+        94183967,
+        63643041,
+        94180314,
+        94182160,
+        94180582
+      ],
+      "note": "Fall shoot DSCF1157 (Oct 2026), the desk between two windows. Items: what's in the photo, then the chair, mug and lamp.",
+      "wide": true
+    },
+    {
+      "title": "What's in my living room",
+      "photo": "space-living",
+      "alt": "Maisy on the olive corduroy sofa in the living room",
+      "lists": [
+        7419901
+      ]
+    },
+    {
+      "title": "What's in my kitchen",
+      "photo": "space-kitchen",
+      "alt": "Maisy and Tristan having coffee at the kitchen counter",
+      "lists": [
+        5447476,
+        7822715
+      ]
+    },
+    {
+      "title": "What's in my workshop",
+      "photo": "space-workshop",
+      "alt": "Taking a print off the 3D printer bed",
+      "lists": [
+        7816075
+      ]
+    }
+  ]
 }
