@@ -448,7 +448,7 @@
   "_notes": {
     "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old.",
     "spaces": "Nov 25 2026, Maisy: organise by space ('whats in my workshop', 'whats in my kitchen') instead of one page per post. Each space = ShopMy lists (items shown once, our pieces first) + a photo in tools/bio/photos.",
-    "space_photos": "Nov 25 2026: living room DSCF1486, kitchen DSCF1402, workshop DSCF1427 (this week's footage, 11.20 and 11.24); desk DSCF1157 (fall shoot).",
+    "space_photos": "Nov 25 2026: living room DSCF1476 (11.24), kitchen from the 'cozy café' reel DRhmV5HDnLT, workshop DSCF1427 (11.20), desk DSCF1157 (fall shoot).",
     "link_fixes": "Nov 25 2026, fixed in ShopMy: Wonder Oven and rice cooker now link to Our Place US; Sunset glasses and The Frame TV hidden there (discontinued / unavailable)."
   },
   "reel_pages": {
@@ -536,7 +536,7 @@
     {
       "title": "What's in my living room",
       "photo": "space-living",
-      "alt": "The living room with the rust corduroy sofa, paper lantern and TV",
+      "alt": "Maisy on the rust corduroy sofa with her dog, the lantern and kitchen behind",
       "lists": [
         7419901
       ]
@@ -544,7 +544,7 @@
     {
       "title": "What's in my kitchen",
       "photo": "space-kitchen",
-      "alt": "Maisy making coffee at the kitchen counter",
+      "alt": "Maisy and Tristan having coffee at the kitchen counter",
       "lists": [
         5447476,
         7822715
