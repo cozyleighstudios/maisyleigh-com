@@ -37,6 +37,7 @@ h1,h2,p,ul{margin:0;padding:0}
 .space-band{padding:32px 0 36px}
 .space-title{font:700 26px/1.15 var(--serif);letter-spacing:-.015em;margin:0 0 14px}
 .space{aspect-ratio:4/5;object-fit:cover;border-radius:8px;margin-bottom:16px}
+.space.wide{aspect-ratio:3/2}
 @media (min-width:768px){.space{aspect-ratio:3/2}}
 @media (min-width:768px){.space-title{font-size:34px}}
 
