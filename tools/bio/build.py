@@ -330,7 +330,7 @@ def build_spaces(shop):
             print('NOTE:', problems_note)
             items = items[:len(items) - extra]
         photo = own_photo(sp['photo']) if sp.get('photo') else None
-        pic = f'<img class="space" src="{photo}" width="1200" height="800" alt="{e(sp.get("alt", sp["title"]))}" loading="lazy">' if photo else ''
+        pic = f'<img class="space" src="{photo}" width="1000" height="1250" alt="{e(sp.get("alt", sp["title"]))}" loading="lazy">' if photo else ''
         sections.append(f'<section class="band space-band" id="{slug}"><div class="wrap"><h2 class="space-title">{e(sp["title"])}</h2>{pic}{grid(items)}</div></section>')
     if not sections:
         sys.exit('No space could be built. Nothing was written.')

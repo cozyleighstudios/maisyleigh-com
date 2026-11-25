@@ -421,7 +421,8 @@
   ],
   "_notes": {
     "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old.",
-    "spaces": "Nov 25 2026, Maisy: organise by space ('whats in my workshop', 'whats in my kitchen') instead of one page per post. Each space = ShopMy lists (items shown once, our pieces first) + a photo in tools/bio/photos."
+    "spaces": "Nov 25 2026, Maisy: organise by space ('whats in my workshop', 'whats in my kitchen') instead of one page per post. Each space = ShopMy lists (items shown once, our pieces first) + a photo in tools/bio/photos.",
+    "space_photos": "Nov 25 2026: frames from her own reels (DU6NzAxDncf desk, DUJGw-tjrBi living room, DRhmV5HDnLT kitchen, DYmpX35u0RC workshop), cropped 4:5 clear of on-screen words."
   },
   "reel_pages": {
     "_about": "What's in each reel on the profile (Nov 25 2026). 'list' = the ShopMy collection whose items show, 'lead' = item ids shown first (from the reel's DM cards or what the reel is about). A reel not listed here opens on Instagram.",
@@ -487,18 +488,25 @@
     {
       "title": "What's on my desk",
       "photo": "space-desk",
-      "alt": "Maisy's desk: monitor on the maple desk shelf, speakers, keyboard and desk mat",
-      "lists": [
-        8234820
-      ],
+      "alt": "Maisy's white desk from above: maple shelf, monitor, charger stand, matcha and keyboard",
+      "lists": [],
       "lead": [
-        90380517
-      ]
+        94876779,
+        94180881,
+        94181528,
+        90380517,
+        63643041,
+        94181600,
+        94180314,
+        94182160,
+        94180582
+      ],
+      "note": "The studio desk from 'what's on my cozy desk setup' (Feb 18 2026), items in its caption's order. Not in ShopMy: Ergonofis Sway desk, Mode Loop TKL, granite wrist rest, Gantri wall light, IKEA paper lantern, Citizenry jute rug."
     },
     {
       "title": "What's in my living room",
       "photo": "space-living",
-      "alt": "The olive sofa and rug in the living room",
+      "alt": "Maisy on the olive corduroy sofa in the living room",
       "lists": [
         7419901
       ]
@@ -506,7 +514,7 @@
     {
       "title": "What's in my kitchen",
       "photo": "space-kitchen",
-      "alt": "The kitchen counter and stools",
+      "alt": "Maisy and Tristan having coffee at the kitchen counter",
       "lists": [
         5447476,
         7822715
@@ -515,7 +523,7 @@
     {
       "title": "What's in my workshop",
       "photo": "space-workshop",
-      "alt": "Making wood pieces at the workshop bench",
+      "alt": "Taking a print off the 3D printer bed",
       "lists": [
         7816075
       ]
