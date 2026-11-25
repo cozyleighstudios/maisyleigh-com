@@ -254,7 +254,7 @@ PROFILE = '''<div class="cover"><img src="img/cover-maisy-desk.jpg" width="1400"
 <h1 class="name">Maisy Leigh</h1><p class="line">making life warm again, one design at a time</p><p class="role">designer &amp; founder of <a href="https://www.instagram.com/cozyleigh.studios/">@cozyleigh.studios</a></p>
 <ul class="soc">'''+SOCIALS+'''</ul>
 <a class="btn shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile">Shop Cozyleigh Studios</a>
-<p class="note">Tap a video to see what&rsquo;s in it. Some links earn me a small commission.</p></div></section>'''
+<p class="note">Everything on my desk and around my home. Some links earn me a small commission.</p></div></section>'''
 FOOT = '''</main><footer class="ft"><div class="wrap"><small>&copy; 2026 Maisy Leigh</small></div></footer>%s</body></html>'''
 COPY_JS = '''<script>document.querySelectorAll('.code').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.code,t=b.querySelector('em');
 function done(){t.textContent='Copied';setTimeout(function(){t.textContent=c},1600)}
@@ -307,11 +307,51 @@ def grid(items, cls='g3'):
     return f'<div class="{cls}">' + ''.join(items) + '</div>'
 
 
+def build_spaces(shop):
+    """The page by space (Nov 25 2026): profile top, then 'What's on my desk', 'What's in my kitchen'... each a photo
+    of the space and its things (our pieces first), then the codes. One page; nothing to set up per post."""
+    import glob
+    every_pin = {p['id']: p for col in shop.values() for p in col['pins']}
+    sections = []
+    for sp in CFG['spaces']:
+        pins = [every_pin[i] for i in sp.get('lead', []) if i in every_pin]
+        for cid in sp['lists']:
+            pins += shop.get(str(cid), {}).get('pins', [])
+        if not pins:
+            problems.append(f"{sp['title']}: none of its ShopMy lists could be read, so it's left off.")
+            continue
+        slug = slugify(sp['title'].replace("'", ''))
+        ts = tiles(pins, slug)
+        lead_n = len([i for i in sp.get('lead', []) if i in every_pin])
+        items = [t for _, t in ts[:lead_n]] + [t for s_, t in ts[lead_n:] if s_] + [t for s_, t in ts[lead_n:] if not s_]
+        extra = len(items) % 3
+        if extra and len(items) > 3:  # three across: never a lonely tile on the last row
+            problems_note = f"{sp['title']}: the last {extra} in ShopMy's order left off so the last row is full ({len(items)} in all)."
+            print('NOTE:', problems_note)
+            items = items[:len(items) - extra]
+        photo = own_photo(sp['photo']) if sp.get('photo') else None
+        pic = f'<img class="space" src="{photo}" width="1200" height="800" alt="{e(sp.get("alt", sp["title"]))}" loading="lazy">' if photo else ''
+        sections.append(f'<section class="band space-band" id="{slug}"><div class="wrap"><h2 class="space-title">{e(sp["title"])}</h2>{pic}{grid(items)}</div></section>')
+    if not sections:
+        sys.exit('No space could be built. Nothing was written.')
+    codes = ''.join(f'<button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button>' for c in CFG['codes'])
+    body = ''.join(sections) + band('b-paper', 'My codes', f'<div class="codes">{codes}</div><p class="note">Tap a code to copy it.</p>')
+    for old in glob.glob(os.path.join(OUT, '*.html')):
+        os.remove(old)  # the per-post pages are gone; one page now
+    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE) + body + FOOT % COPY_JS)
+    print(f"Wrote the bio page to {OUT}: {len(sections)} spaces.")
+    for p in problems:
+        print('PROBLEM:', p)
+    sys.exit(3 if problems else 0)
+
+
 def main():
     os.makedirs(IMG, exist_ok=True)
     shop = read_shop()
     if not shop:
         sys.exit('ShopMy could not be read and there is no kept copy. Nothing was written.')
+    if CFG.get('spaces'):
+        return build_spaces(shop)
 
     # which collections are videos, and where each page lives
     videos = []

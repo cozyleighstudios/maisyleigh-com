@@ -99,6 +99,16 @@
   ],
   "names": [
     {
+      "match": "moss pole",
+      "label": "Moss pole",
+      "brand": "3D printed, MakerWorld"
+    },
+    {
+      "match": "bamboo wave",
+      "label": "Bamboo screen",
+      "brand": "Oriental Furniture"
+    },
+    {
       "match": "charger stand",
       "label": "Charger stand",
       "brand": "Zen MagSafe Stand",
@@ -410,7 +420,8 @@
     "Dc65LS5hupE"
   ],
   "_notes": {
-    "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old."
+    "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old.",
+    "spaces": "Nov 25 2026, Maisy: organise by space ('whats in my workshop', 'whats in my kitchen') instead of one page per post. Each space = ShopMy lists (items shown once, our pieces first) + a photo in tools/bio/photos."
   },
   "reel_pages": {
     "_about": "What's in each reel on the profile (Nov 25 2026). 'list' = the ShopMy collection whose items show, 'lead' = item ids shown first (from the reel's DM cards or what the reel is about). A reel not listed here opens on Instagram.",
@@ -471,5 +482,43 @@
       "title": "Our home café and kitchen",
       "list": 5447476
     }
-  }
+  },
+  "spaces": [
+    {
+      "title": "What's on my desk",
+      "photo": "space-desk",
+      "alt": "Maisy's desk: monitor on the maple desk shelf, speakers, keyboard and desk mat",
+      "lists": [
+        8234820
+      ],
+      "lead": [
+        90380517
+      ]
+    },
+    {
+      "title": "What's in my living room",
+      "photo": "space-living",
+      "alt": "The olive sofa and rug in the living room",
+      "lists": [
+        7419901
+      ]
+    },
+    {
+      "title": "What's in my kitchen",
+      "photo": "space-kitchen",
+      "alt": "The kitchen counter and stools",
+      "lists": [
+        5447476,
+        7822715
+      ]
+    },
+    {
+      "title": "What's in my workshop",
+      "photo": "space-workshop",
+      "alt": "Making wood pieces at the workshop bench",
+      "lists": [
+        7816075
+      ]
+    }
+  ]
 }
