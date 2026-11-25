@@ -95,6 +95,17 @@ def trim(im, least=.04):
     return im.crop(box) if (l > w * least or t > h * least or r < w * (1 - least) or b < h * (1 - least)) else im
 
 
+def whiten(im):
+    """Make a product photo's plain backdrop white, so on the page's sand card it blends away (multiply).
+    Only when the four corners agree (a plain backdrop); a photo of a room is left as it is."""
+    w, h = im.size
+    corners = [im.getpixel(xy) for xy in ((3, 3), (w - 4, 3), (3, h - 4), (w - 4, h - 4))]
+    if max(max(c[i] for c in corners) - min(c[i] for c in corners) for i in range(3)) > 60:
+        return im
+    bg = [sorted(c[i] for c in corners)[2] for i in range(3)]
+    return Image.merge('RGB', [ch.point(lambda v, b=b: min(255, int(v * 255 / max(b, 1)))) for ch, b in zip(im.split(), bg)])
+
+
 def is_cutout(im):
     """True when the picture is a product on a white backdrop (so it sits on a paper card)."""
     s = im.convert('RGB').resize((40, 40))
@@ -117,7 +128,7 @@ def picture(url, name, size=700, square=False, ua=UA, cover=False):
             if box:  # a badge or band a brand's own photo carries
                 im = im.crop((int(box[0] * im.width), int(box[1] * im.height), int(box[2] * im.width), int(box[3] * im.height)))
             if square:
-                im = trim(im)
+                im = whiten(trim(im))
             if cover:
                 im = trim(im, .004)
             im.thumbnail((size, size * 2))
@@ -136,7 +147,7 @@ def own_photo(key):
     dst = os.path.join(IMG, 'own-' + key + '.jpg')
     if os.path.exists(src):
         if not os.path.exists(dst):
-            Image.open(src).convert('RGB').save(dst, quality=84)
+            whiten(Image.open(src).convert('RGB')).save(dst, quality=84)
         return f'img/own-{key}.jpg'
     return None
 
