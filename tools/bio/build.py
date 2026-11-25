@@ -225,7 +225,10 @@ def tiles(pins, slug, seen=None):
     """Tile html for a list of items, one tile per different thing."""
     seen = set() if seen is None else seen
     out = []
+    hide = CFG.get('hide_links', [])
     for p in pins:
+        if any(h in (p.get('link') or '') + (p.get('affiliate_link') or '') for h in hide):
+            continue  # a dead, out-of-stock or wrong-country link (bio.json hide_links)
         label, brand, code, studio, photo = name_of(p)
         key = (label, brand)
         if key in seen:
