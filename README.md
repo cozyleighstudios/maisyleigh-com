@@ -20,7 +20,10 @@ and our own photos of studio pieces in `tools/bio/photos/`.
 - Items ShopMy earns on link through `go.shopmy.us/p-<item id>`, because ShopMy makes that commission link fresh for
   each tap. Items with Maisy's own programme link use it as is. Cozyleigh links carry `utm_source=maisyleigh.com`,
   `utm_medium=bio`, `utm_campaign=<page>`.
-- Reels and YouTube videos show newest first, by the day each was posted (kept in `tools/bio/dates.json`).
+- The reel row is the @maisyleigh profile: the latest reels in feed order, read each night from the studio server
+  (`cozyleigh.studio/apps/engagement/bio-reels`, covers at `/bio-reels/<code>.jpg`), kept in `tools/bio/feed.json`.
+  A reel opens its "what's in it" page when a ShopMy list belongs to it (`reel_lists` in bio.json), else Instagram.
+- YouTube videos show newest first, by the day each was posted (kept in `tools/bio/dates.json`).
 - Colours are the three in the Cozyleigh logo (peach `#FEDBAE`, coral `#EF886E`, green `#AEBE6C`), as grainy gradients.
 - `.github/workflows/bio-nightly.yml` runs the script every night at 08:30 UTC (and from the Actions tab, "Run workflow") and commits
   what changed to `main`. A run that couldn't read ShopMy or a picture ends red, so GitHub emails the repo's owners.

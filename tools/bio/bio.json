@@ -409,5 +409,12 @@
     "DXkHU-BDrzF": 4995448,
     "DRe8shvDikX": 5447476
   },
-  "reels_shown": 9
+  "reels_shown": 9,
+  "hide_reels": [
+    "DedPwaTuZtF",
+    "Dc65LS5hupE"
+  ],
+  "_notes": {
+    "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old."
+  }
 }

@@ -262,6 +262,28 @@ if(navigator.clipboard){navigator.clipboard.writeText(c).then(done,function(){})
 DISCLOSE = 'Some links earn me a small commission, at no cost to you.'
 
 
+FEED_URL = 'https://cozyleigh.studio/apps/engagement/bio-reels'
+
+
+def read_feed():
+    """@maisyleigh's profile reels, newest first, from the studio server (it syncs Instagram hourly; trial reels and
+    archived posts left out). A copy is kept in feed.json; if the server can't be read, the copy is used and the run
+    says so. Reels in bio.json "hide_reels" are left out."""
+    path = os.path.join(HERE, 'feed.json')
+    kept = json.load(open(path)) if os.path.exists(path) else {'posts': []}
+    try:
+        d = json.loads(curl(FEED_URL, origin=False))
+        posts = [{'code': r['code'], 'date': r['date'], 'type': 'reel', 'caption': r.get('caption', '')} for r in d['reels'] if r.get('code')]
+        if not posts:
+            raise ValueError('the feed came back empty')
+        kept = {'_about': 'Your Instagram profile reels, newest first, from the studio server (' + FEED_URL + ').', 'read': d.get('read', ''), 'posts': posts}
+        json.dump(kept, open(path, 'w'), indent=1, ensure_ascii=False)
+    except Exception as ex:  # noqa: BLE001 - keep the last good copy
+        problems.append(f'The studio server\'s reel feed could not be read ({ex}); the reel row uses the copy from {kept.get("read") or "before"}.')
+    hide = set(CFG.get('hide_reels', []))
+    return [p for p in kept['posts'] if p.get('type', 'reel') == 'reel' and p.get('code') and p['code'] not in hide]
+
+
 def reel_tile(v):
     rel = '' if v['list'] else ' rel="noopener"'
     return f'<a href="{e(v["href"])}"{rel}><img src="{v["cover"]}" alt="Reel: {e(v["title"][:80])}"></a>'
@@ -344,14 +366,13 @@ def main():
     # the bio page
     # The reel row is the profile itself: the latest reels in feed order, so it matches what people just scrolled.
     # A reel opens its "what's in it" page when a ShopMy list belongs to it, otherwise the reel on Instagram.
-    feed_path = os.path.join(HERE, 'feed.json')
-    feed = [p for p in (json.load(open(feed_path))['posts'] if os.path.exists(feed_path) else []) if p.get('type') == 'reel' and p.get('code')]
+    feed = read_feed()
     page_of = {v['url'].rstrip('/').rsplit('/', 1)[-1]: v for v in videos if v['kind'] == 'reel'}
     for code, cid in CFG.get('reel_lists', {}).items():
         page_of[code] = next((v for v in videos if v['cid'] == str(cid)), page_of.get(code))
     reels = []
     for p in feed[:CFG.get('reels_shown', 9)]:
-        cover, _ = picture(f"https://www.instagram.com/p/{p['code']}/media/?size=l", 'r_' + p['code'], size=540, ua=PHONE)
+        cover, _ = picture(FEED_URL + f"/{p['code']}.jpg", 'r_' + p['code'], size=540)
         if not cover:
             continue
         v = page_of.get(p['code'])
