@@ -99,6 +99,11 @@
   ],
   "names": [
     {
+      "match": "latte cup",
+      "label": "Latte cup",
+      "brand": "Owiu Goods"
+    },
+    {
       "match": "sunset glass",
       "label": "Sunset glasses",
       "brand": "Our Place"
@@ -443,7 +448,7 @@
     "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old.",
     "spaces": "Nov 25 2026, Maisy: organise by space ('whats in my workshop', 'whats in my kitchen') instead of one page per post. Each space = ShopMy lists (items shown once, our pieces first) + a photo in tools/bio/photos.",
     "space_photos": "Nov 25 2026: frames from her own reels (DU6NzAxDncf desk, DUJGw-tjrBi living room, DRhmV5HDnLT kitchen, DYmpX35u0RC workshop), cropped 4:5 clear of on-screen words.",
-    "hide_links": "Nov 25 2026 link check: The Frame unavailable at Bloomingdale's, Sunset glasses out of stock at Selfridges (UK; discontinued in the US), Wonder Oven and rice cooker linked to Our Place Canada. Hidden by link, so fixing the link in ShopMy brings each back by itself."
+    "link_fixes": "Nov 25 2026, fixed in ShopMy: Wonder Oven and rice cooker now link to Our Place US; Sunset glasses and The Frame TV hidden there (discontinued / unavailable)."
   },
   "reel_pages": {
     "_about": "What's in each reel on the profile (Nov 25 2026). 'list' = the ShopMy collection whose items show, 'lead' = item ids shown first (from the reel's DM cards or what the reel is about). A reel not listed here opens on Instagram.",
@@ -553,10 +558,5 @@
         7816075
       ]
     }
-  ],
-  "hide_links": [
-    "bloomingdales.com/shop/product/samsung-ls03d",
-    "selfridges.com",
-    "fromourplace.ca"
   ]
 }

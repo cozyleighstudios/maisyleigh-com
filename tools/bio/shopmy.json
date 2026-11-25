@@ -964,15 +964,6 @@
     "affiliate_link": "https://glnk.io/jloqy/maisyleigh"
    },
    {
-    "id": 60211898,
-    "title": "OUR PLACE | Essentials Sunset Glass Tumblers Set Of Four",
-    "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-53012715-1776360669007-R03870731_DAWN_M",
-    "link": "https://www.selfridges.com/GB/en/cat/our-place-essentials-sunset-glass-tumblers-set-of-four_R03870731/",
-    "domain": "selfridges.com",
-    "earns": true,
-    "affiliate_link": null
-   },
-   {
     "id": 60211904,
     "title": "HASAMI PORCELAIN | Glass Tumblers",
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767682685926",
@@ -992,10 +983,10 @@
    },
    {
     "id": 60211910,
-    "title": "OUR PLACE | Large Wonder Oven + Wonder Oven Baker's Kit",
+    "title": "OUR PLACE | Large Wonder Oven",
     "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-52740710-1776258031916-our-place-LargeWonderOven-WonderOvenBakersKit-Steam.jpg",
-    "link": "https://fromourplace.ca/products/large-wonder-oven-wonder-oven-bakers-kit",
-    "domain": "fromourplace.ca",
+    "link": "https://fromourplace.com/products/large-wonder-oven",
+    "domain": "fromourplace.com",
     "earns": true,
     "affiliate_link": null
    },
@@ -1003,8 +994,8 @@
     "id": 60212171,
     "title": "OUR PLACE | Six-Mode Rice Cooker",
     "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/da25eeae-e7c1-4969-a009-61be114d88ca_pistachio-rice-cooker.webp",
-    "link": "https://fromourplace.ca/products/rice-cooker",
-    "domain": "fromourplace.ca",
+    "link": "https://fromourplace.com/products/rice-cooker",
+    "domain": "fromourplace.com",
     "earns": true,
     "affiliate_link": null
    },
@@ -1100,15 +1091,6 @@
     "domain": "us.omhucph.com",
     "earns": false,
     "affiliate_link": "https://us.omhucph.com/products/corner-closed?variant=52689496211820&ref=maisyleigh"
-   },
-   {
-    "id": 84135557,
-    "title": "SAMSUNG | 55\" Class The Frame QLED 4K",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774553507249",
-    "link": "https://www.bloomingdales.com/shop/product/samsung-ls03d-55-4k-the-frame-qled-hdr-smart-tv-with-slim-fit-wall-mount-2024?ID=5139246",
-    "domain": "bloomingdales.com",
-    "earns": true,
-    "affiliate_link": null
    },
    {
     "id": 84135564,
