@@ -244,9 +244,17 @@ def tiles(pins, slug, seen=None):
 
 HEAD = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>%s · Maisy Leigh</title><meta name="description" content="%s">
-<link rel="icon" href="../../img/icon.png"><link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css"><link rel="stylesheet" href="bio.css"></head><body>
-<header class="hd"><div class="wrap hd-in"><a class="wm" href="index.html">Maisy Leigh</a><a class="more" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=header">Shop Cozyleigh</a></div></header><main>'''
-FOOT = '''</main><footer class="ft"><div class="wrap"><ul><li><a href="https://www.youtube.com/@maisyleigh">YouTube</a></li><li><a href="https://www.instagram.com/maisyleigh/">Instagram</a></li><li><a href="https://www.tiktok.com/@maisyleighs">TikTok</a></li></ul><small>&copy; 2026 Maisy Leigh</small></div></footer>%s</body></html>'''
+<link rel="icon" href="../../img/icon.png"><link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css"><link rel="stylesheet" href="bio.css"></head><body>%s<main>'''
+BAR = '''<header class="hd"><div class="wrap hd-in"><a class="wm" href="index.html">Maisy Leigh</a><a class="more" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=header">Shop Cozyleigh</a></div></header>'''
+SOCIALS = '''<li><a href="https://www.youtube.com/@maisyleigh" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a></li><li><a href="https://www.instagram.com/maisyleigh/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a></li><li><a href="https://www.tiktok.com/@maisyleighs" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.8V9.4a6.3 6.3 0 1 0 5.4 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8l-1-.1z"/></svg></a></li><li><a href="https://x.com/maisyleigh_" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7 4.2H5z"/></svg></a></li>'''
+# The bio page opens like the old link page (links.html): studio cover, Maisy's photo, name, one line, socials, shop.
+PROFILE = '''<div class="cover"><img src="../../img/cover-studio.jpg" width="1182" height="635" alt="Maisy, Tristan and Ashleigh in the Cozyleigh studio"></div>
+<section class="band b-top profile"><div class="wrap"><img class="avatar" src="../../img/cozyleigh-maisy.jpg" width="886" height="886" alt="Maisy Leigh">
+<h1 class="name">Maisy Leigh</h1><p class="line">Designer and YouTuber. Founder of Cozyleigh Studios, the little studio I run with Tristan and my sister Ashleigh.</p>
+<ul class="soc">'''+SOCIALS+'''</ul>
+<a class="btn shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile">Shop Cozyleigh Studios</a>
+<p class="note">Tap a video to see what&rsquo;s in it. Some links earn me a small commission.</p></div></section>'''
+FOOT = '''</main><footer class="ft"><div class="wrap"><small>&copy; 2026 Maisy Leigh</small></div></footer>%s</body></html>'''
 COPY_JS = '''<script>document.querySelectorAll('.code').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.code,t=b.querySelector('em');
 function done(){t.textContent='Copied';setTimeout(function(){t.textContent=c},1600)}
 if(navigator.clipboard){navigator.clipboard.writeText(c).then(done,function(){})}})});</script>'''
@@ -344,17 +352,15 @@ def main():
         n = len({name_of(p)[:2] for p in pins})
         room_tiles.append(f'<a class="t{" cut" if cut else ""}" href="{r["slug"]}.html"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(r["title"])}" loading="lazy"></span><b>{e(r["title"])}</b><span>{n} things</span></a>')
     codes = ''.join(f'<button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button>' for c in CFG['codes'])
-    body = band('b-top', None, f'<h1 class="lead">Everything on my desk and in my videos.</h1><p class="note">Tap a video to see what&rsquo;s in it. {DISCLOSE}</p>')
-    body += band('b-paper', 'From my reels', grid([f'<a href="{v["slug"]}.html"><img src="{v["cover"]}" alt="Reel: {e(v["title"])}"></a>' for v in reels], 'g3 v'))
+    body = band('b-paper', 'From my reels', grid([f'<a href="{v["slug"]}.html"><img src="{v["cover"]}" alt="Reel: {e(v["title"])}"></a>' for v in reels], 'g3 v'))
     body += band('b-paper tight', 'From YouTube', grid([f'<a class="t" href="{v["slug"]}.html"><img src="{v["cover"]}" alt="Video: {e(v["title"])}" loading="lazy"><b>{e(v["title"])}</b></a>' for v in yts], 'g2'))
     body += band('b-green', 'On my desk, made in our studio', grid(studio))
     body += band('b-peach', 'The rest of my desk', grid(rest) + '<h2 class="sub more-sub">More of my things</h2>' + grid(room_tiles))
-    body += band('b-coral', 'My codes', f'<div class="codes">{codes}</div><p class="note">Tap a code to copy it.</p>'
-                 '<a class="btn" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=button">Shop Cozyleigh Studios</a>')
-    pages['index'] = ('My desk and my videos', body)
+    body += band('b-coral', 'My codes', f'<div class="codes">{codes}</div><p class="note">Tap a code to copy it.</p>')
+    pages['index'] = ('Links', body)
 
     for slug, (title, body) in pages.items():
-        open(os.path.join(OUT, slug + '.html'), 'w').write(HEAD % (e(title), 'Everything on my desk and in my videos, with links.') + body + FOOT % (COPY_JS if slug == 'index' else ''))
+        open(os.path.join(OUT, slug + '.html'), 'w').write(HEAD % (e(title), 'Everything on my desk and in my videos, with links.', PROFILE if slug == 'index' else BAR) + body + FOOT % (COPY_JS if slug == 'index' else ''))
     print(f'Wrote {len(pages)} pages to {OUT}: {len(reels)} reels, {len(yts)} YouTube videos, {len(studio)} studio pieces, {len(rest)} other things, {len(rooms)} rooms.')
     for n in notes:
         print('NOTE:', n)
