@@ -99,6 +99,26 @@
   ],
   "names": [
     {
+      "match": "sunset glass",
+      "label": "Sunset glasses",
+      "brand": "Our Place"
+    },
+    {
+      "match": "matcha whisk holder",
+      "label": "Whisk holder",
+      "brand": "Owiu Goods"
+    },
+    {
+      "match": "simple matcha set",
+      "label": "Matcha set",
+      "brand": "Owiu Goods"
+    },
+    {
+      "match": "glass tumblers",
+      "label": "Glass tumblers",
+      "brand": "Hasami Porcelain"
+    },
+    {
       "match": "moss pole",
       "label": "Moss pole",
       "brand": "3D printed, MakerWorld"
@@ -232,7 +252,7 @@
     {
       "match": "pro display",
       "label": "My monitor",
-      "brand": "Apple Pro Display"
+      "brand": "Apple Studio Display XDR"
     },
     {
       "match": "play75",
