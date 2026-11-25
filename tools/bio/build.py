@@ -262,6 +262,11 @@ if(navigator.clipboard){navigator.clipboard.writeText(c).then(done,function(){})
 DISCLOSE = 'Some links earn me a small commission, at no cost to you.'
 
 
+def reel_tile(v):
+    rel = '' if v['list'] else ' rel="noopener"'
+    return f'<a href="{e(v["href"])}"{rel}><img src="{v["cover"]}" alt="Reel: {e(v["title"][:80])}"></a>'
+
+
 def band(cls, title, body):
     h = f'<h2 class="sub">{e(title)}</h2>' if title else ''
     return f'<section class="band {cls}"><div class="wrap">{h}{body}</div></section>'
@@ -337,7 +342,22 @@ def main():
         pages[r['slug']] = (r['title'], body)
 
     # the bio page
-    reels = [v for v in videos if v['kind'] == 'reel']
+    # The reel row is the profile itself: the latest reels in feed order, so it matches what people just scrolled.
+    # A reel opens its "what's in it" page when a ShopMy list belongs to it, otherwise the reel on Instagram.
+    feed_path = os.path.join(HERE, 'feed.json')
+    feed = [p for p in (json.load(open(feed_path))['posts'] if os.path.exists(feed_path) else []) if p.get('type') == 'reel' and p.get('code')]
+    page_of = {v['url'].rstrip('/').rsplit('/', 1)[-1]: v for v in videos if v['kind'] == 'reel'}
+    for code, cid in CFG.get('reel_lists', {}).items():
+        page_of[code] = next((v for v in videos if v['cid'] == str(cid)), page_of.get(code))
+    reels = []
+    for p in feed[:CFG.get('reels_shown', 9)]:
+        cover, _ = picture(f"https://www.instagram.com/p/{p['code']}/media/?size=l", 'r_' + p['code'], size=540, ua=PHONE)
+        if not cover:
+            continue
+        v = page_of.get(p['code'])
+        reels.append({'cover': cover, 'title': v['title'] if v else p.get('caption', ''), 'href': f"{v['slug']}.html" if v else f"https://www.instagram.com/reel/{p['code']}/", 'list': bool(v)})
+    if not feed:
+        problems.append('tools/bio/feed.json is missing, so the reel row is empty.')
     yts = [v for v in videos if v['kind'] == 'yt']
     reels, yts = whole_rows(reels, 3, 'Reels'), whole_rows(yts, 6, 'YouTube videos')
     every = {str(p['id']): p for c in shop.values() for p in c['pins']}
@@ -353,7 +373,7 @@ def main():
         n = len({name_of(p)[:2] for p in pins})
         room_tiles.append(f'<a class="t{" cut" if cut else ""}" href="{r["slug"]}.html"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(r["title"])}" loading="lazy"></span><b>{e(r["title"])}</b><span>{n} things</span></a>')
     codes = ''.join(f'<button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button>' for c in CFG['codes'])
-    body = band('b-paper', 'From my reels', grid([f'<a href="{v["slug"]}.html"><img src="{v["cover"]}" alt="Reel: {e(v["title"])}"></a>' for v in reels], 'g3 v'))
+    body = band('b-paper', 'From my reels', grid([reel_tile(v) for v in reels], 'g3 v'))
     body += band('b-paper tight', 'From YouTube', grid([f'<a class="t" href="{v["slug"]}.html"><img src="{v["cover"]}" alt="Video: {e(v["title"])}" loading="lazy"><b>{e(v["title"])}</b></a>' for v in yts], 'g2'))
     body += band('b-green', 'On my desk, made in our studio', grid(studio))
     body += band('b-peach', 'The rest of my desk', grid(rest) + '<h2 class="sub more-sub">More of my things</h2>' + grid(room_tiles))

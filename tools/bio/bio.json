@@ -17,10 +17,7 @@
     },
     "8234820": {
       "title": "My desk ritual",
-      "reel": "DedO4ysOT5R",
-      "more_reels": [
-        "DedPvMbubNK"
-      ]
+      "reel": "DedO4ysOT5R"
     },
     "4995448": {
       "title": "The full cozy desk look"
@@ -406,5 +403,11 @@
       1,
       1
     ]
-  }
+  },
+  "reel_lists": {
+    "Dc2OApkuyMt": 7419901,
+    "DXkHU-BDrzF": 4995448,
+    "DRe8shvDikX": 5447476
+  },
+  "reels_shown": 9
 }
