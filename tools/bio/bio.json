@@ -205,21 +205,21 @@
     },
     {
       "match": "mini light",
-      "label": "My small lamp",
+      "label": "Small lamp",
       "brand": "Zen Mini Light, by Gantri",
       "studio": false,
       "photo": "small-lamp"
     },
     {
       "match": "compact table light",
-      "label": "My small lamp",
+      "label": "Small lamp",
       "brand": "Zen Mini Light, by Gantri",
       "studio": false,
       "photo": "small-lamp"
     },
     {
       "match": "zen light",
-      "label": "My lamp",
+      "label": "Lamp",
       "brand": "Zen Light, by Gantri",
       "studio": false,
       "photo": "my-lamp"
@@ -251,42 +251,42 @@
     },
     {
       "match": "steelcase",
-      "label": "My chair",
+      "label": "Chair",
       "brand": "Steelcase Gesture"
     },
     {
       "match": "pro display",
-      "label": "My monitor",
-      "brand": "Apple Studio Display XDR"
+      "label": "Monitor",
+      "brand": "Apple Studio Display"
     },
     {
       "match": "play75",
-      "label": "My keyboard",
+      "label": "Keyboard",
       "brand": "Play75"
     },
     {
       "match": "logitech lift",
-      "label": "My mouse",
+      "label": "Mouse",
       "brand": "Logitech Lift"
     },
     {
       "match": "kanto",
-      "label": "My speakers",
+      "label": "Speakers",
       "brand": "Kanto Ora"
     },
     {
       "match": "wh-1000",
-      "label": "My headphones",
+      "label": "Headphones",
       "brand": "Sony WH-1000XM5"
     },
     {
       "match": "taggtofs",
-      "label": "My pendant",
+      "label": "Pendant",
       "brand": "IKEA, bamboo"
     },
     {
       "match": "bamboo pendant",
-      "label": "My pendant",
+      "label": "Pendant",
       "brand": "IKEA, bamboo"
     },
     {
@@ -296,33 +296,33 @@
     },
     {
       "match": "matcha for my lattes",
-      "label": "My matcha",
+      "label": "Matcha",
       "brand": "Matchakari",
       "code": "MAISY10"
     },
     {
       "match": "hasami gloss mug",
-      "label": "My mug",
+      "label": "Mug",
       "brand": "Hasami Porcelain"
     },
     {
       "match": "ember mug",
-      "label": "My mug",
+      "label": "Mug",
       "brand": "Ember Mug 2"
     },
     {
       "match": "vitruvi",
-      "label": "My diffuser",
+      "label": "Diffuser",
       "brand": "Vitruvi Stone"
     },
     {
       "match": "airpods",
-      "label": "My earbuds",
+      "label": "Earbuds",
       "brand": "AirPods Pro 3"
     },
     {
       "match": "mac studio",
-      "label": "My computer",
+      "label": "Computer",
       "brand": "Mac Studio"
     },
     {
@@ -332,7 +332,7 @@
     },
     {
       "match": "x-h2s",
-      "label": "My camera",
+      "label": "Camera",
       "brand": "Fujifilm X-H2S"
     },
     {
@@ -343,17 +343,17 @@
     },
     {
       "match": "teddy",
-      "label": "Our sofa",
+      "label": "Sofa",
       "brand": "OMHU Teddy"
     },
     {
       "match": "the frame",
-      "label": "Our TV",
+      "label": "TV",
       "brand": "Samsung The Frame"
     },
     {
       "match": "checked rug",
-      "label": "Our rug",
+      "label": "Rug",
       "brand": "Rugs USA"
     },
     {
@@ -393,12 +393,12 @@
     },
     {
       "match": "magic trackpad",
-      "label": "My trackpad",
+      "label": "Trackpad",
       "brand": "Apple Magic Trackpad"
     },
     {
       "match": "brio",
-      "label": "My webcam",
+      "label": "Webcam",
       "brand": "Logitech Brio 4K"
     },
     {
@@ -530,8 +530,7 @@
         94182160,
         94180582
       ],
-      "note": "Fall shoot DSCF1157 (Oct 2026), the desk between two windows. Items: what's in the photo, then the chair, mug and lamp.",
-      "wide": true
+      "note": "Fall shoot DSCF1157 (Oct 2026), the desk between two windows. Items: what's in the photo, then the chair, mug and lamp."
     },
     {
       "title": "What's in my living room",
