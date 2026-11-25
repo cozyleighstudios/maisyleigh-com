@@ -284,6 +284,15 @@ def read_feed():
     return [p for p in kept['posts'] if p.get('type', 'reel') == 'reel' and p.get('code') and p['code'] not in hide]
 
 
+def nice_day(day):
+    import datetime
+    try:
+        d = datetime.date.fromisoformat(day)
+        return f"{d.strftime('%b')} {d.day}, {d.year}"
+    except ValueError:
+        return day
+
+
 def reel_tile(v):
     rel = '' if v['list'] else ' rel="noopener"'
     return f'<a href="{e(v["href"])}"{rel}><img src="{v["cover"]}" alt="Reel: {e(v["title"][:80])}"></a>'
@@ -367,16 +376,27 @@ def main():
     # The reel row is the profile itself: the latest reels in feed order, so it matches what people just scrolled.
     # A reel opens its "what's in it" page when a ShopMy list belongs to it, otherwise the reel on Instagram.
     feed = read_feed()
-    page_of = {v['url'].rstrip('/').rsplit('/', 1)[-1]: v for v in videos if v['kind'] == 'reel'}
-    for code, cid in CFG.get('reel_lists', {}).items():
-        page_of[code] = next((v for v in videos if v['cid'] == str(cid)), page_of.get(code))
+    every_pin = {p['id']: p for col in shop.values() for p in col['pins']}
+    rp = CFG.get('reel_pages', {})
     reels = []
     for p in feed[:CFG.get('reels_shown', 9)]:
         cover, _ = picture(FEED_URL + f"/{p['code']}.jpg", 'r_' + p['code'], size=540)
         if not cover:
             continue
-        v = page_of.get(p['code'])
-        reels.append({'cover': cover, 'title': v['title'] if v else p.get('caption', ''), 'href': f"{v['slug']}.html" if v else f"https://www.instagram.com/reel/{p['code']}/", 'list': bool(v)})
+        spec = rp.get(p['code'])
+        url = f"https://www.instagram.com/reel/{p['code']}/"
+        if spec and str(spec.get('list')) in shop:
+            title, slug = spec.get('title') or p.get('caption', ''), 'reel-' + p['code'].lower()
+            lead = [every_pin[i] for i in spec.get('lead', []) if i in every_pin]
+            ts = tiles(lead + shop[str(spec['list'])]['pins'], slug)
+            items = [t for _, t in ts[:len(lead)]] + [t for s_, t in ts[len(lead):] if s_] + [t for s_, t in ts[len(lead):] if not s_]
+            top = (f'<a class="back" href="index.html">All my videos</a><div class="vh reel"><img src="{cover}" alt="{e(title)}"><div><h1 class="lead">{e(title)}</h1>'
+                   f'<p class="note">Posted {e(nice_day(p.get("date", "")))}</p><a class="more" href="{e(url)}" rel="noopener">Watch the reel</a></div></div>')
+            pages[slug] = (title, band('b-top', None, top) + band('b-green', 'In this video', grid(items) + f'<p class="note">{DISCLOSE}</p><a class="btn" href="index.html">See my whole desk</a>'))
+            reels.append({'cover': cover, 'title': title, 'href': slug + '.html', 'list': True})
+        else:
+            reels.append({'cover': cover, 'title': p.get('caption', ''), 'href': url, 'list': False})
+            notes.append(f"Reel {p['code']} has no list in bio.json reel_pages, so it opens on Instagram.")
     if not feed:
         problems.append('tools/bio/feed.json is missing, so the reel row is empty.')
     yts = [v for v in videos if v['kind'] == 'yt']

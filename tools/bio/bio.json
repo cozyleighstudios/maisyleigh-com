@@ -404,11 +404,6 @@
       1
     ]
   },
-  "reel_lists": {
-    "Dc2OApkuyMt": 7419901,
-    "DXkHU-BDrzF": 4995448,
-    "DRe8shvDikX": 5447476
-  },
   "reels_shown": 9,
   "hide_reels": [
     "DedPwaTuZtF",
@@ -416,5 +411,65 @@
   ],
   "_notes": {
     "hide_reels": "Reels Instagram's API no longer returns (archived or deleted), Nov 25 2026. The server only spots this for posts under 4 weeks old."
+  },
+  "reel_pages": {
+    "_about": "What's in each reel on the profile (Nov 25 2026). 'list' = the ShopMy collection whose items show, 'lead' = item ids shown first (from the reel's DM cards or what the reel is about). A reel not listed here opens on Instagram.",
+    "DgLE5ilNIMB": {
+      "title": "How I work in bursts",
+      "list": 8234820
+    },
+    "Df7PlEdtnL8": {
+      "title": "A cozy couch for my office",
+      "list": 8234820
+    },
+    "DfITr7gtQfh": {
+      "title": "A day at my desk with Mori",
+      "list": 8234820
+    },
+    "DepEsgCNA_I": {
+      "title": "Setting up my zen desk shelf",
+      "list": 8234820,
+      "lead": [
+        90380517
+      ]
+    },
+    "DedUtnCOkOo": {
+      "title": "Calm desk, calm mind",
+      "list": 8234820,
+      "lead": [
+        94180881,
+        94181544,
+        94181683,
+        94876779
+      ]
+    },
+    "DdRiKgMO_R9": {
+      "title": "Work from home with me",
+      "list": 8234820
+    },
+    "DdITi2kuC4o": {
+      "title": "Our cozy japandi home",
+      "list": 7419901
+    },
+    "DdFpUuCuyFr": {
+      "title": "My therapy after a chaotic day",
+      "list": 8234820
+    },
+    "Dc652xoN5AK": {
+      "title": "Work from home with me",
+      "list": 8234820
+    },
+    "Dc2OApkuyMt": {
+      "title": "Our cozy japandi home",
+      "list": 7419901
+    },
+    "DXkHU-BDrzF": {
+      "title": "The full cozy desk look",
+      "list": 4995448
+    },
+    "DRe8shvDikX": {
+      "title": "Our home café and kitchen",
+      "list": 5447476
+    }
   }
 }
