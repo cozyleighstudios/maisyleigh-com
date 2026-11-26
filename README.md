@@ -1,6 +1,6 @@
 # maisyleigh.com
 
-Maisy Leigh's personal site: the home page (`index.html`) and the link page (`links.html`, served at `/links`).
+Maisy Leigh's personal site: the home page (`index.html`) and the link page (`links/`, served at `/links/`, built by `tools/bio/build.py`).
 Plain HTML, hosted on GitHub Pages. Fonts come from Adobe Fonts kit `ikz6twe` (the same kit as cozyleigh.studio);
 the domain must be on that kit's list or the pages fall back to Georgia / Futura.
 
@@ -8,7 +8,9 @@ Every number and quote on the page was checked against its source on Nov 14 2026
 Instagram via the studio server, CanvasRebel). Update the numbers by checking them again, never by guessing.
 Never link Grovemade. Never mention Maisy's mom in the copy.
 
-## Link in bio (`preview/bio/`, not live yet)
+## Link in bio (`links/`, live at maisyleigh.com/links/ since Nov 26 2026)
+
+`preview/bio/` only redirects to `/links/` (keeping `#codes` etc.), because its github.io link was shared before the move.
 
 Maisy's desk and video links, built from her public ShopMy shop by `python3 tools/bio/build.py` (Python 3 + Pillow).
 She keeps editing in ShopMy: a collection with a reel or YouTube link becomes a video page. What ShopMy doesn't hold

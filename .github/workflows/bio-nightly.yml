@@ -30,10 +30,10 @@ jobs:
         if: steps.build.outputs.code == '0' || steps.build.outputs.code == '3'
         run: |
           rm -f build.log
-          if [ -z "$(git status --porcelain preview/bio tools/bio/shopmy.json tools/bio/dates.json tools/bio/feed.json tools/bio/channels.json)" ]; then echo "Nothing changed."; exit 0; fi
+          if [ -z "$(git status --porcelain links tools/bio/shopmy.json tools/bio/dates.json tools/bio/feed.json tools/bio/channels.json)" ]; then echo "Nothing changed."; exit 0; fi
           git config user.name "bio-rebuild"
           git config user.email "actions@users.noreply.github.com"
-          git add preview/bio tools/bio/shopmy.json tools/bio/dates.json tools/bio/feed.json tools/bio/channels.json
+          git add links tools/bio/shopmy.json tools/bio/dates.json tools/bio/feed.json tools/bio/channels.json
           git commit -m "Link in bio: nightly rebuild from ShopMy"
           git push
       - name: Say so if something could not be read

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Builds Maisy's link-in-bio pages from her public ShopMy shop.
 
-  python3 tools/bio/build.py [out_dir]        (default: preview/bio)
+  python3 tools/bio/build.py [out_dir]        (default: links, served at maisyleigh.com/links/)
 
 Reads ShopMy (sections -> collections -> items), keeps a copy in tools/bio/shopmy.json, and writes
 index.html plus one page per video or room. If ShopMy can't be read, it builds from the kept copy and
@@ -18,7 +18,7 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-OUT = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 1 else 'preview/bio')
+OUT = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 1 else 'links')
 IMG = os.path.join(OUT, 'img')
 CFG = json.load(open(os.path.join(HERE, 'bio.json')))
 SNAP = os.path.join(HERE, 'shopmy.json')
@@ -289,11 +289,14 @@ def tiles(pins, slug, seen=None):
 
 
 HEAD = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>%s · Maisy Leigh</title><meta name="description" content="%s">
-<link rel="icon" href="../../img/icon.png"><link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css"><link rel="stylesheet" href="bio.css"></head><body>%s<main>'''
+<title>%s · Maisy Leigh</title><meta name="description" content="%s">
+<link rel="canonical" href="https://maisyleigh.com/links/"><meta property="og:type" content="profile"><meta property="og:url" content="https://maisyleigh.com/links/">
+<meta property="og:title" content="Maisy Leigh: links"><meta property="og:description" content="My desk, my codes and sales, my videos.">
+<meta property="og:image" content="https://maisyleigh.com/links/img/cover-maisy-desk.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/icon.png"><link rel="apple-touch-icon" href="../img/icon.png"><link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css"><link rel="stylesheet" href="bio.css"></head><body>%s<main>'''
 BAR = '''<header class="hd"><div class="wrap hd-in"><a class="wm" href="index.html">Maisy Leigh</a><a class="more" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=header">Shop Cozyleigh</a></div></header>'''
 SOCIALS = '''<li><a href="https://www.youtube.com/@maisyleigh" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a></li><li><a href="https://www.instagram.com/maisyleigh/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a></li><li><a href="https://www.tiktok.com/@maisyleighs" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.8V9.4a6.3 6.3 0 1 0 5.4 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8l-1-.1z"/></svg></a></li><li><a href="https://x.com/maisyleigh_" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7 4.2H5z"/></svg></a></li>'''
-# The bio page opens like the old link page (links.html), but as @maisyleigh is positioned (Nov 24 2026): Maisy the designer,
+# The bio page (maisyleigh.com/links/, Nov 26 2026) opens like the old link page (links.html), but as @maisyleigh is positioned (Nov 24 2026): Maisy the designer,
 # at her own desk, in her own words. Family and studio stories belong to @cozyleigh.studios, so no studio group photo here.
 PROFILE = '''<header class="profile"><div class="wrap">
 <div class="cover"><img src="img/cover-maisy-desk.jpg" width="1400" height="788" alt="Maisy at her desk in the morning light"></div>
