@@ -333,6 +333,113 @@ def read_feed():
     return [p for p in kept['posts'] if p.get('type', 'reel') == 'reel' and p.get('code') and p['code'] not in hide]
 
 
+CHANNELS = os.path.join(HERE, 'channels.json')
+YT_CHANNEL = 'UC_h-Jl4Zxb7p-sSBTxprs4Q'
+
+
+def count_of(text):
+    """'773K' / '1.2M' / '577300' -> a whole number, or None."""
+    m = re.fullmatch(r'([\d.,]+)\s*([KM]?)', (text or '').strip(), re.I)
+    if not m:
+        return None
+    n = float(m.group(1).replace(',', '')) * {'': 1, 'K': 1e3, 'M': 1e6}[m.group(2).upper()]
+    return int(n) if n > 0 else None
+
+
+def short_count(n):
+    """577300 -> '577K', 1234000 -> '1.2M', the way the apps show it."""
+    if n >= 1_000_000:
+        return f'{n / 1e6:.1f}'.rstrip('0').rstrip('.') + 'M'
+    if n >= 1000:
+        return f'{n // 1000}K'
+    return str(n)
+
+
+def read_channels():
+    """Follower counts under the channel icons and the newest long YouTube video (Maisy, Nov 26 2026). Read fresh each
+    night: YouTube and TikTok from their public pages, Instagram from the studio server's feed (Instagram refuses GitHub).
+    The last good copy is kept in channels.json; a failed read keeps the last number and says so, and a count is never 0."""
+    kept = json.load(open(CHANNELS)) if os.path.exists(CHANNELS) else {}
+    counts = dict(kept.get('counts', {}))
+    yt = curl('https://www.youtube.com/@maisyleigh', origin=False).decode('utf8', 'ignore')
+    m = re.search(r'"([\d.,]+[KM]?) subscribers"', yt) or re.search(r'([\d.,]+[KM]?) subscribers', yt)
+    tt = curl('https://www.tiktok.com/@maisyleighs', origin=False).decode('utf8', 'ignore')
+    t = re.search(r'"followerCount":(\d+)', tt)
+    try:
+        feed = json.loads(curl(FEED_URL, origin=False))
+    except Exception:  # noqa: BLE001
+        feed = {}
+    fresh = {'youtube': count_of(m.group(1)) if m else None, 'tiktok': int(t.group(1)) if t and int(t.group(1)) > 0 else None,
+             'instagram': ((feed or {}).get('followers') or {}).get('instagram') or None}
+    for k, v in fresh.items():
+        if v:
+            counts[k] = int(v)
+        else:
+            problems.append(f'The {k} follower count could not be read; the page keeps {short_count(counts[k]) if counts.get(k) else "no number"}.')
+    video = newest_long_video() or kept.get('video')
+    if not video:
+        problems.append('No long YouTube video could be found, so Watch & read shows only its links.')
+    kept = {'_about': 'Follower counts under the channel icons and the newest long YouTube video on the bio page, kept from the last good read.',
+            'read': today_ny(), 'counts': counts, 'video': video}
+    json.dump(kept, open(CHANNELS, 'w'), indent=1, ensure_ascii=False)
+    return counts, video
+
+
+def newest_long_video():
+    """The newest upload that isn't a Short. The channel's feed mixes Shorts in; YouTube answers youtube.com/shorts/<id>
+    with 200 only for a Short (a long video redirects to /watch)."""
+    rss = curl(f'https://www.youtube.com/feeds/videos.xml?channel_id={YT_CHANNEL}', origin=False).decode('utf8', 'ignore')
+    for vid, title in re.findall(r'<yt:videoId>([\w-]{11})</yt:videoId>\s*<yt:channelId>[^<]*</yt:channelId>\s*<title>([^<]*)</title>', rss):
+        code = subprocess.run(['curl', '-s', '-o', '/dev/null', '-w', '%{http_code}', '--max-time', '20', '-A', UA, f'https://www.youtube.com/shorts/{vid}'], capture_output=True).stdout.decode()
+        if code == '200':
+            continue
+        if code not in ('301', '302', '303'):
+            problems.append(f'Could not tell whether video {vid} is a Short (YouTube said {code or "nothing"}).')
+            return None
+        page = curl('https://www.youtube.com/watch?v=' + vid, origin=False).decode('utf8', 'ignore')
+        secs = re.search(r'"lengthSeconds":"(\d+)"', page)
+        return {'id': vid, 'title': html.unescape(title), 'minutes': max(1, round(int(secs.group(1)) / 60)) if secs else None}
+    return None
+
+
+def plain_title(title):
+    """'cozy studio diaries 🍃🪵  slow living, ...' -> 'Cozy studio diaries: slow living, ...' (emojis read as a pause)."""
+    t = re.sub(r'\s*[^\w\s,.:;!?\'"&()\-–—|/]+\s*', ': ', title).strip(' :')
+    t = re.sub(r'\s*:\s*', ': ', re.sub(r'\s+', ' ', t))
+    return t[:1].upper() + t[1:]
+
+
+def soc_counts(counts):
+    """The channel icons with each one's follower count under it; X stays an icon."""
+    soc = SOCIALS
+    for label, key in (('YouTube', 'youtube'), ('Instagram', 'instagram'), ('TikTok', 'tiktok')):
+        if counts.get(key):
+            n = short_count(counts[key])
+            start = soc.index(f'aria-label="{label}">')
+            end = soc.index('</svg></a>', start) + len('</svg>')
+            link = soc[start:end].replace(f'aria-label="{label}">', f'aria-label="{label}, {n} followers">')
+            soc = soc[:start] + link + f'<span>{n}</span>' + soc[end:]
+    return soc
+
+
+def watch_section(video):
+    """Watch & read: the newest long video, then all videos and her interviews, in the codes' row style."""
+    card = ''
+    if video:
+        pic, _ = picture(f'https://i.ytimg.com/vi/{video["id"]}/maxresdefault.jpg', 'yt-' + video['id'], size=1280)
+        if not pic:
+            pic, _ = picture(f'https://i.ytimg.com/vi/{video["id"]}/hqdefault.jpg', 'yt-' + video['id'], size=1280)
+        if pic:
+            mins = f' &middot; {video["minutes"]} min' if video.get('minutes') else ''
+            card = (f'<a class="vid" href="https://www.youtube.com/watch?v={e(video["id"])}" rel="noopener"><img class="space" src="{pic}" '
+                    f'width="1280" height="720" alt="Video: {e(plain_title(video["title"]))}" loading="lazy"><b>{e(plain_title(video["title"]))}</b>'
+                    f'<small>My newest video{mins}</small></a>')
+    rows = [{'name': 'All my videos', 'line': 'Slow living, the studio and how we make things', 'link': 'https://www.youtube.com/@maisyleigh/videos', 'pill': 'YouTube'}] + CFG.get('reads', [])
+    items = ''.join(f'<li><a class="code" href="{e(r["link"])}" rel="noopener"><span><b>{e(r["name"])}</b><small>{e(r["line"])}</small></span><em>{e(r.get("pill", "Read"))}</em></a></li>' for r in rows)
+    return (f'<section class="sec" id="watch"><div class="wrap"><div class="sec-hd"><h2>Watch &amp; read</h2><span>More of me</span></div>'
+            f'{card}<ul class="codes{" reads" if card else ""}">{items}</ul></div></section>')
+
+
 def nice_day(day):
     import datetime
     try:
@@ -387,10 +494,12 @@ def build_spaces(shop):
     codes = ''.join(f'<li>{code_row(c)}</li>' for c in rows)
     sales = any(not c.get('code') for c in rows)  # a sale with no code is a link, so the heading says both
     head = '<h2>Codes &amp; sales</h2><span>Tap to copy or shop</span>' if sales else '<h2>My codes</h2><span>Tap to copy</span>'
+    counts, video = read_channels()
     body = ''.join(sections) + f'<section class="sec" id="codes"><div class="wrap"><div class="sec-hd">{head}</div><ul class="codes">{codes}</ul></div></section>'
+    body += watch_section(video)
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
-    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE) + body + FOOT % COPY_JS)
+    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE.replace(SOCIALS, soc_counts(counts))) + body + FOOT % COPY_JS)
     print(f"Wrote the bio page to {OUT}: {len(sections)} spaces.")
     for p in problems:
         print('PROBLEM:', p)
