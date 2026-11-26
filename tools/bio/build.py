@@ -311,6 +311,21 @@ FOOT = '''</main><footer class="ft"><div class="wrap"><p>Some links earn me a sm
 COPY_JS = '''<script>document.querySelectorAll('button.code').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.code,t=b.querySelector('em');
 function done(){t.textContent='Copied';setTimeout(function(){t.textContent=c},1600)}
 if(navigator.clipboard){navigator.clipboard.writeText(c).then(done,function(){})}})});</script>'''
+# Counts what people open and tap (Maisy, Nov 26 2026), sent to the studio server through the shop's app proxy.
+# One request per open and per tap; no cookies, no storage, no ids. A failed count never blocks a tap.
+TAP_JS = '''<script>(function(){var U='https://cozyleigh.studio/apps/engagement/bio-tap?';
+function send(k,s,n){try{var q=new URLSearchParams({k:k});if(s)q.set('s',s);if(n)q.set('n',String(n).trim().slice(0,60));var u=U+q;
+if(window.fetch){fetch(u,{mode:'no-cors',keepalive:true,credentials:'omit'}).catch(function(){})}else{new Image().src=u}}catch(e){}}
+function txt(el,sel){var b=el.querySelector(sel);return b?b.textContent:''}
+send('view');
+document.addEventListener('click',function(ev){try{var el=ev.target.closest('a,button');if(!el)return;var sec=el.closest('section');var sid=sec&&sec.id;
+if(el.matches('.soc a'))return send('social','profile',(el.getAttribute('aria-label')||'').split(',')[0]);
+if(el.matches('.shop'))return send('shop','profile');
+if(el.matches('button.code'))return send('code','codes',el.dataset.code);
+if(el.matches('.yt'))return send('video','watch');
+if(el.matches('.post'))return send('letter','watch');
+if(el.matches('a.code'))return send('thing',sid||'codes',txt(el,'b'));
+if(el.matches('.t'))return send('thing',sid,txt(el,'b'));}catch(e){}},true);})();</script>'''
 DISCLOSE = 'Some links earn me a small commission, at no cost to you.'
 
 
@@ -584,7 +599,7 @@ def build_spaces(shop):
     body += watch_section(video, letter)
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
-    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE.replace(SOCIALS, soc_counts(counts))) + body + FOOT % COPY_JS)
+    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE.replace(SOCIALS, soc_counts(counts))) + body + FOOT % (COPY_JS + TAP_JS))
     print(f"Wrote the bio page to {OUT}: {len(sections)} spaces.")
     for p in problems:
         print('PROBLEM:', p)
