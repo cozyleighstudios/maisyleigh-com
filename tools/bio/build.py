@@ -200,7 +200,7 @@ def link_of(pin, slug):
     if 'cozyleigh.studio' in link:
         u = urllib.parse.urlsplit(link)
         q = [(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not k.startswith('utm_')]
-        q += [('utm_source', 'maisyleigh.com'), ('utm_medium', 'bio'), ('utm_campaign', slug)]
+        q += [('utm_source', 'maisyleigh.com'), ('utm_medium', 'bio'), ('utm_campaign', slug), ('utm_content', slug)]
         return urllib.parse.urlunsplit((u.scheme, u.netloc, u.path, urllib.parse.urlencode(q), u.fragment))
     if pin.get('earns') or pin.get('click_token') or '<custom_id>' in aff or 'shopmy.us' in aff:
         return f"https://go.shopmy.us/p-{pin['id']}"  # ShopMy earns on it: let ShopMy make the tap's link
@@ -294,7 +294,7 @@ HEAD = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=
 <meta property="og:title" content="Maisy Leigh: links"><meta property="og:description" content="My desk, my codes and sales, my videos.">
 <meta property="og:image" content="https://maisyleigh.com/links/img/cover-maisy-desk.jpg"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../img/icon.png"><link rel="apple-touch-icon" href="../img/icon.png"><link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css"><link rel="stylesheet" href="bio.css"></head><body>%s<main>'''
-BAR = '''<header class="hd"><div class="wrap hd-in"><a class="wm" href="index.html">Maisy Leigh</a><a class="more" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=header">Shop Cozyleigh</a></div></header>'''
+BAR = '''<header class="hd"><div class="wrap hd-in"><a class="wm" href="index.html">Maisy Leigh</a><a class="more" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=header&amp;utm_content=header">Shop Cozyleigh</a></div></header>'''
 SOCIALS = '''<li><a href="https://www.youtube.com/@maisyleigh" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a></li><li><a href="https://www.instagram.com/maisyleigh/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a></li><li><a href="https://www.tiktok.com/@maisyleighs" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.8V9.4a6.3 6.3 0 1 0 5.4 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8l-1-.1z"/></svg></a></li><li><a href="https://x.com/maisyleigh_" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7 4.2H5z"/></svg></a></li>'''
 # The bio page (maisyleigh.com/links/, Nov 26 2026) opens like the old link page (links.html), but as @maisyleigh is positioned (Nov 24 2026): Maisy the designer,
 # at her own desk, in her own words. Family and studio stories belong to @cozyleigh.studios, so no studio group photo here.
@@ -305,7 +305,7 @@ PROFILE = '''<header class="profile"><div class="wrap">
 <p class="line">making life warm again, one design at a time</p>
 <p class="role">designer &amp; founder of <a href="https://www.instagram.com/cozyleigh.studios/">@cozyleigh.studios</a></p>
 <div class="actions"><ul class="soc">'''+SOCIALS+'''</ul>
-<a class="shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile">Shop Cozyleigh</a></div>
+<a class="shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile&amp;utm_content=profile">Shop Cozyleigh</a></div>
 </div></header>'''
 FOOT = '''</main><footer class="ft"><div class="wrap"><p>Some links earn me a small commission, at no cost to you.</p><small>&copy; 2026 Maisy Leigh</small></div></footer>%s</body></html>'''
 COPY_JS = '''<script>document.querySelectorAll('button.code').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.code,t=b.querySelector('em');
@@ -326,6 +326,13 @@ if(el.matches('.yt'))return send('video','watch');
 if(el.matches('.post'))return send('letter','watch');
 if(el.matches('a.code'))return send('thing',sid||'codes',txt(el,'b'));
 if(el.matches('.t'))return send('thing',sid,txt(el,'b'));}catch(e){}},true);})();</script>'''
+# A DM's counted link lands here as ?utm_medium=dm&utm_campaign=<post code> (Maisy, Nov 26 2026: keep each post's sales
+# on the post). Its post code then becomes utm_campaign on every cozyleigh.studio link; utm_content keeps the section.
+# Affiliate links are left alone.
+DM_JS = '''<script>(function(){try{var p=new URLSearchParams(location.search),c=p.get('utm_campaign');
+if(p.get('utm_medium')!=='dm'||!c)return;c=c.slice(0,80);
+document.querySelectorAll('a[href*="cozyleigh.studio"]').forEach(function(a){try{var u=new URL(a.href);
+if(!/(^|\\.)cozyleigh\\.studio$/.test(u.hostname))return;u.searchParams.set('utm_campaign',c);a.href=u.toString()}catch(e){}})}catch(e){}})();</script>'''
 DISCLOSE = 'Some links earn me a small commission, at no cost to you.'
 
 
@@ -529,7 +536,7 @@ def watch_section(video, letter=None):
     if letter and letter.get('image'):
         pic, _ = picture(letter['image'], 'letter-' + slugify(letter['title'])[:40], size=1000)
         if pic:
-            tagged = letter['link'] + ('&' if '?' in letter['link'] else '?') + 'utm_source=maisyleigh.com&utm_medium=bio&utm_campaign=letter'
+            tagged = letter['link'] + ('&' if '?' in letter['link'] else '?') + 'utm_source=maisyleigh.com&utm_medium=bio&utm_campaign=letter&utm_content=letter'
             read = f' &middot; {max(1, round(letter["words"] / 200))} min read' if letter.get('words') else ''
             opening = f'<p>{e(letter["summary"])}</p>' if letter.get('summary') else ''
             card += (f'<a class="post" href="{e(tagged)}" rel="noopener"><img src="{pic}" alt="{e(letter["title"])}" loading="lazy"><span class="kind">Letter from the studio</span>'
@@ -599,7 +606,7 @@ def build_spaces(shop):
     body += watch_section(video, letter)
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
-    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE.replace(SOCIALS, soc_counts(counts))) + body + FOOT % (COPY_JS + TAP_JS))
+    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE.replace(SOCIALS, soc_counts(counts))) + body + FOOT % (COPY_JS + TAP_JS + DM_JS))
     print(f"Wrote the bio page to {OUT}: {len(sections)} spaces.")
     for p in problems:
         print('PROBLEM:', p)
