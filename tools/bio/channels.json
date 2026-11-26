@@ -2,13 +2,23 @@
  "_about": "Follower counts under the channel icons and the newest long YouTube video on the bio page, kept from the last good read.",
  "read": "2026-11-26",
  "counts": {
-  "instagram": 486334,
+  "instagram": 486338,
   "youtube": 773000,
   "tiktok": 577400
  },
  "video": {
   "id": "-zb82zs478I",
   "title": "cozy studio diaries 🍃🪵  slow living, making our first wood pieces",
-  "minutes": null
+  "seconds": 1222,
+  "views": 33283,
+  "date": "2026-08-18"
+ },
+ "letter": {
+  "title": "Taking our fall collection into the forest",
+  "link": "https://cozyleigh.studio/blogs/the-monthly-batch/taking-our-fall-collection-into-the-forest",
+  "date": "2026-11-26",
+  "summary": "For fall, Ashleigh and I carried our desk shelf, charger stands and trays on a 20-minute hike to a stream near us. Here's why, and where the new fall colors came from.",
+  "words": 802,
+  "image": "https://cozyleigh.studio/cdn/shop/articles/cozyleigh-fall-2026-desk-shelf-by-the-stream.jpg?v=1794618882&width=1200"
  }
 }

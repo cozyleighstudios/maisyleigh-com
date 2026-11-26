@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Builds Maisy's link-in-bio pages from her public ShopMy shop.
 
-  python3 tools/bio/build.py [out_dir]        (default: preview/bio)
+  python3 tools/bio/build.py [out_dir]        (default: links, served at maisyleigh.com/links/)
 
 Reads ShopMy (sections -> collections -> items), keeps a copy in tools/bio/shopmy.json, and writes
 index.html plus one page per video or room. If ShopMy can't be read, it builds from the kept copy and
@@ -18,7 +18,7 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-OUT = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 1 else 'preview/bio')
+OUT = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 1 else 'links')
 IMG = os.path.join(OUT, 'img')
 CFG = json.load(open(os.path.join(HERE, 'bio.json')))
 SNAP = os.path.join(HERE, 'shopmy.json')
@@ -289,11 +289,14 @@ def tiles(pins, slug, seen=None):
 
 
 HEAD = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>%s · Maisy Leigh</title><meta name="description" content="%s">
-<link rel="icon" href="../../img/icon.png"><link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css"><link rel="stylesheet" href="bio.css"></head><body>%s<main>'''
+<title>%s · Maisy Leigh</title><meta name="description" content="%s">
+<link rel="canonical" href="https://maisyleigh.com/links/"><meta property="og:type" content="profile"><meta property="og:url" content="https://maisyleigh.com/links/">
+<meta property="og:title" content="Maisy Leigh: links"><meta property="og:description" content="My desk, my codes and sales, my videos.">
+<meta property="og:image" content="https://maisyleigh.com/links/img/cover-maisy-desk.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/icon.png"><link rel="apple-touch-icon" href="../img/icon.png"><link rel="stylesheet" href="https://use.typekit.net/ikz6twe.css"><link rel="stylesheet" href="bio.css"></head><body>%s<main>'''
 BAR = '''<header class="hd"><div class="wrap hd-in"><a class="wm" href="index.html">Maisy Leigh</a><a class="more" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=header">Shop Cozyleigh</a></div></header>'''
 SOCIALS = '''<li><a href="https://www.youtube.com/@maisyleigh" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a></li><li><a href="https://www.instagram.com/maisyleigh/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a></li><li><a href="https://www.tiktok.com/@maisyleighs" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.8V9.4a6.3 6.3 0 1 0 5.4 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8l-1-.1z"/></svg></a></li><li><a href="https://x.com/maisyleigh_" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7 4.2H5z"/></svg></a></li>'''
-# The bio page opens like the old link page (links.html), but as @maisyleigh is positioned (Nov 24 2026): Maisy the designer,
+# The bio page (maisyleigh.com/links/, Nov 26 2026) opens like the old link page (links.html), but as @maisyleigh is positioned (Nov 24 2026): Maisy the designer,
 # at her own desk, in her own words. Family and studio stories belong to @cozyleigh.studios, so no studio group photo here.
 PROFILE = '''<header class="profile"><div class="wrap">
 <div class="cover"><img src="img/cover-maisy-desk.jpg" width="1400" height="788" alt="Maisy at her desk in the morning light"></div>
@@ -377,12 +380,60 @@ def read_channels():
         else:
             problems.append(f'The {k} follower count could not be read; the page keeps {short_count(counts[k]) if counts.get(k) else "no number"}.')
     video = newest_long_video() or kept.get('video')
+    letter = newest_letter()
+    if letter is None:
+        letter = kept.get('letter')
+        problems.append('The blog feed could not be read; Watch & read keeps the letter it had.')
     if not video:
         problems.append('No long YouTube video could be found, so Watch & read shows only its links.')
     kept = {'_about': 'Follower counts under the channel icons and the newest long YouTube video on the bio page, kept from the last good read.',
-            'read': today_ny(), 'counts': counts, 'video': video}
+            'read': today_ny(), 'counts': counts, 'video': video, 'letter': letter}
     json.dump(kept, open(CHANNELS, 'w'), indent=1, ensure_ascii=False)
-    return counts, video
+    return counts, video, letter
+
+
+BLOG_FEED = 'https://cozyleigh.studio/blogs/the-monthly-batch.atom'
+GUIDE = re.compile(r'^(how to|what is|which|why does)\b|\bguide\b|\bcare for\b', re.I)
+
+
+def newest_letter():
+    """Maisy's newest letter from the studio (Maisy, Nov 26 2026: "include my blog posts"). Only her own letters:
+    Ash's and Tristan's belong to @cozyleigh.studios, and how-to guides aren't letters. bio.json "skip_letters" leaves
+    out a letter by its link's last part. Returns {} when the feed has none of hers, None when it can't be read."""
+    try:
+        feed = curl(BLOG_FEED, origin=False).decode('utf8', 'ignore')
+        entries = re.findall(r'<entry>(.*?)</entry>', feed, re.S)
+        if not entries:
+            raise ValueError('no entries')
+    except Exception:  # noqa: BLE001
+        return None
+    skip = set(CFG.get('skip_letters', []))
+    best = {}
+    for ent in entries:
+        author = re.search(r'<author>\s*<name>(.*?)</name>', ent, re.S)
+        title = html.unescape(re.search(r'<title>(.*?)</title>', ent, re.S).group(1).strip())
+        link = re.search(r'<link[^>]*rel="alternate"[^>]*href="([^"]+)"', ent) or re.search(r'<link[^>]*href="([^"]+)"', ent)
+        day = re.search(r'<published>(\d{4}-\d\d-\d\d)', ent)
+        if not (author and link and day) or not author.group(1).strip().lower().startswith('maisy'):
+            continue
+        if GUIDE.search(title) or link.group(1).rstrip('/').rsplit('/', 1)[-1] in skip:
+            continue
+        if not best or day.group(1) > best['date']:
+            summary = re.search(r'<summary[^>]*>(.*?)</summary>', ent, re.S)
+            content = re.search(r'<content[^>]*>(.*?)</content>', ent, re.S)
+            raw = lambda m: html.unescape(m.group(1).replace('<![CDATA[', '').replace(']]>', '')) if m else ''
+            text = lambda m: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', raw(m))).strip()
+            body = raw(content)
+            first_img = re.search(r'<img[^>]*src="([^"]+)"', body)
+            best = {'title': title, 'link': link.group(1), 'date': day.group(1),
+                    'summary': re.sub(r'\s*More$', '', text(summary)), 'words': len(text(content).split()),
+                    'image': first_img.group(1) if first_img else ''}
+    if best:  # the letter's own featured photo, the one its page shares
+        page = curl(best['link'], origin=False).decode('utf8', 'ignore')
+        og = re.search(r'property="og:image" content="([^"]+)"', page)
+        if og:
+            best['image'] = html.unescape(og.group(1))
+    return best
 
 
 def newest_long_video():
@@ -398,15 +449,17 @@ def newest_long_video():
             return None
         page = curl('https://www.youtube.com/watch?v=' + vid, origin=False).decode('utf8', 'ignore')
         secs = re.search(r'"lengthSeconds":"(\d+)"', page)
-        return {'id': vid, 'title': html.unescape(title), 'minutes': max(1, round(int(secs.group(1)) / 60)) if secs else None}
+        views = re.search(r'"viewCount":"(\d+)"', page)
+        day = re.search(r'"(?:publishDate|uploadDate)":"(\d{4}-\d\d-\d\d)', page)
+        return {'id': vid, 'title': html.unescape(title), 'seconds': int(secs.group(1)) if secs else None,
+                'views': int(views.group(1)) if views else None, 'date': day.group(1) if day else None}
     return None
 
 
-def plain_title(title):
-    """'cozy studio diaries 🍃🪵  slow living, ...' -> 'Cozy studio diaries: slow living, ...' (emojis read as a pause)."""
-    t = re.sub(r'\s*[^\w\s,.:;!?\'"&()\-–—|/]+\s*', ': ', title).strip(' :')
-    t = re.sub(r'\s*:\s*', ': ', re.sub(r'\s+', ' ', t))
-    return t[:1].upper() + t[1:]
+def short_day(day):
+    """'2026-11-26' -> 'Nov 26'."""
+    d = datetime.strptime(day, '%Y-%m-%d')
+    return f"{d.strftime('%b')} {d.day}"
 
 
 def soc_counts(counts):
@@ -422,23 +475,55 @@ def soc_counts(counts):
     return soc
 
 
-def watch_section(video):
-    """Watch & read: the newest long video, then all videos and her interviews, in the codes' row style."""
+def ago(day):
+    """'2026-08-18' -> '3 months ago', the way YouTube says it."""
+    days = (datetime.strptime(today_ny(), '%Y-%m-%d') - datetime.strptime(day, '%Y-%m-%d')).days
+    for size, unit in ((365, 'year'), (30, 'month'), (7, 'week'), (1, 'day')):
+        if days >= size:
+            n = days // size
+            return f'{n} {unit}{"s" if n > 1 else ""} ago'
+    return 'today'
+
+
+def clock(secs):
+    """1222 -> '20:22', 3725 -> '1:02:05'."""
+    h, m, sec = secs // 3600, secs % 3600 // 60, secs % 60
+    return f'{h}:{m:02d}:{sec:02d}' if h else f'{m}:{sec:02d}'
+
+
+def views_of(n):
+    return (short_count(n) if n >= 1000 else str(n)) + (' view' if n == 1 else ' views')
+
+
+def watch_section(video, letter=None):
+    """Watch & read (Maisy, Nov 26 2026: "i want blog post to look more like a blog post. and i want yt video to look more
+    like a yt video"): the newest long video laid out like YouTube (thumbnail, length, avatar, title, views, age), the newest
+    letter like a blog post (photo, label, title, opening lines, byline, Keep reading), then all videos and interviews."""
     card = ''
     if video:
         pic, _ = picture(f'https://i.ytimg.com/vi/{video["id"]}/maxresdefault.jpg', 'yt-' + video['id'], size=1280)
         if not pic:
             pic, _ = picture(f'https://i.ytimg.com/vi/{video["id"]}/hqdefault.jpg', 'yt-' + video['id'], size=1280)
         if pic:
-            mins = f' &middot; {video["minutes"]} min' if video.get('minutes') else ''
-            card = (f'<a class="vid" href="https://www.youtube.com/watch?v={e(video["id"])}" rel="noopener"><img class="space" src="{pic}" '
-                    f'width="1280" height="720" alt="Video: {e(plain_title(video["title"]))}" loading="lazy"><b>{e(plain_title(video["title"]))}</b>'
-                    f'<small>My newest video{mins}</small></a>')
+            title = re.sub(r'\s+', ' ', re.sub(r'\s*[^\w\s,.:;!?\'"&()\-–—|/]+\s*', ': ', video['title'])).strip(' :')
+            meta = ' &middot; '.join(['Maisy Leigh'] + ([views_of(video['views'])] if video.get('views') else []) + ([ago(video['date'])] if video.get('date') else []))
+            length = f'<i>{clock(video["seconds"])}</i>' if video.get('seconds') else ''
+            card += (f'<a class="yt" href="https://www.youtube.com/watch?v={e(video["id"])}" rel="noopener"><span class="th"><img src="{pic}" width="1280" height="720" '
+                     f'alt="Video: {e(title)}" loading="lazy">{length}</span><span class="yt-row"><img class="yt-av" src="img/profile-maisy.jpg" alt="">'
+                     f'<span><b>{e(title)}</b><small>{meta}</small></span></span></a>')
+    if letter and letter.get('image'):
+        pic, _ = picture(letter['image'], 'letter-' + slugify(letter['title'])[:40], size=1000)
+        if pic:
+            tagged = letter['link'] + ('&' if '?' in letter['link'] else '?') + 'utm_source=maisyleigh.com&utm_medium=bio&utm_campaign=letter'
+            read = f' &middot; {max(1, round(letter["words"] / 200))} min read' if letter.get('words') else ''
+            opening = f'<p>{e(letter["summary"])}</p>' if letter.get('summary') else ''
+            card += (f'<a class="post" href="{e(tagged)}" rel="noopener"><img src="{pic}" alt="{e(letter["title"])}" loading="lazy"><span class="kind">Letter from the studio</span>'
+                     f'<b>{e(letter["title"])}</b>{opening}<span class="by"><img src="img/profile-maisy.jpg" alt="">Maisy Leigh &middot; {short_day(letter["date"])}{read}</span>'
+                     f'<span class="more">Keep reading &rarr;</span></a>')
     rows = [{'name': 'All my videos', 'line': 'Slow living, the studio and how we make things', 'link': 'https://www.youtube.com/@maisyleigh/videos', 'pill': 'YouTube'}] + CFG.get('reads', [])
     items = ''.join(f'<li><a class="code" href="{e(r["link"])}" rel="noopener"><span><b>{e(r["name"])}</b><small>{e(r["line"])}</small></span><em>{e(r.get("pill", "Read"))}</em></a></li>' for r in rows)
-    return (f'<section class="sec" id="watch"><div class="wrap"><div class="sec-hd"><h2>Watch &amp; read</h2><span>More of me</span></div>'
+    return (f'<section class="sec sand" id="watch"><div class="wrap"><div class="sec-hd"><h2>Watch &amp; read</h2><span>More of me</span></div>'
             f'{card}<ul class="codes{" reads" if card else ""}">{items}</ul></div></section>')
-
 
 def nice_day(day):
     import datetime
@@ -494,9 +579,9 @@ def build_spaces(shop):
     codes = ''.join(f'<li>{code_row(c)}</li>' for c in rows)
     sales = any(not c.get('code') for c in rows)  # a sale with no code is a link, so the heading says both
     head = '<h2>Codes &amp; sales</h2><span>Tap to copy or shop</span>' if sales else '<h2>My codes</h2><span>Tap to copy</span>'
-    counts, video = read_channels()
+    counts, video, letter = read_channels()
     body = ''.join(sections) + f'<section class="sec" id="codes"><div class="wrap"><div class="sec-hd">{head}</div><ul class="codes">{codes}</ul></div></section>'
-    body += watch_section(video)
+    body += watch_section(video, letter)
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
     open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE.replace(SOCIALS, soc_counts(counts))) + body + FOOT % COPY_JS)
