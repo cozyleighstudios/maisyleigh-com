@@ -259,7 +259,9 @@
     {
       "match": "steelcase",
       "label": "Chair",
-      "brand": "Steelcase Gesture"
+      "brand": "Steelcase Gesture",
+      "code": "EXTRAJOY5",
+      "code_until": "2026-12-01"
     },
     {
       "match": "pro display",

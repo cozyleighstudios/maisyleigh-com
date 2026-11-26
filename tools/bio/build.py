@@ -169,13 +169,19 @@ def short(text, n=24):
     return cut.rstrip(' ,-&(')
 
 
+def pill(code):
+    """The code under an item's name: just the code, on one line, read out as "Code …"."""
+    return f'<i aria-label="Code {e(code)}">{e(code)}</i>' if code else ''
+
+
 def name_of(pin):
     """(label, brand, code, studio, own photo key) for an item."""
     title = pin.get('title') or ''
     low = title.lower()
     for r in CFG['names']:
         if r['match'] in low:
-            return r['label'], r['brand'], r.get('code'), bool(r.get('studio')), r.get('photo')
+            code = r.get('code') if r.get('code_until', '9999') >= today_ny() else None  # a dated code leaves after its day
+            return r['label'], r['brand'], code, bool(r.get('studio')), r.get('photo')
     brand = DOMAINS.get((pin.get('domain') or '').replace('www.', ''), '')
     if '\n' in title:  # IKEA style: "NAME\nWhat it is, details"
         first, rest = title.split('\n', 1)
@@ -209,8 +215,11 @@ B64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
 def live_codes():
     """Codes still running today (New York). A code with "until" (YYYY-MM-DD) leaves the page on the nightly
     rebuild after that day, so a sale never stays up after it ends."""
-    today = datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d')
-    return [c for c in CFG['codes'] if not c.get('until') or c['until'] >= today]
+    return [c for c in CFG['codes'] if not c.get('until') or c['until'] >= today_ny()]
+
+
+def today_ny():
+    return datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d')
 
 
 def posted(kind, code, dates):
@@ -262,7 +271,7 @@ def tiles(pins, slug, seen=None):
         if not src:
             continue
         out.append((studio, f'<a class="t{" cut" if cut else ""}" href="{e(link_of(p, slug))}" rel="noopener"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(label)}: {e(brand)}" loading="lazy"></span>'
-                            f'<b>{e(label)}</b><span>{e(brand)}</span>{f"<i>Code {e(code)}</i>" if code else ""}</a>'))
+                            f'<b>{e(label)}</b><span>{e(brand)}</span>{pill(code)}</a>'))
     return out
 
 
