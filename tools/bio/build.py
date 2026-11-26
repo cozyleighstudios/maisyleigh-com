@@ -170,7 +170,7 @@ def short(text, n=24):
 
 
 def pill(code):
-    """The code under an item's name: just the code, on one line, read out as "Code …"."""
+    """The code in the photo's top corner, so every row keeps the same height (Maisy, Nov 25 2026). Read out as "Code …"."""
     return f'<i aria-label="Code {e(code)}">{e(code)}</i>' if code else ''
 
 
@@ -270,8 +270,8 @@ def tiles(pins, slug, seen=None):
             src, cut = picture(cdn(p.get('image')), f"p{p['id']}", square=True)
         if not src:
             continue
-        out.append((studio, f'<a class="t{" cut" if cut else ""}" href="{e(link_of(p, slug))}" rel="noopener"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(label)}: {e(brand)}" loading="lazy"></span>'
-                            f'<b>{e(label)}</b><span>{e(brand)}</span>{pill(code)}</a>'))
+        out.append((studio, f'<a class="t{" cut" if cut else ""}" href="{e(link_of(p, slug))}" rel="noopener"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(label)}: {e(brand)}" loading="lazy">{pill(code)}</span>'
+                            f'<b>{e(label)}</b><span>{e(brand)}</span></a>'))
     return out
 
 
