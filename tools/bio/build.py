@@ -169,13 +169,19 @@ def short(text, n=24):
     return cut.rstrip(' ,-&(')
 
 
+def pill(code):
+    """The code in the photo's top corner, so every row keeps the same height (Maisy, Nov 25 2026). Read out as "Code …"."""
+    return f'<i aria-label="Code {e(code)}">{e(code)}</i>' if code else ''
+
+
 def name_of(pin):
     """(label, brand, code, studio, own photo key) for an item."""
     title = pin.get('title') or ''
     low = title.lower()
     for r in CFG['names']:
         if r['match'] in low:
-            return r['label'], r['brand'], r.get('code'), bool(r.get('studio')), r.get('photo')
+            code = r.get('code') if r.get('code_until', '9999') >= today_ny() else None  # a dated code leaves after its day
+            return r['label'], r['brand'], code, bool(r.get('studio')), r.get('photo')
     brand = DOMAINS.get((pin.get('domain') or '').replace('www.', ''), '')
     if '\n' in title:  # IKEA style: "NAME\nWhat it is, details"
         first, rest = title.split('\n', 1)
@@ -209,8 +215,24 @@ B64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
 def live_codes():
     """Codes still running today (New York). A code with "until" (YYYY-MM-DD) leaves the page on the nightly
     rebuild after that day, so a sale never stays up after it ends."""
-    today = datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d')
-    return [c for c in CFG['codes'] if not c.get('until') or c['until'] >= today]
+    return [c for c in CFG['codes'] if not c.get('until') or c['until'] >= today_ny()]
+
+
+def offer_of(c):
+    """A standing code can carry a dated sale line ("sale" until "sale_until"); after that day its usual offer shows."""
+    return c['sale'] if c.get('sale') and c.get('sale_until', '0000') >= today_ny() else c['offer']
+
+
+def code_row(c):
+    """A code copies on tap; a sale with no code (Black Friday, Nov 26 2026) opens the shop through Maisy's own link."""
+    text = f'<span><b>{e(c["name"])}</b><small>{e(offer_of(c))}</small></span>'
+    if c.get('code'):
+        return f'<button class="code" type="button" data-code="{e(c["code"])}">{text}<em>{e(c["code"])}</em></button>'
+    return f'<a class="code" href="{e(c["link"])}" rel="noopener">{text}<em>Shop</em></a>'
+
+
+def today_ny():
+    return datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d')
 
 
 def posted(kind, code, dates):
@@ -261,8 +283,8 @@ def tiles(pins, slug, seen=None):
             src, cut = picture(cdn(p.get('image')), f"p{p['id']}", square=True)
         if not src:
             continue
-        out.append((studio, f'<a class="t{" cut" if cut else ""}" href="{e(link_of(p, slug))}" rel="noopener"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(label)}: {e(brand)}" loading="lazy"></span>'
-                            f'<b>{e(label)}</b><span>{e(brand)}</span>{f"<i>Code {e(code)}</i>" if code else ""}</a>'))
+        out.append((studio, f'<a class="t{" cut" if cut else ""}" href="{e(link_of(p, slug))}" rel="noopener"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(label)}: {e(brand)}" loading="lazy">{pill(code)}</span>'
+                            f'<b>{e(label)}</b><span>{e(brand)}</span></a>'))
     return out
 
 
@@ -283,7 +305,7 @@ PROFILE = '''<header class="profile"><div class="wrap">
 <a class="shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile">Shop Cozyleigh</a></div>
 </div></header>'''
 FOOT = '''</main><footer class="ft"><div class="wrap"><p>Some links earn me a small commission, at no cost to you.</p><small>&copy; 2026 Maisy Leigh</small></div></footer>%s</body></html>'''
-COPY_JS = '''<script>document.querySelectorAll('.code').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.code,t=b.querySelector('em');
+COPY_JS = '''<script>document.querySelectorAll('button.code').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.code,t=b.querySelector('em');
 function done(){t.textContent='Copied';setTimeout(function(){t.textContent=c},1600)}
 if(navigator.clipboard){navigator.clipboard.writeText(c).then(done,function(){})}})});</script>'''
 DISCLOSE = 'Some links earn me a small commission, at no cost to you.'
@@ -361,8 +383,11 @@ def build_spaces(shop):
         sections.append(f'<section class="sec" id="{slug}"><div class="wrap"><div class="sec-hd"><h2>{e(sp["title"])}</h2><span>{len(items)} things</span></div>{pic}{grid(items)}</div></section>')
     if not sections:
         sys.exit('No space could be built. Nothing was written.')
-    codes = ''.join(f'<li><button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button></li>' for c in live_codes())
-    body = ''.join(sections) + f'<section class="sec" id="codes"><div class="wrap"><div class="sec-hd"><h2>My codes</h2><span>Tap to copy</span></div><ul class="codes">{codes}</ul></div></section>'
+    rows = live_codes()
+    codes = ''.join(f'<li>{code_row(c)}</li>' for c in rows)
+    sales = any(not c.get('code') for c in rows)  # a sale with no code is a link, so the heading says both
+    head = '<h2>Codes &amp; sales</h2><span>Tap to copy or shop</span>' if sales else '<h2>My codes</h2><span>Tap to copy</span>'
+    body = ''.join(sections) + f'<section class="sec" id="codes"><div class="wrap"><div class="sec-hd">{head}</div><ul class="codes">{codes}</ul></div></section>'
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
     open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE) + body + FOOT % COPY_JS)
@@ -480,7 +505,7 @@ def main():
         src, cut = picture(cdn(first.get('image')), f"p{first['id']}", square=True)
         n = len({name_of(p)[:2] for p in pins})
         room_tiles.append(f'<a class="t{" cut" if cut else ""}" href="{r["slug"]}.html"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(r["title"])}" loading="lazy"></span><b>{e(r["title"])}</b><span>{n} things</span></a>')
-    codes = ''.join(f'<button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button>' for c in live_codes())
+    codes = ''.join(code_row(c) for c in live_codes())
     body = band('b-paper', 'From my reels', grid([reel_tile(v) for v in reels], 'g3 v'))
     body += band('b-paper tight', 'From YouTube', grid([f'<a class="t" href="{v["slug"]}.html"><img src="{v["cover"]}" alt="Video: {e(v["title"])}" loading="lazy"><b>{e(v["title"])}</b></a>' for v in yts], 'g2'))
     body += band('b-green', 'On my desk, made in our studio', grid(studio))

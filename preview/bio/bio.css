@@ -46,7 +46,9 @@ ul{list-style:none}
 .t .ph img{width:100%;height:100%;object-fit:contain;padding:10%;mix-blend-mode:multiply}  /* renders: every product whole, never cropped */
 .t b{display:block;font:500 var(--fs-small)/1.3 var(--sans);margin-top:8px}
 .t>span:not(.ph){display:block;font:400 13px/1.3 var(--sans);color:var(--muted);margin-top:1px}
-.t i{display:inline-block;margin-top:6px;font:500 11px/1 var(--sans);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);border-radius:999px;padding:5px 8px}
+.t .ph{position:relative}
+.t .ph i{position:absolute;top:5px;left:5px;font:500 9px/1 var(--sans);font-style:normal;letter-spacing:.1em;color:var(--ink);background:#FEDBAE;padding:4px 7px 4px 15px;border-radius:0 3px 3px 0;white-space:nowrap;clip-path:polygon(9px 0,100% 0,100% 100%,9px 100%,0 50%);transform:rotate(-3deg);transform-origin:0 50%}  /* a code as a little gift tag in the photo corner (Maisy, Nov 25 2026), peach from the logo */
+.t .ph i::before{content:"";position:absolute;left:6px;top:50%;width:4px;height:4px;margin-top:-2px;border-radius:50%;background:var(--sand)}  /* the string hole */
 
 /* codes: plain rows, like the rows on maisyleigh.com */
 .codes{border-top:1px solid var(--hair)}
@@ -55,6 +57,9 @@ ul{list-style:none}
 .code b{display:block;font:500 var(--fs-body)/1.3 var(--sans)}
 .code small{display:block;font-size:13px;color:var(--muted);margin-top:2px}
 .code em{font:500 var(--fs-label)/1 var(--sans);font-style:normal;letter-spacing:.14em;border:1px solid var(--ink);border-radius:999px;padding:9px 12px;white-space:nowrap}
+a.code{text-decoration:none}
+a.code em{text-transform:uppercase}
+a.code em::after{content:"\2197";margin-left:5px}  /* a sale with no code opens the shop, like Shop Cozyleigh */
 
 /* footer: the disclosure once, then the name */
 .ft{padding:24px 0 40px;border-top:1px solid var(--hair)}

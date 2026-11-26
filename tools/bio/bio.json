@@ -82,6 +82,21 @@
   ],
   "codes": [
     {
+      "name": "Our Place",
+      "offer": "Black Friday: up to 45% off everything, my Wonder Oven too · until Nov 30",
+      "until": "2026-11-30",
+      "link": "https://go.shopmy.us/p-60211910",
+      "_source": "Our Place ambassador email, Nov 24 2026 (sale and higher commission through Nov 30). Link = her Wonder Oven ShopMy pin"
+    },
+    {
+      "name": "Hey Hae gel nails",
+      "offer": "10% off",
+      "code": "MAISYLEIGH",
+      "sale": "Black Friday: 30% off until Nov 30",
+      "sale_until": "2026-11-30",
+      "_sale_source": "Heyhae affiliate emails Nov 19 and Nov 25 2026"
+    },
+    {
       "name": "Steelcase",
       "offer": "Holiday sale up to 25% off, plus 5% more on chairs · until Dec 1",
       "code": "EXTRAJOY5",
@@ -89,19 +104,24 @@
       "_source": "CJ Steelcase offer email, Nov 23 2026 (code Nov 23 to Dec 1; sale to Dec 8)"
     },
     {
+      "name": "Bambu Lab 3D printers",
+      "offer": "Black Friday: printers from $199, save up to $450 · until Dec 1",
+      "until": "2026-12-01",
+      "link": "https://www.awin1.com/cread.php?awinmid=46345&awinaffid=2052647&ued=https%3A%2F%2Fstore.bambulab.com%2Fpages%2Fblack-friday-sale",
+      "_source": "Bambu Lab via Awin, Oct 27 2026 (campaign Oct 27 to Dec 1, US offer). Link = her Awin deep link to the sale page"
+    },
+    {
       "name": "Matchakari matcha",
       "offer": "10% off",
-      "code": "MAISY10"
+      "code": "MAISY10",
+      "sale": "Black Friday: 20% off, taken off at checkout",
+      "sale_until": "2026-12-01",
+      "_sale_source": "Matcha.com early access email, Nov 25 2026 (no end date given; shown through Cyber Monday)"
     },
     {
       "name": "Colorful Standard",
       "offer": "10% off",
       "code": "MAISYLEIGHCS10"
-    },
-    {
-      "name": "Hey Hae gel nails",
-      "offer": "10% off",
-      "code": "MAISYLEIGH"
     }
   ],
   "names": [
@@ -259,7 +279,9 @@
     {
       "match": "steelcase",
       "label": "Chair",
-      "brand": "Steelcase Gesture"
+      "brand": "Steelcase Gesture",
+      "code": "EXTRAJOY5",
+      "code_until": "2026-12-01"
     },
     {
       "match": "pro display",
