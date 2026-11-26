@@ -419,7 +419,20 @@ def newest_letter():
         if GUIDE.search(title) or link.group(1).rstrip('/').rsplit('/', 1)[-1] in skip:
             continue
         if not best or day.group(1) > best['date']:
-            best = {'title': title, 'link': link.group(1), 'date': day.group(1)}
+            summary = re.search(r'<summary[^>]*>(.*?)</summary>', ent, re.S)
+            content = re.search(r'<content[^>]*>(.*?)</content>', ent, re.S)
+            raw = lambda m: html.unescape(m.group(1).replace('<![CDATA[', '').replace(']]>', '')) if m else ''
+            text = lambda m: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', raw(m))).strip()
+            body = raw(content)
+            first_img = re.search(r'<img[^>]*src="([^"]+)"', body)
+            best = {'title': title, 'link': link.group(1), 'date': day.group(1),
+                    'summary': re.sub(r'\s*More$', '', text(summary)), 'words': len(text(content).split()),
+                    'image': first_img.group(1) if first_img else ''}
+    if best:  # the letter's own featured photo, the one its page shares
+        page = curl(best['link'], origin=False).decode('utf8', 'ignore')
+        og = re.search(r'property="og:image" content="([^"]+)"', page)
+        if og:
+            best['image'] = html.unescape(og.group(1))
     return best
 
 
@@ -436,15 +449,11 @@ def newest_long_video():
             return None
         page = curl('https://www.youtube.com/watch?v=' + vid, origin=False).decode('utf8', 'ignore')
         secs = re.search(r'"lengthSeconds":"(\d+)"', page)
-        return {'id': vid, 'title': html.unescape(title), 'minutes': max(1, round(int(secs.group(1)) / 60)) if secs else None}
+        views = re.search(r'"viewCount":"(\d+)"', page)
+        day = re.search(r'"(?:publishDate|uploadDate)":"(\d{4}-\d\d-\d\d)', page)
+        return {'id': vid, 'title': html.unescape(title), 'seconds': int(secs.group(1)) if secs else None,
+                'views': int(views.group(1)) if views else None, 'date': day.group(1) if day else None}
     return None
-
-
-def plain_title(title):
-    """'cozy studio diaries 🍃🪵  slow living, ...' -> 'Cozy studio diaries: slow living, ...' (emojis read as a pause)."""
-    t = re.sub(r'\s*[^\w\s,.:;!?\'"&()\-–—|/]+\s*', ': ', title).strip(' :')
-    t = re.sub(r'\s*:\s*', ': ', re.sub(r'\s+', ' ', t))
-    return t[:1].upper() + t[1:]
 
 
 def short_day(day):
@@ -466,26 +475,55 @@ def soc_counts(counts):
     return soc
 
 
+def ago(day):
+    """'2026-08-18' -> '3 months ago', the way YouTube says it."""
+    days = (datetime.strptime(today_ny(), '%Y-%m-%d') - datetime.strptime(day, '%Y-%m-%d')).days
+    for size, unit in ((365, 'year'), (30, 'month'), (7, 'week'), (1, 'day')):
+        if days >= size:
+            n = days // size
+            return f'{n} {unit}{"s" if n > 1 else ""} ago'
+    return 'today'
+
+
+def clock(secs):
+    """1222 -> '20:22', 3725 -> '1:02:05'."""
+    h, m, sec = secs // 3600, secs % 3600 // 60, secs % 60
+    return f'{h}:{m:02d}:{sec:02d}' if h else f'{m}:{sec:02d}'
+
+
+def views_of(n):
+    return (short_count(n) if n >= 1000 else str(n)) + (' view' if n == 1 else ' views')
+
+
 def watch_section(video, letter=None):
-    """Watch & read: the newest long video, then all videos and her interviews, in the codes' row style."""
+    """Watch & read (Maisy, Nov 26 2026: "i want blog post to look more like a blog post. and i want yt video to look more
+    like a yt video"): the newest long video laid out like YouTube (thumbnail, length, avatar, title, views, age), the newest
+    letter like a blog post (photo, label, title, opening lines, byline, Keep reading), then all videos and interviews."""
     card = ''
     if video:
         pic, _ = picture(f'https://i.ytimg.com/vi/{video["id"]}/maxresdefault.jpg', 'yt-' + video['id'], size=1280)
         if not pic:
             pic, _ = picture(f'https://i.ytimg.com/vi/{video["id"]}/hqdefault.jpg', 'yt-' + video['id'], size=1280)
         if pic:
-            mins = f' &middot; {video["minutes"]} min' if video.get('minutes') else ''
-            card = (f'<a class="vid" href="https://www.youtube.com/watch?v={e(video["id"])}" rel="noopener"><img class="space" src="{pic}" '
-                    f'width="1280" height="720" alt="Video: {e(plain_title(video["title"]))}" loading="lazy"><b>{e(plain_title(video["title"]))}</b>'
-                    f'<small>My newest video{mins}</small></a>')
+            title = re.sub(r'\s+', ' ', re.sub(r'\s*[^\w\s,.:;!?\'"&()\-–—|/]+\s*', ': ', video['title'])).strip(' :')
+            meta = ' &middot; '.join(['Maisy Leigh'] + ([views_of(video['views'])] if video.get('views') else []) + ([ago(video['date'])] if video.get('date') else []))
+            length = f'<i>{clock(video["seconds"])}</i>' if video.get('seconds') else ''
+            card += (f'<a class="yt" href="https://www.youtube.com/watch?v={e(video["id"])}" rel="noopener"><span class="th"><img src="{pic}" width="1280" height="720" '
+                     f'alt="Video: {e(title)}" loading="lazy">{length}</span><span class="yt-row"><img class="yt-av" src="img/profile-maisy.jpg" alt="">'
+                     f'<span><b>{e(title)}</b><small>{meta}</small></span></span></a>')
+    if letter and letter.get('image'):
+        pic, _ = picture(letter['image'], 'letter-' + slugify(letter['title'])[:40], size=1000)
+        if pic:
+            tagged = letter['link'] + ('&' if '?' in letter['link'] else '?') + 'utm_source=maisyleigh.com&utm_medium=bio&utm_campaign=letter'
+            read = f' &middot; {max(1, round(letter["words"] / 200))} min read' if letter.get('words') else ''
+            opening = f'<p>{e(letter["summary"])}</p>' if letter.get('summary') else ''
+            card += (f'<a class="post" href="{e(tagged)}" rel="noopener"><img src="{pic}" alt="{e(letter["title"])}" loading="lazy"><span class="kind">Letter from the studio</span>'
+                     f'<b>{e(letter["title"])}</b>{opening}<span class="by"><img src="img/profile-maisy.jpg" alt="">Maisy Leigh &middot; {short_day(letter["date"])}{read}</span>'
+                     f'<span class="more">Keep reading &rarr;</span></a>')
     rows = [{'name': 'All my videos', 'line': 'Slow living, the studio and how we make things', 'link': 'https://www.youtube.com/@maisyleigh/videos', 'pill': 'YouTube'}] + CFG.get('reads', [])
-    if letter:
-        tagged = letter['link'] + ('&' if '?' in letter['link'] else '?') + 'utm_source=maisyleigh.com&utm_medium=bio&utm_campaign=letter'
-        rows.insert(0, {'name': letter['title'], 'line': 'My newest letter from the studio \u00b7 ' + short_day(letter['date']), 'link': tagged, 'pill': 'Read'})
     items = ''.join(f'<li><a class="code" href="{e(r["link"])}" rel="noopener"><span><b>{e(r["name"])}</b><small>{e(r["line"])}</small></span><em>{e(r.get("pill", "Read"))}</em></a></li>' for r in rows)
-    return (f'<section class="sec" id="watch"><div class="wrap"><div class="sec-hd"><h2>Watch &amp; read</h2><span>More of me</span></div>'
+    return (f'<section class="sec sand" id="watch"><div class="wrap"><div class="sec-hd"><h2>Watch &amp; read</h2><span>More of me</span></div>'
             f'{card}<ul class="codes{" reads" if card else ""}">{items}</ul></div></section>')
-
 
 def nice_day(day):
     import datetime
