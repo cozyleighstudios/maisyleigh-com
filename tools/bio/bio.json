@@ -82,6 +82,13 @@
   ],
   "codes": [
     {
+      "name": "Steelcase",
+      "offer": "Holiday sale up to 25% off, plus 5% more on chairs · until Dec 1",
+      "code": "EXTRAJOY5",
+      "until": "2026-12-01",
+      "_source": "CJ Steelcase offer email, Nov 23 2026 (code Nov 23 to Dec 1; sale to Dec 8)"
+    },
+    {
       "name": "Matchakari matcha",
       "offer": "10% off",
       "code": "MAISY10"

@@ -12,6 +12,8 @@ commission link is made fresh for each tap. Items with Maisy's own programme lin
 Needs Python 3 and Pillow.
 """
 import html, json, os, re, subprocess, sys, urllib.parse
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -203,6 +205,14 @@ DATES = os.path.join(HERE, 'dates.json')
 B64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
 
 
+
+def live_codes():
+    """Codes still running today (New York). A code with "until" (YYYY-MM-DD) leaves the page on the nightly
+    rebuild after that day, so a sale never stays up after it ends."""
+    today = datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d')
+    return [c for c in CFG['codes'] if not c.get('until') or c['until'] >= today]
+
+
 def posted(kind, code, dates):
     """The day a video went up, 'YYYY-MM-DD', or '' if it can't be told. Kept in dates.json once known."""
     if code in dates:
@@ -351,7 +361,7 @@ def build_spaces(shop):
         sections.append(f'<section class="sec" id="{slug}"><div class="wrap"><div class="sec-hd"><h2>{e(sp["title"])}</h2><span>{len(items)} things</span></div>{pic}{grid(items)}</div></section>')
     if not sections:
         sys.exit('No space could be built. Nothing was written.')
-    codes = ''.join(f'<li><button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button></li>' for c in CFG['codes'])
+    codes = ''.join(f'<li><button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button></li>' for c in live_codes())
     body = ''.join(sections) + f'<section class="sec" id="codes"><div class="wrap"><div class="sec-hd"><h2>My codes</h2><span>Tap to copy</span></div><ul class="codes">{codes}</ul></div></section>'
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
@@ -470,7 +480,7 @@ def main():
         src, cut = picture(cdn(first.get('image')), f"p{first['id']}", square=True)
         n = len({name_of(p)[:2] for p in pins})
         room_tiles.append(f'<a class="t{" cut" if cut else ""}" href="{r["slug"]}.html"><span class="ph"><img src="{src}" width="700" height="700" alt="{e(r["title"])}" loading="lazy"></span><b>{e(r["title"])}</b><span>{n} things</span></a>')
-    codes = ''.join(f'<button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button>' for c in CFG['codes'])
+    codes = ''.join(f'<button class="code" type="button" data-code="{e(c["code"])}"><span><b>{e(c["name"])}</b><small>{e(c["offer"])}</small></span><em>{e(c["code"])}</em></button>' for c in live_codes())
     body = band('b-paper', 'From my reels', grid([reel_tile(v) for v in reels], 'g3 v'))
     body += band('b-paper tight', 'From YouTube', grid([f'<a class="t" href="{v["slug"]}.html"><img src="{v["cover"]}" alt="Video: {e(v["title"])}" loading="lazy"><b>{e(v["title"])}</b></a>' for v in yts], 'g2'))
     body += band('b-green', 'On my desk, made in our studio', grid(studio))
