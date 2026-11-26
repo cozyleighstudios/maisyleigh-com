@@ -380,12 +380,47 @@ def read_channels():
         else:
             problems.append(f'The {k} follower count could not be read; the page keeps {short_count(counts[k]) if counts.get(k) else "no number"}.')
     video = newest_long_video() or kept.get('video')
+    letter = newest_letter()
+    if letter is None:
+        letter = kept.get('letter')
+        problems.append('The blog feed could not be read; Watch & read keeps the letter it had.')
     if not video:
         problems.append('No long YouTube video could be found, so Watch & read shows only its links.')
     kept = {'_about': 'Follower counts under the channel icons and the newest long YouTube video on the bio page, kept from the last good read.',
-            'read': today_ny(), 'counts': counts, 'video': video}
+            'read': today_ny(), 'counts': counts, 'video': video, 'letter': letter}
     json.dump(kept, open(CHANNELS, 'w'), indent=1, ensure_ascii=False)
-    return counts, video
+    return counts, video, letter
+
+
+BLOG_FEED = 'https://cozyleigh.studio/blogs/the-monthly-batch.atom'
+GUIDE = re.compile(r'^(how to|what is|which|why does)\b|\bguide\b|\bcare for\b', re.I)
+
+
+def newest_letter():
+    """Maisy's newest letter from the studio (Maisy, Nov 26 2026: "include my blog posts"). Only her own letters:
+    Ash's and Tristan's belong to @cozyleigh.studios, and how-to guides aren't letters. bio.json "skip_letters" leaves
+    out a letter by its link's last part. Returns {} when the feed has none of hers, None when it can't be read."""
+    try:
+        feed = curl(BLOG_FEED, origin=False).decode('utf8', 'ignore')
+        entries = re.findall(r'<entry>(.*?)</entry>', feed, re.S)
+        if not entries:
+            raise ValueError('no entries')
+    except Exception:  # noqa: BLE001
+        return None
+    skip = set(CFG.get('skip_letters', []))
+    best = {}
+    for ent in entries:
+        author = re.search(r'<author>\s*<name>(.*?)</name>', ent, re.S)
+        title = html.unescape(re.search(r'<title>(.*?)</title>', ent, re.S).group(1).strip())
+        link = re.search(r'<link[^>]*rel="alternate"[^>]*href="([^"]+)"', ent) or re.search(r'<link[^>]*href="([^"]+)"', ent)
+        day = re.search(r'<published>(\d{4}-\d\d-\d\d)', ent)
+        if not (author and link and day) or not author.group(1).strip().lower().startswith('maisy'):
+            continue
+        if GUIDE.search(title) or link.group(1).rstrip('/').rsplit('/', 1)[-1] in skip:
+            continue
+        if not best or day.group(1) > best['date']:
+            best = {'title': title, 'link': link.group(1), 'date': day.group(1)}
+    return best
 
 
 def newest_long_video():
@@ -412,6 +447,12 @@ def plain_title(title):
     return t[:1].upper() + t[1:]
 
 
+def short_day(day):
+    """'2026-11-26' -> 'Nov 26'."""
+    d = datetime.strptime(day, '%Y-%m-%d')
+    return f"{d.strftime('%b')} {d.day}"
+
+
 def soc_counts(counts):
     """The channel icons with each one's follower count under it; X stays an icon."""
     soc = SOCIALS
@@ -425,7 +466,7 @@ def soc_counts(counts):
     return soc
 
 
-def watch_section(video):
+def watch_section(video, letter=None):
     """Watch & read: the newest long video, then all videos and her interviews, in the codes' row style."""
     card = ''
     if video:
@@ -438,6 +479,9 @@ def watch_section(video):
                     f'width="1280" height="720" alt="Video: {e(plain_title(video["title"]))}" loading="lazy"><b>{e(plain_title(video["title"]))}</b>'
                     f'<small>My newest video{mins}</small></a>')
     rows = [{'name': 'All my videos', 'line': 'Slow living, the studio and how we make things', 'link': 'https://www.youtube.com/@maisyleigh/videos', 'pill': 'YouTube'}] + CFG.get('reads', [])
+    if letter:
+        tagged = letter['link'] + ('&' if '?' in letter['link'] else '?') + 'utm_source=maisyleigh.com&utm_medium=bio&utm_campaign=letter'
+        rows.insert(0, {'name': letter['title'], 'line': 'My newest letter from the studio \u00b7 ' + short_day(letter['date']), 'link': tagged, 'pill': 'Read'})
     items = ''.join(f'<li><a class="code" href="{e(r["link"])}" rel="noopener"><span><b>{e(r["name"])}</b><small>{e(r["line"])}</small></span><em>{e(r.get("pill", "Read"))}</em></a></li>' for r in rows)
     return (f'<section class="sec" id="watch"><div class="wrap"><div class="sec-hd"><h2>Watch &amp; read</h2><span>More of me</span></div>'
             f'{card}<ul class="codes{" reads" if card else ""}">{items}</ul></div></section>')
@@ -497,9 +541,9 @@ def build_spaces(shop):
     codes = ''.join(f'<li>{code_row(c)}</li>' for c in rows)
     sales = any(not c.get('code') for c in rows)  # a sale with no code is a link, so the heading says both
     head = '<h2>Codes &amp; sales</h2><span>Tap to copy or shop</span>' if sales else '<h2>My codes</h2><span>Tap to copy</span>'
-    counts, video = read_channels()
+    counts, video, letter = read_channels()
     body = ''.join(sections) + f'<section class="sec" id="codes"><div class="wrap"><div class="sec-hd">{head}</div><ul class="codes">{codes}</ul></div></section>'
-    body += watch_section(video)
+    body += watch_section(video, letter)
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
     open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE.replace(SOCIALS, soc_counts(counts))) + body + FOOT % COPY_JS)
