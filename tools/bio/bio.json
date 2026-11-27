@@ -81,8 +81,10 @@
     }
   ],
   "studio_now": [
-    {"key": "archive-sale", "name": "The Archive Sale at Cozyleigh", "line": "Up to 20% off \u00b7 ends Sunday, Nov 30", "link": "https://cozyleigh.studio/pages/imperfectly-perfect", "until": "2026-11-30"},
-    {"key": "gift-guide", "name": "The Cozyleigh gift guide", "line": "Add a little zen to their desk \u00b7 gifts under $40", "link": "https://cozyleigh.studio/pages/gifts", "from": "2026-12-01", "until": "2026-12-20"}
+    {"key": "archive-sale", "name": "The Archive Sale at Cozyleigh", "line": "Up to 20% off \u00b7 ends Sunday, Nov 30", "link": "https://cozyleigh.studio/pages/imperfectly-perfect", "until": "2026-11-30",
+     "image": "https://cozyleigh.studio/cdn/shop/t/24/assets/cl-hero-nov26-archive-shoot-2200.jpg", "alt": "A hand reaching into the Fa tray beside a terracotta charger stand on a walnut tray, on a festive table"},
+    {"key": "gift-guide", "name": "The Cozyleigh gift guide", "line": "Add a little zen to their desk \u00b7 gifts under $40", "link": "https://cozyleigh.studio/pages/gifts", "from": "2026-12-01", "until": "2026-12-20",
+     "image": "https://cozyleigh.studio/cdn/shop/files/cozyleigh-fall26-edit-burgundy-stand-zen-tray-cosmos.jpg?width=1600", "focus": "50% 52%", "alt": "A burgundy charger stand and a yellow puck on a walnut tray, with pink cosmos"}
   ],
   "reads": [
     {"name": "Meet Maisy Leigh", "line": "My interview with CanvasRebel", "link": "https://canvasrebel.com/meet-maisy-leigh/", "pill": "Read"}
