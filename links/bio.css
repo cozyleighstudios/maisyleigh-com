@@ -36,6 +36,9 @@ ul{list-style:none}
 .shop--logo{gap:6px;padding:0 14px}
 .shop--logo img{width:auto;height:15px;display:inline-block;transform:translateY(1px)}  /* the Cozyleigh logo in the Shop button (Maisy, Nov 26 2026) */
 .studio-now{margin-top:16px}  /* one dated studio row under the profile: a sale, then the gift guide */
+.studio-now.has-pic{border-top:0;margin-top:20px}
+.studio-now.has-pic .code{flex-wrap:wrap;align-content:flex-start;padding-top:0}
+.studio-now .code>img{flex:0 0 100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;margin-bottom:12px}  /* the photo card, no words on it */
 
 /* sections: a hairline, one heading style, the photo of the space, then its things */
 .sec{padding:28px 0 32px;border-top:1px solid var(--hair)}

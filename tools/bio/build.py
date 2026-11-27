@@ -570,7 +570,8 @@ def shop_button(profile):
 
 def studio_now():
     """One dated studio row under the profile (Maisy, Nov 26 2026): the first bio.json "studio_now" entry live today in
-    New York ("from"/"until", YYYY-MM-DD, both days included), in the codes' row style; nothing when none is live."""
+    New York ("from"/"until", YYYY-MM-DD, both days included), in the codes' row style; nothing when none is live.
+    An optional "image" (with "focus" as a CSS object-position and "alt") puts a photo on top, the whole card one link."""
     today = today_ny()
     for r in CFG.get('studio_now', []):
         if r.get('from', '0000') <= today <= r.get('until', '9999'):
@@ -579,7 +580,12 @@ def studio_now():
             q = [(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not k.startswith('utm_')]
             q += [('utm_source', 'maisyleigh.com'), ('utm_medium', 'bio'), ('utm_campaign', 'profile'), ('utm_content', slug)]
             link = urllib.parse.urlunparse(u._replace(query=urllib.parse.urlencode(q)))
-            return (f'<ul class="codes studio-now"><li><a class="code" href="{e(link)}" rel="noopener"><span><b>{e(r["name"])}</b>'
+            pic = None
+            if r.get('image'):  # a photo card on top of the row, like the Watch & read video (Maisy: "use the hero img")
+                pic, _ = picture(r['image'], 'now-' + slug, size=1200)
+            img = (f'<img src="{pic}" width="1200" height="675" alt="{e(r.get("alt", r["name"]))}" loading="lazy"'
+                   + (f' style="object-position:{e(r["focus"])}"' if r.get('focus') else '') + '>') if pic else ''
+            return (f'<ul class="codes studio-now{" has-pic" if pic else ""}"><li><a class="code" href="{e(link)}" rel="noopener">{img}<span><b>{e(r["name"])}</b>'
                     f'<small>{e(r["line"])}</small></span><em>Shop</em></a></li></ul>')
     return ''
 
