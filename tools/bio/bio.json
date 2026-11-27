@@ -80,6 +80,10 @@
       "cover": 88917418
     }
   ],
+  "studio_now": [
+    {"key": "archive-sale", "name": "The Archive Sale at Cozyleigh", "line": "Up to 20% off \u00b7 ends Sunday, Nov 30", "link": "https://cozyleigh.studio/pages/imperfectly-perfect", "until": "2026-11-30"},
+    {"key": "gift-guide", "name": "The Cozyleigh gift guide", "line": "Add a little zen to their desk \u00b7 gifts under $40", "link": "https://cozyleigh.studio/pages/gifts", "from": "2026-12-01", "until": "2026-12-20"}
+  ],
   "reads": [
     {"name": "Meet Maisy Leigh", "line": "My interview with CanvasRebel", "link": "https://canvasrebel.com/meet-maisy-leigh/", "pill": "Read"}
   ],

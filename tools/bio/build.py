@@ -232,7 +232,8 @@ def code_row(c):
 
 
 def today_ny():
-    return datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d')
+    """Today in New York, or BIO_TODAY=YYYY-MM-DD to check what a given day's build would show."""
+    return os.environ.get('BIO_TODAY') or datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d')
 
 
 def posted(kind, code, dates):
@@ -305,7 +306,7 @@ PROFILE = '''<header class="profile"><div class="wrap">
 <p class="line">making life warm again, one design at a time</p>
 <p class="role">designer &amp; founder of <a href="https://www.instagram.com/cozyleigh.studios/">@cozyleigh.studios</a></p>
 <div class="actions"><ul class="soc">'''+SOCIALS+'''</ul>
-<a class="shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile&amp;utm_content=profile">Shop Cozyleigh</a></div>
+<a class="shop" href="https://cozyleigh.studio/?utm_source=maisyleigh.com&amp;utm_medium=bio&amp;utm_campaign=profile&amp;utm_content=profile">Shop Cozyleigh</a></div>%STUDIO_NOW%
 </div></header>'''
 FOOT = '''</main><footer class="ft"><div class="wrap"><p>Some links earn me a small commission, at no cost to you.</p><small>&copy; 2026 Maisy Leigh</small></div></footer>%s</body></html>'''
 COPY_JS = '''<script>document.querySelectorAll('button.code').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.code,t=b.querySelector('em');
@@ -324,6 +325,7 @@ if(el.matches('.shop'))return send('shop','profile');
 if(el.matches('button.code'))return send('code','codes',el.dataset.code);
 if(el.matches('.yt'))return send('video','watch');
 if(el.matches('.post'))return send('letter','watch');
+if(el.closest('.studio-now'))return send('thing','profile',txt(el,'b'));
 if(el.matches('a.code'))return send('thing',sid||'codes',txt(el,'b'));
 if(el.matches('.t'))return send('thing',sid,txt(el,'b'));}catch(e){}},true);})();</script>'''
 # A DM's counted link lands here as ?utm_medium=dm&utm_campaign=<post code> (Maisy, Nov 26 2026: keep each post's sales
@@ -546,6 +548,41 @@ def watch_section(video, letter=None):
     items = ''.join(f'<li><a class="code" href="{e(r["link"])}" rel="noopener"><span><b>{e(r["name"])}</b><small>{e(r["line"])}</small></span><em>{e(r.get("pill", "Read"))}</em></a></li>' for r in rows)
     return (f'<section class="sec sand" id="watch"><div class="wrap"><div class="sec-hd"><h2>Watch &amp; read</h2><span>More of me</span></div>'
             f'{card}<ul class="codes{" reads" if card else ""}">{items}</ul></div></section>')
+LOGO_URL = 'https://cozyleigh.studio/cdn/shop/files/Cozyleigh_Logo_Colored_300x.png'
+
+
+def shop_button(profile):
+    """The profile's Shop button with the Cozyleigh logo in it (Maisy, Nov 26 2026). The logo is kept in img/ as the
+    shop's own PNG (transparent, so it sits on the pill's paper); if it can't be fetched the button keeps its words."""
+    dst = os.path.join(IMG, 'cozyleigh-logo.png')
+    if not (os.path.exists(dst) and os.path.getsize(dst) > 1000):
+        curl(LOGO_URL, dst, origin=False)
+        try:
+            Image.open(dst).verify()
+        except Exception:  # noqa: BLE001
+            if os.path.exists(dst):
+                os.remove(dst)
+            problems.append('The Cozyleigh logo could not be read, so the Shop button says "Shop Cozyleigh" in words.')
+            return profile
+    return profile.replace('<a class="shop" href=', '<a class="shop shop--logo" aria-label="Shop Cozyleigh" href=').replace(
+        '>Shop Cozyleigh</a>', '>Shop <img src="img/cozyleigh-logo.png" width="300" height="90" alt=""></a>')
+
+
+def studio_now():
+    """One dated studio row under the profile (Maisy, Nov 26 2026): the first bio.json "studio_now" entry live today in
+    New York ("from"/"until", YYYY-MM-DD, both days included), in the codes' row style; nothing when none is live."""
+    today = today_ny()
+    for r in CFG.get('studio_now', []):
+        if r.get('from', '0000') <= today <= r.get('until', '9999'):
+            slug = r.get('key') or slugify(r['name'])
+            u = urllib.parse.urlparse(r['link'])
+            q = [(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not k.startswith('utm_')]
+            q += [('utm_source', 'maisyleigh.com'), ('utm_medium', 'bio'), ('utm_campaign', 'profile'), ('utm_content', slug)]
+            link = urllib.parse.urlunparse(u._replace(query=urllib.parse.urlencode(q)))
+            return (f'<ul class="codes studio-now"><li><a class="code" href="{e(link)}" rel="noopener"><span><b>{e(r["name"])}</b>'
+                    f'<small>{e(r["line"])}</small></span><em>Shop</em></a></li></ul>')
+    return ''
+
 
 def nice_day(day):
     import datetime
@@ -606,7 +643,7 @@ def build_spaces(shop):
     body += watch_section(video, letter)
     for old in glob.glob(os.path.join(OUT, '*.html')):
         os.remove(old)  # the per-post pages are gone; one page now
-    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', PROFILE.replace(SOCIALS, soc_counts(counts))) + body + FOOT % (COPY_JS + TAP_JS + DM_JS))
+    open(os.path.join(OUT, 'index.html'), 'w').write(HEAD % ('Links', 'Everything on my desk and around my home, with links.', shop_button(PROFILE.replace(SOCIALS, soc_counts(counts))).replace('%STUDIO_NOW%', studio_now())) + body + FOOT % (COPY_JS + TAP_JS + DM_JS))
     print(f"Wrote the bio page to {OUT}: {len(sections)} spaces.")
     for p in problems:
         print('PROBLEM:', p)
